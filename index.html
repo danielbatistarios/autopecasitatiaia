@@ -2871,6 +2871,9 @@ ul, ol { list-style: none; }
      ============================================================ -->
 <script>
 /* ── LOADER ────────────────────────────────────────────────── */
+let _loaderDone = false, _gsapReady = false;
+function _tryInitAnimations() { if (_loaderDone && _gsapReady) initAnimations(); }
+
 window.addEventListener('DOMContentLoaded', () => {
   const loader = document.getElementById('loader');
   const phrase = document.getElementById('loaderPhrase');
@@ -2894,22 +2897,11 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
     setTimeout(() => {
       loader.style.display = 'none';
-      initAnimations();
+      _loaderDone = true;
+      _tryInitAnimations();
     }, 700);
   }, 300 + words.length * 280 + 1000);
 });
-
-/* ── LENIS SMOOTH SCROLL ─────────────────────────────────── */
-const lenis = new Lenis({
-  duration: 1.2,
-  easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-});
-
-function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-requestAnimationFrame(raf);
-
-gsap.ticker.add(time => lenis.raf(time * 1000));
-gsap.ticker.lagSmoothing(0);
 
 /* ── HEADER SCROLL ───────────────────────────────────────── */
 const header = document.getElementById('header');
@@ -3002,8 +2994,25 @@ document.querySelectorAll('a, button, [data-cursor]').forEach(el => {
   });
 });
 
+/* ── GSAP + LENIS (carregados com defer — aguarda window load) */
+window.addEventListener('load', () => {
+
+/* ── LENIS SMOOTH SCROLL ─────────────────────────────────── */
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+});
+
+function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+requestAnimationFrame(raf);
+
+gsap.ticker.add(time => lenis.raf(time * 1000));
+gsap.ticker.lagSmoothing(0);
+
 /* ── GSAP ANIMATIONS ─────────────────────────────────────── */
 gsap.registerPlugin(ScrollTrigger);
+_gsapReady = true;
+_tryInitAnimations();
 
 function initAnimations() {
   // Hero entrance timeline
@@ -3147,7 +3156,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) { lenis.scrollTo(target); }
   });
-});
+
+}); /* end window load */
 </script>
 </body>
 </html>

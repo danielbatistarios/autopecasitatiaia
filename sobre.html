@@ -682,6 +682,9 @@ ul, ol { list-style: none; }
 </footer>
 <script>
 /* LOADER */
+let _loaderDone = false, _gsapReady = false;
+function _tryInitAnimations() { if (_loaderDone && _gsapReady) initAnimations(); }
+
 window.addEventListener('DOMContentLoaded', () => {
   const loader = document.getElementById('loader');
   const phrase = document.getElementById('loaderPhrase');
@@ -696,11 +699,13 @@ window.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     loader.classList.add('done');
     document.body.style.overflow = '';
-    setTimeout(() => { loader.style.display = 'none'; initAnimations(); }, 700);
+    setTimeout(() => { loader.style.display = 'none'; _loaderDone = true; _tryInitAnimations(); }, 700);
   }, 300 + words.length * 280 + 1000);
 });
 
 /* LENIS */
+window.addEventListener('load', () => {
+
 const lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
 function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
 requestAnimationFrame(raf);
@@ -743,6 +748,8 @@ document.querySelectorAll('a, button, [data-cursor]').forEach(el => {
 
 /* GSAP */
 gsap.registerPlugin(ScrollTrigger);
+_gsapReady = true;
+_tryInitAnimations();
 function initAnimations() {
   const tl = gsap.timeline({ delay: 0.2 });
   tl.to('#heroEyebrow', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' })
@@ -778,6 +785,8 @@ if (stickyCta && heroEl) {
   const stickyObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { stickyCta.classList.toggle('visible', !entry.isIntersecting); }); }, { threshold: 0, rootMargin: '0px 0px -100px 0px' });
   stickyObserver.observe(heroEl);
 }
+
+}); /* end window load */
 </script>
 </body>
 </html>
