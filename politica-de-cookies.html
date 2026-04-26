@@ -149,7 +149,7 @@ ul, ol { list-style: none; }
 .pre-cta-sub { font-size: 14px; color: var(--text-tertiary); font-family: var(--font-mono); }
 
 .footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: var(--s-8) 0 var(--s-6); }
-.footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: var(--s-7); margin-bottom: var(--s-7); }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: var(--s-7); margin-bottom: var(--s-7); }
 .footer-brand-desc { font-size: 14px; color: var(--text-tertiary); line-height: 1.7; max-width: 280px; margin-bottom: var(--s-3); }
 .footer-col-title { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-primary); margin-bottom: var(--s-4); }
 .footer-links { display: flex; flex-direction: column; gap: var(--s-3); }
@@ -537,6 +537,18 @@ const menuToggle = document.getElementById('menu-toggle');
 const nav = document.getElementById('nav');
 menuToggle.addEventListener('click', () => { menuToggle.classList.toggle('active'); nav.classList.toggle('open'); });
 nav.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { menuToggle.classList.remove('active'); nav.classList.remove('open'); }); });
+
+/* ── DROPDOWN MENU (DESKTOP HOVER + MOBILE CLICK) ────────── */
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+  const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+  let hoverTimeout;
+  if (window.innerWidth > 768) {
+    dropdown.addEventListener('mouseenter', () => { clearTimeout(hoverTimeout); dropdown.classList.add('open'); toggle.setAttribute('aria-expanded', 'true'); });
+    dropdown.addEventListener('mouseleave', () => { hoverTimeout = setTimeout(() => { dropdown.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }, 150); });
+  }
+  toggle.addEventListener('click', e => { if (window.innerWidth <= 768) { e.preventDefault(); const isOpen = dropdown.classList.toggle('open'); toggle.setAttribute('aria-expanded', isOpen); } });
+  dropdown.querySelectorAll('.nav-dropdown-item').forEach(item => { item.addEventListener('click', () => { if (window.innerWidth <= 768) { dropdown.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); menuToggle.classList.remove('active'); nav.classList.remove('open'); } }); });
+});
 
 const cursor = document.getElementById('cursor');
 const cursorLabel = document.getElementById('cursorLabel');

@@ -208,7 +208,7 @@ ul, ol { list-style: none; }
 .map-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--orange); margin-top: var(--s-3); transition: gap var(--duration-fast); }
 .map-link:hover { gap: 10px; }
 .footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: var(--s-8) 0 var(--s-6); }
-.footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: var(--s-7); margin-bottom: var(--s-7); }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: var(--s-7); margin-bottom: var(--s-7); }
 .footer-brand-desc { font-size: 14px; color: var(--text-tertiary); line-height: 1.7; max-width: 280px; margin-bottom: var(--s-3); }
 .footer-col-title { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-primary); margin-bottom: var(--s-4); }
 .footer-links { display: flex; flex-direction: column; gap: var(--s-3); }
@@ -683,16 +683,40 @@ ul, ol { list-style: none; }
   </div>
 </section>
 
-<section class="content-section">
+<section class="content-section" style="background:var(--bg-secondary);">
   <div class="container">
-    <div class="reveal"><div class="sec-label">Área de Atendimento</div><h2>Atendemos Itatiaia, Resende, Penedo e Maromba</h2></div>
-    <p class="reveal">A <strong>Auto Pecas Itatiaia</strong> atende motoristas, mecanicos e frotas de toda a regiao. Nossa localizacao no Centro de Itatiaia, a poucos metros da <strong>Via Dutra (BR-116)</strong>, facilita o acesso para quem vem de cidades vizinhas:</p>
-    <ul class="reveal">
-      <li><strong>Itatiaia</strong>, Centro, Vila Florida, Campo Alegre, Maringa, Maromba, Penedo</li>
-      <li><strong>Resende</strong>, 8 km pela Via Dutra, menos de 10 minutos de carro</li>
-      <li><strong>Penedo</strong>, 12 km pela RJ-163, acesso direto pela estrada da serra</li>
-      <li><strong>Engenheiro Passos</strong>, 25 km, acesso pela BR-354 pela regiao serrana</li>
-    </ul>
+    <div class="reveal"><div class="sec-label">Área de Atendimento</div><h2>Troca de Disco de Freio em Itatiaia: Bairros e Localidades Atendidas</h2></div>
+    <p class="reveal">A <strong>Auto Peças Itatiaia</strong> troca discos de freio com análise de espessura e verificação de empenamento. Marcas Fremax, TRW, Bosch e Hipper Freios em estoque.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--s-5);margin-top:var(--s-7);">
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Disco de Freio em Centro de Itatiaia</h3>
+        <p>Moradores do <strong>Centro de Itatiaia</strong> que descem frequentemente para Resende pela Via Dutra percebem vibração no pedal com mais frequência, sinal de disco empenado pelo calor das descidas.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Disco de Freio em Maromba</h3>
+        <p>A descida de <strong>Maromba</strong> é uma das mais exigentes para os freios na região. Discos mais finos que o mínimo especificado superaquecem nessa descida e podem causar perda de frenagem. Verificamos a espessura gratuitamente.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Disco de Freio em Penedo</h3>
+        <p>A RJ-163 entre Itatiaia e <strong>Penedo</strong> tem curvas fechadas em sequência. Discos empenados transmitem vibração na descida. Trocamos o par completo (dois discos) para garantir frenagem uniforme.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Disco de Freio em Vila Florida e Campo Alegre</h3>
+        <p>Para moradores de <strong>Vila Florida e Campo Alegre</strong> que usam o carro principalmente no plano, os discos duram mais, mas o desgaste desigual ainda acontece. Verificamos alinhamento e balanceamento junto.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Disco de Freio em Maringa</h3>
+        <p>Veículos que rodam nas estradas de terra de <strong>Maringa</strong> acumulam barro nas pinças, o que causa desgaste desigual entre os discos. Inspecionamos pastilhas e discos juntos.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Disco de Freio em Resende</h3>
+        <p><strong>Resende</strong> a 8 km pela Via Dutra. Moradores de Resende vêm à Auto Peças Itatiaia para comparar preço e qualidade, especialmente para carros importados com discos de marcas específicas.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Disco de Freio em Engenheiro Passos</h3>
+        <p>Motoristas de <strong>Engenheiro Passos</strong> que percorrem a BR-116 diariamente submetem os discos a frenagens frequentes em trechos de tráfego intenso.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -813,6 +837,18 @@ const menuToggle = document.getElementById('menu-toggle');
 const nav = document.getElementById('nav');
 menuToggle.addEventListener('click', () => { menuToggle.classList.toggle('active'); nav.classList.toggle('open'); });
 nav.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { menuToggle.classList.remove('active'); nav.classList.remove('open'); }); });
+
+/* ── DROPDOWN MENU (DESKTOP HOVER + MOBILE CLICK) ────────── */
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+  const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+  let hoverTimeout;
+  if (window.innerWidth > 768) {
+    dropdown.addEventListener('mouseenter', () => { clearTimeout(hoverTimeout); dropdown.classList.add('open'); toggle.setAttribute('aria-expanded', 'true'); });
+    dropdown.addEventListener('mouseleave', () => { hoverTimeout = setTimeout(() => { dropdown.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }, 150); });
+  }
+  toggle.addEventListener('click', e => { if (window.innerWidth <= 768) { e.preventDefault(); const isOpen = dropdown.classList.toggle('open'); toggle.setAttribute('aria-expanded', isOpen); } });
+  dropdown.querySelectorAll('.nav-dropdown-item').forEach(item => { item.addEventListener('click', () => { if (window.innerWidth <= 768) { dropdown.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); menuToggle.classList.remove('active'); nav.classList.remove('open'); } }); });
+});
 const cursor = document.getElementById('cursor');
 const cursorLabel = document.getElementById('cursorLabel');
 let cx = 0, cy = 0, mx = 0, my = 0;

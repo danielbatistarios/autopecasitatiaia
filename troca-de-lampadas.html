@@ -208,7 +208,7 @@ ul, ol { list-style: none; }
 .map-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--orange); margin-top: var(--s-3); transition: gap var(--duration-fast); }
 .map-link:hover { gap: 10px; }
 .footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: var(--s-8) 0 var(--s-6); }
-.footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: var(--s-7); margin-bottom: var(--s-7); }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: var(--s-7); margin-bottom: var(--s-7); }
 .footer-brand-desc { font-size: 14px; color: var(--text-tertiary); line-height: 1.7; max-width: 280px; margin-bottom: var(--s-3); }
 .footer-col-title { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-primary); margin-bottom: var(--s-4); }
 .footer-links { display: flex; flex-direction: column; gap: var(--s-3); }
@@ -682,16 +682,40 @@ ul, ol { list-style: none; }
   </div>
 </section>
 
-<section class="content-section">
+<section class="content-section" style="background:var(--bg-secondary);">
   <div class="container">
-    <div class="reveal"><div class="sec-label">Área de Atendimento</div><h2>Atendemos Itatiaia, Resende, Penedo e Engenheiro Passos</h2></div>
-    <p class="reveal">A <strong>Auto Pecas Itatiaia</strong> atende motoristas e mecanicos da regiao. Nossa localizacao no Centro de Itatiaia, a poucos metros da <strong>Via Dutra (BR-116)</strong>, facilita o acesso para quem vem de cidades vizinhas:</p>
-    <ul class="reveal">
-      <li><strong>Itatiaia</strong>, Centro, Vila Florida, Campo Alegre, Maringa, Maromba, Penedo</li>
-      <li><strong>Resende</strong>, 8 km pela Via Dutra, menos de 10 minutos de carro</li>
-      <li><strong>Penedo</strong>, 12 km pela RJ-163, acesso direto pela estrada da serra</li>
-      <li><strong>Engenheiro Passos</strong>, regiao atendida pela loja</li>
-    </ul>
+    <div class="reveal"><div class="sec-label">Área de Atendimento</div><h2>Troca de Lâmpadas em Itatiaia: Bairros e Localidades Atendidas</h2></div>
+    <p class="reveal">A <strong>Auto Peças Itatiaia</strong> troca lâmpadas de faróis, lanternas e luzes auxiliares. Philips e Osram em estoque. Neblina frequente na Serra exige visibilidade máxima.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--s-5);margin-top:var(--s-7);">
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Lâmpadas em Centro de Itatiaia</h3>
+        <p>Moradores do <strong>Centro de Itatiaia</strong> que transitam pela Av. dos Expedicionários à noite precisam de faróis com boa projeção. Lâmpadas escurecidas reduzem o alcance em 30% e são causa comum de multa na blitz da PRF na Dutra.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Lâmpadas em Maromba</h3>
+        <p>A estrada de <strong>Maromba</strong> não tem iluminação pública. Subir ou descer à noite com lâmpada fraca é risco real. Trocamos o par de lâmpadas (recomendado sempre em par) para garantir iluminação uniforme.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Lâmpadas em Penedo</h3>
+        <p>A neblina frequente entre Itatiaia e <strong>Penedo</strong> pela RJ-163 exige que os faróis de neblina estejam em perfeitas condições. Trocamos faróis dianteiros e traseiros de neblina com peças originais Philips ou Osram.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Lâmpadas em Vila Florida e Campo Alegre</h3>
+        <p>Moradores de <strong>Vila Florida e Campo Alegre</strong> que retornam do trabalho no início da noite percebem a diferença entre uma lâmpada nova e uma com 2 anos de uso. Trocar antes de queimar evita surpresa.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Lâmpadas em Parque Nacional do Itatiaia</h3>
+        <p>Visitantes que acessam trilhas do <strong>Parque Nacional</strong> à noite ou ao amanhecer precisam de faróis em pleno funcionamento. Atendemos turistas e guias sem agendamento.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Lâmpadas em Resende</h3>
+        <p>Motoristas de <strong>Resende</strong> autuados na blitz da Via Dutra por lâmpada queimada podem resolver o problema em minutos na Auto Peças Itatiaia antes de seguir viagem.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Lâmpadas em Engenheiro Passos</h3>
+        <p>Veículos de <strong>Engenheiro Passos</strong> que percorrem trechos sem iluminação na BR-116 precisam de faróis com máxima eficiência. Trocamos com garantia de fábrica Philips e Osram.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -812,6 +836,18 @@ const menuToggle = document.getElementById('menu-toggle');
 const nav = document.getElementById('nav');
 menuToggle.addEventListener('click', () => { menuToggle.classList.toggle('active'); nav.classList.toggle('open'); });
 nav.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { menuToggle.classList.remove('active'); nav.classList.remove('open'); }); });
+
+/* ── DROPDOWN MENU (DESKTOP HOVER + MOBILE CLICK) ────────── */
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+  const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+  let hoverTimeout;
+  if (window.innerWidth > 768) {
+    dropdown.addEventListener('mouseenter', () => { clearTimeout(hoverTimeout); dropdown.classList.add('open'); toggle.setAttribute('aria-expanded', 'true'); });
+    dropdown.addEventListener('mouseleave', () => { hoverTimeout = setTimeout(() => { dropdown.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }, 150); });
+  }
+  toggle.addEventListener('click', e => { if (window.innerWidth <= 768) { e.preventDefault(); const isOpen = dropdown.classList.toggle('open'); toggle.setAttribute('aria-expanded', isOpen); } });
+  dropdown.querySelectorAll('.nav-dropdown-item').forEach(item => { item.addEventListener('click', () => { if (window.innerWidth <= 768) { dropdown.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); menuToggle.classList.remove('active'); nav.classList.remove('open'); } }); });
+});
 const cursor = document.getElementById('cursor');
 const cursorLabel = document.getElementById('cursorLabel');
 let cx = 0, cy = 0, mx = 0, my = 0;

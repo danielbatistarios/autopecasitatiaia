@@ -408,7 +408,7 @@ ul, ol { list-style: none; }
 .map-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--orange); margin-top: var(--s-3); transition: gap var(--duration-fast); }
 .map-link:hover { gap: 10px; }
 .footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: var(--s-8) 0 var(--s-6); }
-.footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: var(--s-7); margin-bottom: var(--s-7); }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: var(--s-7); margin-bottom: var(--s-7); }
 .footer-brand-desc { font-size: 14px; color: var(--text-tertiary); line-height: 1.7; max-width: 280px; margin-bottom: var(--s-3); }
 .footer-col-title { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-primary); margin-bottom: var(--s-4); }
 .footer-links { display: flex; flex-direction: column; gap: var(--s-3); }
@@ -683,16 +683,40 @@ ul, ol { list-style: none; }
   </div>
 </section>
 
-<section class="content-section">
+<section class="content-section" style="background:var(--bg-secondary);">
   <div class="container">
-    <div class="reveal"><div class="sec-label">Área de Atendimento</div><h2>Atendemos Itatiaia, Resende, Penedo e Maromba</h2></div>
-    <p class="reveal">A <strong>Auto Pecas Itatiaia</strong> atende motoristas, mecanicos e frotas de toda a regiao. Nossa localizacao no Centro de Itatiaia, a poucos metros da <strong>Via Dutra (BR-116)</strong>, facilita o acesso para quem vem de cidades vizinhas:</p>
-    <ul class="reveal">
-      <li><strong>Itatiaia</strong>, Centro, Vila Florida, Campo Alegre, Maringa, Maromba, Penedo</li>
-      <li><strong>Resende</strong>, 8 km pela Via Dutra, menos de 10 minutos de carro</li>
-      <li><strong>Penedo</strong>, 12 km pela RJ-163, acesso direto pela estrada da serra</li>
-      <li><strong>Engenheiro Passos</strong>, 25 km, acesso pela BR-354 pela regiao serrana</li>
-    </ul>
+    <div class="reveal"><div class="sec-label">Área de Atendimento</div><h2>Troca de Fluido de Freio em Itatiaia: Bairros e Localidades Atendidas</h2></div>
+    <p class="reveal">A <strong>Auto Peças Itatiaia</strong> troca fluido de freio DOT 3, DOT 4 e DOT 5.1 com purga completa. Prevenimos pedal macio e vapor lock nas descidas da Serra.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--s-5);margin-top:var(--s-7);">
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Fluido de Freio em Centro de Itatiaia</h3>
+        <p>Moradores do <strong>Centro de Itatiaia</strong> que fazem uso misto de rodovia e cidade devem trocar o fluido a cada 2 anos. O DOT 4 é o mais indicado por resistir melhor à umidade típica da Serra da Mantiqueira.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Fluido de Freio em Maromba</h3>
+        <p>O trajeto de <strong>Maromba</strong> é o mais crítico para o fluido de freio de toda a região. A descida de 8 km em rampa contínua aquece o fluido acima do ponto de ebulição do DOT 3. Para quem desce Maromba, o DOT 4 ou DOT 5.1 não é opcional.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Fluido de Freio em Penedo</h3>
+        <p>A RJ-163 até <strong>Penedo</strong> tem curvas em sequência que exigem frenagem constante. O pedal macio ao final da descida é o primeiro sintoma de fluido degradado. Substituímos e fazemos a purga de ar no mesmo dia.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Fluido de Freio em Vila Florida e Campo Alegre</h3>
+        <p>Moradores de <strong>Vila Florida e Campo Alegre</strong> com uso urbano leve costumam negligenciar a troca de fluido. A absorção de umidade do DOT 3 ao longo do tempo reduz o ponto de ebulição mesmo sem uso intenso.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Fluido de Freio em Maringa</h3>
+        <p>A umidade elevada da região de <strong>Maringa</strong>, próxima às matas, acelera a absorção de água pelo fluido higroscópico. Recomendamos inspeção anual para veículos nessa área.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Fluido de Freio em Resende</h3>
+        <p>Moradores de <strong>Resende</strong> que fazem o trajeto de ida e volta à Serra frequentemente desgastam o fluido mais rápido que a média. Atendemos sem fila e com tempo de serviço inferior a 40 minutos.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Fluido de Freio em Engenheiro Passos</h3>
+        <p>Veículos de <strong>Engenheiro Passos</strong> que transportam carga pesada pela BR-116 exigem fluido DOT 4 pela maior resistência à temperatura durante frenagens prolongadas.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -813,6 +837,18 @@ const menuToggle = document.getElementById('menu-toggle');
 const nav = document.getElementById('nav');
 menuToggle.addEventListener('click', () => { menuToggle.classList.toggle('active'); nav.classList.toggle('open'); });
 nav.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { menuToggle.classList.remove('active'); nav.classList.remove('open'); }); });
+
+/* ── DROPDOWN MENU (DESKTOP HOVER + MOBILE CLICK) ────────── */
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+  const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+  let hoverTimeout;
+  if (window.innerWidth > 768) {
+    dropdown.addEventListener('mouseenter', () => { clearTimeout(hoverTimeout); dropdown.classList.add('open'); toggle.setAttribute('aria-expanded', 'true'); });
+    dropdown.addEventListener('mouseleave', () => { hoverTimeout = setTimeout(() => { dropdown.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }, 150); });
+  }
+  toggle.addEventListener('click', e => { if (window.innerWidth <= 768) { e.preventDefault(); const isOpen = dropdown.classList.toggle('open'); toggle.setAttribute('aria-expanded', isOpen); } });
+  dropdown.querySelectorAll('.nav-dropdown-item').forEach(item => { item.addEventListener('click', () => { if (window.innerWidth <= 768) { dropdown.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); menuToggle.classList.remove('active'); nav.classList.remove('open'); } }); });
+});
 const cursor = document.getElementById('cursor');
 const cursorLabel = document.getElementById('cursorLabel');
 let cx = 0, cy = 0, mx = 0, my = 0;

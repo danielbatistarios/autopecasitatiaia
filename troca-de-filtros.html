@@ -236,7 +236,7 @@ ul, ol { list-style: none; }
 .map-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--orange); margin-top: var(--s-3); transition: gap var(--duration-fast); }
 .map-link:hover { gap: 10px; }
 .footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: var(--s-8) 0 var(--s-6); }
-.footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: var(--s-7); margin-bottom: var(--s-7); }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: var(--s-7); margin-bottom: var(--s-7); }
 .footer-brand-desc { font-size: 14px; color: var(--text-tertiary); line-height: 1.7; max-width: 280px; margin-bottom: var(--s-3); }
 .footer-col-title { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-primary); margin-bottom: var(--s-4); }
 .footer-links { display: flex; flex-direction: column; gap: var(--s-3); }
@@ -723,16 +723,40 @@ ul, ol { list-style: none; }
   </div>
 </section>
 
-<section class="content-section">
+<section class="content-section" style="background:var(--bg-secondary);">
   <div class="container">
-    <div class="reveal"><div class="sec-label">Área de Atendimento</div><h2>Atendemos Itatiaia, Resende, Penedo e Engenheiro Passos</h2></div>
-    <p class="reveal">A <strong>Auto Pecas Itatiaia</strong> atende motoristas, mecanicos e frotas de toda a regiao. Nossa localizacao no Centro de Itatiaia, a poucos metros da <strong>Via Dutra (BR-116)</strong>, facilita o acesso para quem vem de cidades vizinhas:</p>
-    <ul class="reveal">
-      <li><strong>Itatiaia</strong>, Centro, Vila Florida, Campo Alegre, Maringa, Maromba, Penedo</li>
-      <li><strong>Resende</strong>, 8 km pela Via Dutra, menos de 10 minutos de carro</li>
-      <li><strong>Penedo</strong>, 12 km pela RJ-163, acesso direto pela estrada da serra</li>
-      <li><strong>Engenheiro Passos</strong>, 25 km, acesso pela BR-354 pela regiao serrana</li>
-    </ul>
+    <div class="reveal"><div class="sec-label">Área de Atendimento</div><h2>Troca de Filtros em Itatiaia: Bairros e Localidades Atendidas</h2></div>
+    <p class="reveal">A <strong>Auto Peças Itatiaia</strong> troca filtros de óleo, ar, combustível e cabine para toda a região. Estoque imediato das marcas Tecfil, Mann, Wega, Fram e Mahle.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--s-5);margin-top:var(--s-7);">
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Filtros em Centro de Itatiaia</h3>
+        <p>Moradores do <strong>Centro de Itatiaia</strong> são os que mais trocam <strong>filtro de cabine</strong>, por causa do pólen da Mata Atlântica que concentra nas vias do centro da cidade.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Filtros em Maringa e Campo Alegre</h3>
+        <p>As estradas de terra de <strong>Maringa e Campo Alegre</strong> são as principais responsáveis pelo entupimento precoce do <strong>filtro de ar do motor</strong>. Recomendamos inspeção a cada 5.000 km para veículos que rodam nessas vias.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Filtros em Maromba</h3>
+        <p>O acesso a <strong>Maromba</strong> passa por estrada de chão compactado com poeira fina. Um filtro de ar entupido reduz a potência na subida. Trocamos com prioridade para quem está indo ou voltando da região.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Filtros em Penedo</h3>
+        <p>A RJ-163 que leva a <strong>Penedo</strong> tem trechos de terra e erosão que contaminam o <strong>filtro de combustível</strong>. Verificamos todos os 4 filtros em uma única visita.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Filtros em Parque Nacional do Itatiaia</h3>
+        <p>Veículos que acessam trilhas do <strong>Parque Nacional do Itatiaia</strong> acumulam poeira e material vegetal nos filtros muito mais rápido que o normal. Atendemos guias, pesquisadores e visitantes frequentes.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Filtros em Resende</h3>
+        <p><strong>Resende</strong> a 8 km pela Via Dutra. Muitos moradores de Resende aproveitam para trocar os 4 filtros ao mesmo tempo, aproveitando o estoque completo e o atendimento rápido.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Filtros em Engenheiro Passos</h3>
+        <p>Motoristas de <strong>Engenheiro Passos</strong> que passam pela BR-116 param para revisão de filtros, especialmente os que fazem o trajeto para Resende diariamente.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -853,6 +877,18 @@ const menuToggle = document.getElementById('menu-toggle');
 const nav = document.getElementById('nav');
 menuToggle.addEventListener('click', () => { menuToggle.classList.toggle('active'); nav.classList.toggle('open'); });
 nav.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { menuToggle.classList.remove('active'); nav.classList.remove('open'); }); });
+
+/* ── DROPDOWN MENU (DESKTOP HOVER + MOBILE CLICK) ────────── */
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+  const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+  let hoverTimeout;
+  if (window.innerWidth > 768) {
+    dropdown.addEventListener('mouseenter', () => { clearTimeout(hoverTimeout); dropdown.classList.add('open'); toggle.setAttribute('aria-expanded', 'true'); });
+    dropdown.addEventListener('mouseleave', () => { hoverTimeout = setTimeout(() => { dropdown.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }, 150); });
+  }
+  toggle.addEventListener('click', e => { if (window.innerWidth <= 768) { e.preventDefault(); const isOpen = dropdown.classList.toggle('open'); toggle.setAttribute('aria-expanded', isOpen); } });
+  dropdown.querySelectorAll('.nav-dropdown-item').forEach(item => { item.addEventListener('click', () => { if (window.innerWidth <= 768) { dropdown.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); menuToggle.classList.remove('active'); nav.classList.remove('open'); } }); });
+});
 const cursor = document.getElementById('cursor');
 const cursorLabel = document.getElementById('cursorLabel');
 let cx = 0, cy = 0, mx = 0, my = 0;

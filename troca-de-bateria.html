@@ -236,7 +236,7 @@ ul, ol { list-style: none; }
 .map-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--orange); margin-top: var(--s-3); transition: gap var(--duration-fast); }
 .map-link:hover { gap: 10px; }
 .footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: var(--s-8) 0 var(--s-6); }
-.footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: var(--s-7); margin-bottom: var(--s-7); }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: var(--s-7); margin-bottom: var(--s-7); }
 .footer-brand-desc { font-size: 14px; color: var(--text-tertiary); line-height: 1.7; max-width: 280px; margin-bottom: var(--s-3); }
 .footer-col-title { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-primary); margin-bottom: var(--s-4); }
 .footer-links { display: flex; flex-direction: column; gap: var(--s-3); }
@@ -743,16 +743,40 @@ ul, ol { list-style: none; }
   </div>
 </section>
 
-<section class="content-section">
+<section class="content-section" style="background:var(--bg-secondary);">
   <div class="container">
-    <div class="reveal"><div class="sec-label">Área de Atendimento</div><h2>Atendemos Itatiaia, Resende, Penedo e Região</h2></div>
-    <p class="reveal">A <strong>Auto Peças Itatiaia</strong> atende motoristas e mecânicos da região. Nossa localização no Centro de Itatiaia, a poucos metros da <strong>Via Dutra (BR-116)</strong>, facilita o acesso para quem vem de cidades vizinhas:</p>
-    <ul class="reveal">
-      <li><strong>Itatiaia</strong>: Centro, Vila Florida, Campo Alegre, Maringa, Maromba, Penedo</li>
-      <li><strong>Resende</strong>: 8 km pela Via Dutra, menos de 10 minutos de carro</li>
-      <li><strong>Penedo</strong>: 12 km pela RJ-163, acesso direto pela estrada da serra</li>
-      <li><strong>Engenheiro Passos</strong>: região atendida pela loja</li>
-    </ul>
+    <div class="reveal"><div class="sec-label">Área de Atendimento</div><h2>Troca de Bateria em Itatiaia: Bairros e Localidades Atendidas</h2></div>
+    <p class="reveal">A <strong>Auto Peças Itatiaia</strong> atende motoristas de toda a região com teste gratuito de carga e instalação imediata. Estamos no Centro de Itatiaia, a poucos metros da Via Dutra.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--s-5);margin-top:var(--s-7);">
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Bateria em Centro de Itatiaia</h3>
+        <p>Moradores do <strong>Centro de Itatiaia</strong> são os que mais buscam teste de bateria nos dias frios. O inverno na Serra da Mantiqueira pode reduzir a capacidade de partida da bateria em até 50%.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Bateria em Maromba</h3>
+        <p>Veículos que sobem regularmente até <strong>Maromba</strong> submetem o alternador e a bateria a esforço extra nas subidas. Baterias acima de 3 anos devem ser testadas antes do inverno.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Bateria em Penedo</h3>
+        <p>Moradores de <strong>Penedo</strong> chegam à Auto Peças Itatiaia pela RJ-163 em cerca de 15 minutos. Trocamos a bateria com instalação na hora, sem necessidade de aguardar.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Bateria em Vila Florida e Campo Alegre</h3>
+        <p>Para moradores de <strong>Vila Florida e Campo Alegre</strong> que usam o carro principalmente para percursos curtos, a bateria descarrega mais rápido por falta de recarga completa. O teste gratuito identifica esse problema.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Bateria em Maringa</h3>
+        <p>Na região de <strong>Maringa</strong>, o frio intenso nos meses de junho e julho é o principal agressor da bateria. Atendemos com urgência quando o carro não liga de manhã.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Bateria em Resende</h3>
+        <p><strong>Resende</strong> a 8 km pela Via Dutra. Motoristas de Resende que ficam na dúvida sobre a bateria aproveitam a passagem pela Dutra para fazer o teste gratuito de carga, sem custo e sem agendamento.</p>
+      </div>
+      <div class="reveal" style="margin-bottom:var(--s-6);">
+        <h3>Troca de Bateria em Engenheiro Passos</h3>
+        <p>Motoristas de <strong>Engenheiro Passos</strong> que passam pela BR-116 param para teste de bateria, especialmente quando percebem que o motor está demorando mais para dar a partida.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -873,6 +897,18 @@ const menuToggle = document.getElementById('menu-toggle');
 const nav = document.getElementById('nav');
 menuToggle.addEventListener('click', () => { menuToggle.classList.toggle('active'); nav.classList.toggle('open'); });
 nav.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { menuToggle.classList.remove('active'); nav.classList.remove('open'); }); });
+
+/* ── DROPDOWN MENU (DESKTOP HOVER + MOBILE CLICK) ────────── */
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+  const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+  let hoverTimeout;
+  if (window.innerWidth > 768) {
+    dropdown.addEventListener('mouseenter', () => { clearTimeout(hoverTimeout); dropdown.classList.add('open'); toggle.setAttribute('aria-expanded', 'true'); });
+    dropdown.addEventListener('mouseleave', () => { hoverTimeout = setTimeout(() => { dropdown.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }, 150); });
+  }
+  toggle.addEventListener('click', e => { if (window.innerWidth <= 768) { e.preventDefault(); const isOpen = dropdown.classList.toggle('open'); toggle.setAttribute('aria-expanded', isOpen); } });
+  dropdown.querySelectorAll('.nav-dropdown-item').forEach(item => { item.addEventListener('click', () => { if (window.innerWidth <= 768) { dropdown.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); menuToggle.classList.remove('active'); nav.classList.remove('open'); } }); });
+});
 const cursor = document.getElementById('cursor');
 const cursorLabel = document.getElementById('cursorLabel');
 let cx = 0, cy = 0, mx = 0, my = 0;
