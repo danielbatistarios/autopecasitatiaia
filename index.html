@@ -27,103 +27,324 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 
-<!-- Schema.org: LocalBusiness -->
+<!-- Schema.org: @graph completo (LocalBusiness + WebSite + WebPage + FAQPage + SiteNavigationElement) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "AutoPartsStore",
-  "name": "Auto Peças Itatiaia",
-  "description": "Loja de autopeças em Itatiaia RJ. Peças originais e alternativas para todas as marcas.",
-  "url": "https://autopecasitatiaia.com.br",
-  "telephone": "+55-24-99309-9190",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Av. dos Expedicionários, 275 - loja 5 - Centro",
-    "addressLocality": "Itatiaia",
-    "addressRegion": "RJ",
-    "postalCode": "27580-216",
-    "addressCountry": "BR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "-22.4939592",
-    "longitude": "-44.5614109"
-  },
-  "openingHoursSpecification": [
+  "@graph": [
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-      "opens": "08:00",
-      "closes": "18:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "08:00",
-      "closes": "13:00"
-    }
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "347"
-  }
-}
-</script>
-
-<!-- Schema.org: FAQPage -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Vocês trabalham com peças originais ou alternativas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Trabalhamos com ambas. Temos peças originais de fábrica e alternativas de alta qualidade das melhores marcas do mercado como Cofap, Nakata, TRW, NGK e mais de 40 outras marcas."
+      "@type": "AutoPartsStore",
+      "@id": "https://autopecasitatiaia.com.br/#organization",
+      "name": "Auto Peças Itatiaia",
+      "legalName": "Auto Peças Itatiaia",
+      "description": "Loja de autopeças em Itatiaia RJ com 40+ marcas. Peças originais e alternativas para todas as marcas, troca de óleo, bateria, freios e mais.",
+      "foundingDate": "2019",
+      "url": "https://autopecasitatiaia.com.br",
+      "telephone": "+55-24-99309-9190",
+      "hasMap": "https://www.google.com/maps/place/Auto+Pe%C3%A7as+Itatiaia/@-22.4939592,-44.5614109,17z/data=!4m2!3m1!1s0x0:0xce6aced7aeeef147",
+      "image": "https://autopecasitatiaia.com.br/favicon.svg",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://autopecasitatiaia.com.br/favicon.svg",
+        "width": 512,
+        "height": 512
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. dos Expedicionários, 275 - loja 5 - Centro",
+        "addressLocality": "Itatiaia",
+        "addressRegion": "RJ",
+        "postalCode": "27580-216",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -22.4939592,
+        "longitude": -44.5614109
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Itatiaia",
+          "sameAs": "https://www.wikidata.org/wiki/Q1686604"
+        },
+        {
+          "@type": "City",
+          "name": "Engenheiro Passos",
+          "sameAs": "https://www.wikidata.org/wiki/Q10283028"
+        },
+        {
+          "@type": "City",
+          "name": "Resende",
+          "sameAs": "https://www.wikidata.org/wiki/Q950836"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "00:00",
+          "closes": "00:00"
+        }
+      ],
+      "paymentAccepted": "Dinheiro, PIX, Cartão de Débito, Cartão de Crédito",
+      "currenciesAccepted": "BRL",
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "347",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "sameAs": [
+        "https://www.instagram.com/autopecasitatiaia",
+        "https://www.google.com/maps/place/?q=place_id:ChIJR_HurnqOmwARR_Hurl7Kbs4"
+      ],
+      "knowsAbout": [
+        {
+          "@type": "DefinedTerm",
+          "name": "Peças Automotivas",
+          "inDefinedTermSet": "https://www.wikidata.org/wiki/Q754579"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Troca de Óleo",
+          "inDefinedTermSet": "https://www.wikidata.org/wiki/Q1330968"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Bateria Automotiva",
+          "inDefinedTermSet": "https://www.wikidata.org/wiki/Q193318"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Sistema de Freios",
+          "inDefinedTermSet": "https://www.wikidata.org/wiki/Q178354"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços Auto Peças Itatiaia",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#service",
+              "name": "Troca de Bateria",
+              "url": "https://autopecasitatiaia.com.br/troca-de-bateria.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#service",
+              "name": "Troca de Óleo",
+              "url": "https://autopecasitatiaia.com.br/troca-de-oleo.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://autopecasitatiaia.com.br/troca-de-filtros.html#service",
+              "name": "Troca de Filtros",
+              "url": "https://autopecasitatiaia.com.br/troca-de-filtros.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://autopecasitatiaia.com.br/troca-de-disco-de-freio.html#service",
+              "name": "Troca de Disco de Freio",
+              "url": "https://autopecasitatiaia.com.br/troca-de-disco-de-freio.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://autopecasitatiaia.com.br/troca-de-lampadas.html#service",
+              "name": "Troca de Lâmpadas",
+              "url": "https://autopecasitatiaia.com.br/troca-de-lampadas.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://autopecasitatiaia.com.br/troca-de-palhetas.html#service",
+              "name": "Troca de Palhetas",
+              "url": "https://autopecasitatiaia.com.br/troca-de-palhetas.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#service",
+              "name": "Troca de Fluido de Freio",
+              "url": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#service",
+              "name": "Troca de Pastilhas de Freio",
+              "url": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html"
+            }
+          }
+        ]
       }
     },
     {
-      "@type": "Question",
-      "name": "Fazem troca de óleo na hora?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim! Realizamos troca de óleo com agendamento ou por ordem de chegada. Trabalhamos com Mobil, Shell, Lubrax, Petronas e outras marcas premium."
+      "@type": "WebSite",
+      "@id": "https://autopecasitatiaia.com.br/#website",
+      "url": "https://autopecasitatiaia.com.br",
+      "name": "Auto Peças Itatiaia",
+      "description": "Peças automotivas em Itatiaia RJ. 40+ marcas, troca de óleo, bateria, freios e mais.",
+      "publisher": {
+        "@id": "https://autopecasitatiaia.com.br/#organization"
+      },
+      "inLanguage": "pt-BR",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://autopecasitatiaia.com.br/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
       }
     },
     {
-      "@type": "Question",
-      "name": "Atendem mecânicos e oficinas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim, temos condições especiais para mecânicos, oficinas e frotas. Entre em contato pelo WhatsApp para negociar."
+      "@type": "WebPage",
+      "@id": "https://autopecasitatiaia.com.br/#webpage",
+      "url": "https://autopecasitatiaia.com.br/",
+      "name": "Peças Automotivas em Itatiaia | Auto Peças Itatiaia",
+      "description": "Peças automotivas em Itatiaia com entrega rápida. 40+ marcas, troca de óleo, bateria, freios e mais. Atendemos mecânicos e motoristas de Itatiaia e região.",
+      "isPartOf": {
+        "@id": "https://autopecasitatiaia.com.br/#website"
+      },
+      "about": {
+        "@id": "https://autopecasitatiaia.com.br/#organization"
+      },
+      "inLanguage": "pt-BR",
+      "breadcrumb": {
+        "@id": "https://autopecasitatiaia.com.br/#breadcrumb"
       }
     },
     {
-      "@type": "Question",
-      "name": "Qual o horário de funcionamento?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Segunda a sexta das 08h às 18h. Sábados das 08h às 13h."
-      }
+      "@type": "BreadcrumbList",
+      "@id": "https://autopecasitatiaia.com.br/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://autopecasitatiaia.com.br/"
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "Vocês entregam peças?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim, fazemos entrega para oficinas e mecânicos na região de Itatiaia e cidades vizinhas."
-      }
+      "@type": "FAQPage",
+      "@id": "https://autopecasitatiaia.com.br/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Vocês trabalham com peças originais ou alternativas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trabalhamos com ambas. Temos peças originais de fábrica e alternativas de alta qualidade das melhores marcas do mercado como Cofap, Nakata, TRW, NGK e mais de 40 outras marcas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Fazem troca de óleo na hora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Realizamos troca de óleo com agendamento ou por ordem de chegada. Trabalhamos com Mobil, Shell, Lubrax, Petronas e outras marcas premium."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Atendem mecânicos e oficinas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, temos condições especiais para mecânicos, oficinas e frotas. Entre em contato pelo WhatsApp para negociar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual o horário de funcionamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Segunda a sexta das 08h às 18h. Sábados das 08h às 13h."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês entregam peças?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, fazemos entrega para oficinas e mecânicos na região de Itatiaia e cidades vizinhas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Aceitam cartão de crédito e PIX?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Aceitamos todas as formas de pagamento: dinheiro, PIX, cartão de débito e crédito (parcelamos em até 6x sem juros)."
+          }
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "Aceitam cartão de crédito e PIX?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim! Aceitamos todas as formas de pagamento: dinheiro, PIX, cartão de débito e crédito (parcelamos em até 6x sem juros)."
-      }
+      "@type": "SiteNavigationElement",
+      "@id": "https://autopecasitatiaia.com.br/#nav-inicio",
+      "name": "Início",
+      "url": "https://autopecasitatiaia.com.br/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://autopecasitatiaia.com.br/#nav-sobre",
+      "name": "Sobre Nós",
+      "url": "https://autopecasitatiaia.com.br/sobre.html"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://autopecasitatiaia.com.br/#nav-servicos",
+      "name": "Serviços",
+      "url": "https://autopecasitatiaia.com.br/servicos.html"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://autopecasitatiaia.com.br/#nav-contato",
+      "name": "Contato",
+      "url": "https://autopecasitatiaia.com.br/contato.html"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://autopecasitatiaia.com.br/#nav-trabalhe",
+      "name": "Trabalhe Conosco",
+      "url": "https://autopecasitatiaia.com.br/trabalhe-conosco.html"
     }
   ]
 }
