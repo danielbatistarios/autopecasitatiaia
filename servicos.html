@@ -719,7 +719,7 @@ ul, ol { list-style: none; }
     document.body.style.overflow = '';
     setTimeout(() => { loader.style.display = 'none'; initAnimations(); }, 700);
   }, 300 + words.length * 280 + 1000);
-});
+}
 
 /* LENIS */
 const lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });

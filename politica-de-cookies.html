@@ -524,7 +524,7 @@ ul, ol { list-style: none; }
     document.body.style.overflow = '';
     setTimeout(() => { loader.style.display = 'none'; initAnimations(); }, 700);
   }, 300 + words.length * 280 + 1000);
-});
+}
 
 const lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
 function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
@@ -587,8 +587,5 @@ if (stickyCta && heroEl) {
   stickyObserver.observe(heroEl);
 }
 </script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 </body>
 </html>
