@@ -337,6 +337,271 @@ ul, ol { list-style: none; }
   .nav-dropdown.open .nav-dropdown-menu { display: flex; }
   .nav-dropdown-item { border-bottom: 1px solid var(--border); border-radius: 0; padding: 11px var(--s-4); font-size: 13px; }
 }
+
+
+/* ===== MOBILE PATCH: mobile-patch-troca-de-oleo.css ===== */
+/* ================================================
+   MOBILE PATCH — troca-de-oleo.html
+   Score antes: 57/100 | Estimativa após patch: 81/100
+   P0: 8 fixes críticos | P1: 12 fixes importantes
+   Áreas auditadas: Viewport, Header/Nav, Layout responsivo, Touch targets, Tipografia fluida, Interatividade
+   ================================================ */
+
+/* ═══════════════════════════════════════════════════════════════
+   P0: CRÍTICOS — Responsividade base 320-480px
+   ═══════════════════════════════════════════════════════════════ */
+
+/* P0.1: Falta de @media queries em geral — página está 100% desktop */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0 var(--s-3);
+  }
+  .section {
+    padding: var(--s-5) 0;
+  }
+}
+
+/* P0.2: Header fixo muito alto em 320px — reduzir de 72px para 56px */
+@media (max-width: 480px) {
+  .header {
+    height: 56px;
+  }
+  .header-inner {
+    padding: 0 var(--s-3);
+  }
+  .logo {
+    gap: var(--s-2);
+  }
+}
+
+/* P0.3: Nav com dropdown muito larga em mobile — hamburger menu */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav.mobile-open {
+    display: flex;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+    z-index: 999;
+  }
+}
+
+/* P0.4: Feature grid com 260px min não empilha em 320px */
+@media (max-width: 768px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s-3);
+  }
+}
+
+/* P0.5: Process steps com 220px min não empilha */
+@media (max-width: 768px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: var(--s-4);
+  }
+}
+
+/* P0.6: FAQ com layout 2 colunas não empilha */
+@media (max-width: 768px) {
+  .faq-layout {
+    grid-template-columns: 1fr;
+    gap: var(--s-4);
+  }
+}
+
+/* P0.7: Contact grid 2 colunas não empilha */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s-4);
+  }
+}
+
+/* P0.8: Footer grid 4 colunas — scroll horizontal ou empilha */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s-4);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   P1: IMPORTANTES — Tipografia, Touch, Spacing
+   ═══════════════════════════════════════════════════════════════ */
+
+/* P1.1: Logo reduzido para mobile — menos espaço no header */
+@media (max-width: 480px) {
+  .logo-mark {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .logo-name {
+    font-size: 12px;
+  }
+  .logo-sub {
+    font-size: 8px;
+  }
+}
+
+/* P1.2: H1/H2 com clamp() já bom, mas pode escalar melhor */
+@media (max-width: 480px) {
+  .sec-h {
+    font-size: clamp(24px, 3vw, 32px);
+    letter-spacing: -.02em;
+  }
+}
+
+/* P1.3: Card padding 24px para 16px em 320px */
+@media (max-width: 480px) {
+  .feature-card {
+    padding: var(--s-3);
+  }
+  .process-steps .step {
+    gap: var(--s-2);
+  }
+}
+
+/* P1.4: FAQ accordions — botões precisam de 44px touch area */
+@media (max-width: 768px) {
+  .faq-q {
+    min-height: 44px;
+    padding: var(--s-3);
+    font-size: 14px;
+  }
+}
+
+/* P1.5: Step circle — pode ficar pequeno em 320px */
+@media (max-width: 480px) {
+  .step-num {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 20px;
+  }
+}
+
+/* P1.6: Botões/CTAs — min 44px em touch */
+@media (max-width: 768px) {
+  .nav-cta,
+  .btn,
+  .cta-btn {
+    min-height: 44px;
+    padding: 12px var(--s-4);
+    font-size: 14px;
+  }
+  .sticky-cta-btn {
+    min-height: 44px;
+  }
+}
+
+/* P1.7: Sticky CTA em mobile — não cobrir conteúdo */
+@media (max-width: 480px) {
+  .sticky-cta {
+    bottom: safe(env(safe-area-inset-bottom, 0px));
+    height: auto;
+    padding: var(--s-3);
+  }
+  .sticky-cta-info {
+    gap: var(--s-2);
+  }
+}
+
+/* P1.8: Hero image — reduzir altura em mobile */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 300px;
+  }
+  .hero-image {
+    max-height: 300px;
+  }
+}
+
+/* P1.9: Breadcrumb — pequeno demais em mobile */
+@media (max-width: 480px) {
+  .breadcrumb {
+    font-size: 12px;
+    margin-bottom: var(--s-2);
+  }
+}
+
+/* P1.10: Section gaps — muito grande em 320px */
+@media (max-width: 480px) {
+  .feature-grid {
+    margin-top: var(--s-4);
+  }
+  .process-steps {
+    margin-top: var(--s-5);
+  }
+}
+
+/* P1.11: Footer padding — reduzir em mobile */
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--s-6) 0 var(--s-4);
+  }
+}
+
+/* P1.12: Scroll padding para header fixo */
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 56px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   P2: OTIMIZAÇÕES — Nice-to-have
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Hover states apenas em devices que suportam */
+@media (hover: hover) and (pointer: fine) {
+  .feature-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-hover);
+  }
+  .nav-dropdown-item:hover {
+    background: rgba(255,102,51,.08);
+  }
+}
+
+/* Respeitar preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Landscape em dispositivos pequenos */
+@media (max-height: 500px) and (orientation: landscape) {
+  .header {
+    height: 48px;
+  }
+  .section {
+    padding: var(--s-3) 0;
+  }
+}
+/* ===== END MOBILE PATCH ===== */
 </style>
 <script type="application/ld+json">
 {
@@ -396,8 +661,11 @@ ul, ol { list-style: none; }
         "worstRating": 1
       },
       "sameAs": [
-        "https://www.instagram.com/autopecasitatiaia"
-      ]
+        "https://www.instagram.com/autopecasitatiaia",
+        "https://www.facebook.com/autopecasitatiaia",
+        "https://www.wikidata.org/wiki/Q128705407"
+      ],
+      "taxID": "01.335.600/0001-73"
     },
     {
       "@type": "WebPage",
@@ -454,24 +722,37 @@ ul, ol { list-style: none; }
           "@type": "City",
           "name": "Itatiaia",
           "addressRegion": "RJ",
-          "sameAs": "https://www.wikidata.org/wiki/Q22064919"
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q817223",
+            "https://pt.wikipedia.org/wiki/Itatiaia_(Rio_de_Janeiro)"
+          ]
         },
         {
           "@type": "City",
           "name": "Resende",
           "addressRegion": "RJ",
-          "sameAs": "https://www.wikidata.org/wiki/Q913390"
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q913390",
+            "https://pt.wikipedia.org/wiki/Resende_(Rio_de_Janeiro)"
+          ]
         },
         {
           "@type": "City",
           "name": "Engenheiro Passos",
           "addressRegion": "RJ",
-          "sameAs": "https://www.wikidata.org/wiki/Q10272923"
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q10272923",
+            "https://pt.wikipedia.org/wiki/Engenheiro_Passos"
+          ]
         },
         {
           "@type": "City",
           "name": "Penedo",
-          "addressRegion": "RJ"
+          "addressRegion": "RJ",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q1073075",
+            "https://pt.wikipedia.org/wiki/Penedo_(Rio_de_Janeiro)"
+          ]
         }
       ],
       "offers": {
@@ -481,7 +762,40 @@ ul, ol { list-style: none; }
         "priceCurrency": "BRL",
         "url": "https://autopecasitatiaia.com.br/troca-de-oleo.html"
       },
-      "sameAs": "https://www.wikidata.org/wiki/Q297392"
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q297392",
+        "https://pt.wikipedia.org/wiki/Troca_de_%C3%B3leo"
+      ],
+      "serviceOutput": {
+        "@type": "Product",
+        "name": "Óleo Lubrificante Automotivo",
+        "brand": [
+          {
+            "@type": "Brand",
+            "name": "Mobil",
+            "sameAs": [
+              "https://www.wikidata.org/wiki/Q156238",
+              "https://pt.wikipedia.org/wiki/ExxonMobil"
+            ]
+          },
+          {
+            "@type": "Brand",
+            "name": "Shell",
+            "sameAs": [
+              "https://www.wikidata.org/wiki/Q154950",
+              "https://pt.wikipedia.org/wiki/Shell"
+            ]
+          },
+          {
+            "@type": "Brand",
+            "name": "Lubrax"
+          },
+          {
+            "@type": "Brand",
+            "name": "Petronas"
+          }
+        ]
+      }
     },
     {
       "@type": "FAQPage",

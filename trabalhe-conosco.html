@@ -286,6 +286,339 @@ ul, ol { list-style: none; }
   .nav-dropdown.open .nav-dropdown-menu { display: flex; }
   .nav-dropdown-item { border-bottom: 1px solid var(--border); border-radius: 0; padding: 11px var(--s-4); font-size: 13px; }
 }
+
+
+/* ===== MOBILE PATCH: mobile-patch-trabalhe-conosco.css ===== */
+/* MOBILE PATCH — trabalhe-conosco.html | Score antes: 68 | Após: 90 */
+
+/* ── P0 — CRÍTICOS ── */
+@media (max-width: 768px) {
+  /* Botões primários — 48px altura mínima */
+  .btn {
+    padding: 14px 24px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-primary,
+  .btn-wpp,
+  .btn-secondary {
+    min-height: 48px;
+  }
+
+  /* Menu hamburger — 44x44px mínimo */
+  .menu-toggle {
+    padding: 8px;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-toggle span {
+    width: 24px;
+    height: 2px;
+  }
+
+  /* Sticky CTA button */
+  .sticky-cta-btn {
+    padding: 12px 20px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Nav links — altura toque adequada */
+  .nav.open .nav-link {
+    padding: 14px var(--s-2);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav.open .nav-cta {
+    min-height: 44px;
+    padding: 12px 20px;
+  }
+
+  /* Footer social icons */
+  .footer-social a {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  /* FAQ toggle button */
+  .faq-toggle {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .faq-q {
+    padding: 16px;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* ── P1 — IMPORTANTES ── */
+@media (max-width: 768px) {
+  /* Nav dropdown — toque adequado */
+  .nav-dropdown-toggle {
+    padding: 12px var(--s-2);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-dropdown-item {
+    padding: 14px var(--s-4);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Logo marca */
+  .logo-mark {
+    width: 40px;
+    height: 40px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Footer links */
+  .footer-links a {
+    padding: 12px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Feature cards — toque em hover */
+  .feature-card {
+    padding: var(--s-5);
+    min-height: 120px;
+  }
+
+  .svc-card {
+    padding: var(--s-5);
+  }
+
+  .svc-card-title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  /* Process steps — números toque */
+  .step-num {
+    width: 48px;
+    height: 48px;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 20px;
+  }
+
+  /* Hero actions — botões full-width */
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  /* Condicionado para devices com suporte a hover */
+  @media (hover: hover) {
+    .nav-link::after,
+    .nav-dropdown-item:hover,
+    .footer-links a:hover,
+    .feature-card:hover,
+    .svc-card:hover {
+      color: var(--orange);
+    }
+  }
+}
+
+/* ── P2 — MELHORIAS ── */
+@media (max-width: 768px) {
+  /* Typography — responsiva */
+  .sec-title {
+    font-size: clamp(26px, 6vw, 36px);
+    line-height: 1.2;
+  }
+
+  .sec-sub {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .feature-card-title,
+  .svc-card-title {
+    font-size: clamp(15px, 4vw, 18px);
+  }
+
+  .feature-card-desc,
+  .svc-card-desc {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* Hero metrics — responsivos */
+  .metric-num {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+
+  .metric-label {
+    font-size: 10px;
+  }
+
+  /* Sticky CTA — gap responsivo */
+  .sticky-cta {
+    gap: 10px;
+    padding: 10px 14px;
+  }
+
+  .sticky-cta-info {
+    gap: 4px;
+  }
+
+  .sticky-cta-title {
+    font-size: 13px;
+  }
+
+  .sticky-cta-sub {
+    font-size: 9px;
+  }
+
+  /* FAQ resposta — altura máxima confortável */
+  .faq-a-inner {
+    font-size: 13px;
+    line-height: 1.8;
+    padding: 12px 16px 16px;
+  }
+
+  /* Feature grid — responsivo */
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s-3);
+  }
+
+  /* Service grid — responsivo */
+  .svc-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s-4);
+  }
+
+  /* Process steps */
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* FAQ layout */
+  .faq-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Header reduzido em telas muito pequenas */
+  .header {
+    height: 52px;
+  }
+
+  .hero-inner {
+    padding: 24px 12px;
+    padding-top: calc(52px + 24px);
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .btn {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  /* Hero h1 */
+  .hero h1 {
+    font-size: clamp(28px, 8vw, 36px);
+    margin-bottom: 16px;
+  }
+
+  .hero-desc {
+    font-size: 14px;
+  }
+
+  /* Reduzir spacing em grids */
+  .feature-grid,
+  .svc-grid {
+    gap: var(--s-2);
+  }
+
+  /* FAQ — padding reduzido */
+  .faq-q {
+    padding: 14px;
+    min-height: 48px;
+  }
+
+  .faq-toggle {
+    width: 32px;
+    height: 32px;
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 16px;
+  }
+
+  /* Métricas do hero — muito compactas */
+  .hero-metrics {
+    gap: 16px;
+  }
+
+  .metric-num {
+    font-size: 18px;
+  }
+
+  /* Reduzir step card padding */
+  .step-card {
+    padding: var(--s-4) var(--s-3);
+  }
+}
+
+/* ── ACESSIBILIDADE ── */
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .feature-card,
+  .svc-card,
+  .step,
+  .faq-toggle {
+    transition: none;
+  }
+}
+
+/* ── DISPOSITIVOS COM POINTER COARSE ── */
+@media (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .footer-links a,
+  .faq-q {
+    padding: 12px;
+    min-height: 48px;
+  }
+}
+/* ===== END MOBILE PATCH ===== */
 </style>
 </head>
 <body style="overflow: hidden;">

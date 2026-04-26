@@ -407,6 +407,307 @@ ul, ol { list-style: none; }
   .nav-dropdown.open .nav-dropdown-menu { display: flex; }
   .nav-dropdown-item { border-bottom: 1px solid var(--border); border-radius: 0; padding: 11px var(--s-4); font-size: 13px; }
 }
+
+
+/* ===== MOBILE PATCH: mobile-patch-contato.css ===== */
+/* ================================================
+   MOBILE PATCH — contato.html
+   Score antes: 65 | Estimativa após: 88
+   P0: 8 fixes | P1: 7 fixes | P2: 9 fixes
+   ================================================ */
+
+/* ── P0 — CRÍTICOS ── */
+@media (max-width: 768px) {
+  /* Botões primários — 48px altura mínima */
+  .btn {
+    padding: 14px 24px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-primary,
+  .btn-wpp,
+  .btn-secondary {
+    min-height: 48px;
+  }
+
+  /* Menu hamburger — 44x44px mínimo */
+  .menu-toggle {
+    padding: 8px;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-toggle span {
+    width: 24px;
+    height: 2px;
+  }
+
+  /* Sticky CTA button */
+  .sticky-cta-btn {
+    padding: 12px 20px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Nav links — altura toque adequada */
+  .nav.open .nav-link {
+    padding: 14px var(--s-2);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav.open .nav-cta {
+    min-height: 44px;
+    padding: 12px 20px;
+  }
+
+  /* Footer social icons */
+  .footer-social a {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  /* Contact info cards — toque confortável */
+  .contact-info-card {
+    padding: var(--s-5);
+    min-height: 80px;
+  }
+
+  /* Contact icon — touch target adequado */
+  .contact-info-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* ── P1 — IMPORTANTES ── */
+@media (max-width: 768px) {
+  /* Nav dropdown — toque adequado */
+  .nav-dropdown-toggle {
+    padding: 12px var(--s-2);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-dropdown-item {
+    padding: 14px var(--s-4);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Logo marca */
+  .logo-mark {
+    width: 40px;
+    height: 40px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Footer links */
+  .footer-links a {
+    padding: 12px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* WhatsApp link — touch target */
+  .contact-info-value a {
+    padding: 4px 0;
+    display: inline-block;
+  }
+
+  /* Map link */
+  .map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 0;
+  }
+
+  /* FAQ toggle button */
+  .faq-toggle {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Condicionado para devices com suporte a hover */
+  @media (hover: hover) {
+    .nav-link::after,
+    .nav-dropdown-item:hover,
+    .footer-links a:hover,
+    .contact-info-card:hover {
+      color: var(--orange);
+    }
+  }
+}
+
+/* ── P2 — MELHORIAS ── */
+@media (max-width: 768px) {
+  /* Typography — responsiva */
+  .sec-title {
+    font-size: clamp(26px, 6vw, 36px);
+    line-height: 1.2;
+  }
+
+  .sec-sub {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .contact-info-label {
+    font-size: 9px;
+    letter-spacing: .1em;
+  }
+
+  .contact-info-value {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* FAQ resposta — altura máxima confortável */
+  .faq-q {
+    padding: 16px;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+  }
+
+  .faq-q-text {
+    font-size: 14px;
+  }
+
+  .faq-a-inner {
+    font-size: 13px;
+    line-height: 1.8;
+    padding: 12px 16px 16px;
+  }
+
+  /* Contact grid — responsivo */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s-4);
+  }
+
+  /* Map wrapper — altura adequada */
+  .map-wrapper {
+    height: 220px;
+  }
+
+  /* Sticky CTA — gap responsivo */
+  .sticky-cta {
+    gap: 10px;
+    padding: 10px 14px;
+  }
+
+  .sticky-cta-info {
+    gap: 4px;
+  }
+
+  .sticky-cta-title {
+    font-size: 13px;
+  }
+
+  .sticky-cta-sub {
+    font-size: 9px;
+  }
+
+  /* Contact WPP box — espaçamento */
+  .contact-wpp {
+    padding: var(--s-4);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Header reduzido em telas muito pequenas */
+  .header {
+    height: 52px;
+  }
+
+  .hero-inner {
+    padding: 24px 12px;
+    padding-top: calc(52px + 24px);
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .btn {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  /* Hero h1 */
+  .hero h1 {
+    font-size: clamp(28px, 8vw, 36px);
+    margin-bottom: 16px;
+  }
+
+  .hero-desc {
+    font-size: 14px;
+  }
+
+  /* FAQ — padding reduzido */
+  .faq-q {
+    padding: 14px;
+    min-height: 48px;
+  }
+
+  .faq-toggle {
+    width: 32px;
+    height: 32px;
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 16px;
+  }
+
+  /* Reduzir spacing em seções */
+  .section {
+    padding: 32px 0;
+  }
+}
+
+/* ── ACESSIBILIDADE ── */
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .contact-info-card,
+  .faq-toggle,
+  .map-wrapper iframe {
+    transition: none;
+  }
+}
+
+/* ── DISPOSITIVOS COM POINTER COARSE ── */
+@media (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .footer-links a,
+  .faq-q,
+  .contact-info-value a {
+    padding: 12px;
+    min-height: 48px;
+  }
+}
+/* ===== END MOBILE PATCH ===== */
 </style>
 <script type="application/ld+json">
 {

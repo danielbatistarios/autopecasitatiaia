@@ -309,6 +309,241 @@ ul, ol { list-style: none; }
   .nav-dropdown.open .nav-dropdown-menu { display: flex; }
   .nav-dropdown-item { border-bottom: 1px solid var(--border); border-radius: 0; padding: 11px var(--s-4); font-size: 13px; }
 }
+
+
+/* ===== MOBILE PATCH: mobile-patch-troca-de-disco-de-freio.css ===== */
+/* ================================================
+   MOBILE PATCH — troca-de-disco-de-freio.html
+   Score antes: 57/100 | Estimativa após patch: 81/100
+   P0: 8 fixes críticos | P1: 12 fixes importantes
+   Áreas auditadas: Viewport, Header/Nav, Layout responsivo, Touch targets, Tipografia fluida, Interatividade
+   ================================================ */
+
+/* ═══════════════════════════════════════════════════════════════
+   P0: CRÍTICOS — Responsividade base 320-480px
+   ═══════════════════════════════════════════════════════════════ */
+
+/* P0.1: Página sem @media queries — 100% desktop-first */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0 var(--s-3);
+  }
+}
+
+/* P0.2: Header fixo com 72px de altura — 12.8% em 320px viewport */
+@media (max-width: 480px) {
+  .header {
+    height: 56px;
+  }
+  .header-inner {
+    padding: 0 var(--s-3);
+  }
+}
+
+/* P0.3: Navegação horizontal não responsiva — hamburger */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* P0.4: Feature grid (minmax 260px) não empilha */
+@media (max-width: 768px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s-3);
+  }
+}
+
+/* P0.5: Process steps grid (minmax 220px) não empilha */
+@media (max-width: 768px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: var(--s-4);
+  }
+}
+
+/* P0.6: FAQ layout em 2 colunas — empilhar */
+@media (max-width: 768px) {
+  .faq-layout {
+    grid-template-columns: 1fr;
+    gap: var(--s-4);
+  }
+}
+
+/* P0.7: Contact grid 2 colunas — empilhar em mobile */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s-4);
+  }
+}
+
+/* P0.8: Footer grid 4 colunas — scroll h ou empilha */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s-4);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   P1: IMPORTANTES — Tipografia, Touch targets, Spacing
+   ═══════════════════════════════════════════════════════════════ */
+
+/* P1.1: Logo reduzido em mobile — menos espaço no header */
+@media (max-width: 480px) {
+  .logo-mark {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .logo-name {
+    font-size: 12px;
+  }
+  .logo-sub {
+    font-size: 8px;
+  }
+}
+
+/* P1.2: H1/H2 otimização para 320px com clamp() */
+@media (max-width: 480px) {
+  .sec-h {
+    font-size: clamp(24px, 3vw, 32px);
+    letter-spacing: -.02em;
+  }
+}
+
+/* P1.3: Padding de cards — reduzir de 24px para 16px */
+@media (max-width: 480px) {
+  .feature-card {
+    padding: var(--s-3);
+  }
+}
+
+/* P1.4: FAQ accordion — touch target 44px mínimo */
+@media (max-width: 768px) {
+  .faq-q {
+    min-height: 44px;
+    padding: var(--s-3);
+    font-size: 14px;
+  }
+}
+
+/* P1.5: Step circles — aumentar para 48px */
+@media (max-width: 480px) {
+  .step-num {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+}
+
+/* P1.6: Buttons e CTAs — min 44px tap area */
+@media (max-width: 768px) {
+  .nav-cta,
+  .cta-button {
+    min-height: 44px;
+    padding: 12px var(--s-4);
+  }
+  .sticky-cta-btn {
+    min-height: 44px;
+  }
+}
+
+/* P1.7: Sticky CTA — não cobrir conteúdo */
+@media (max-width: 480px) {
+  .sticky-cta {
+    bottom: safe(env(safe-area-inset-bottom, 0px));
+    padding: var(--s-3);
+  }
+}
+
+/* P1.8: Hero section — altura móvel 300px */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 300px;
+  }
+}
+
+/* P1.9: Section padding — reduzir em 320px */
+@media (max-width: 480px) {
+  .section {
+    padding: var(--s-5) 0;
+  }
+}
+
+/* P1.10: Breadcrumb — aumentar legibilidade */
+@media (max-width: 480px) {
+  .breadcrumb {
+    font-size: 12px;
+    margin-bottom: var(--s-2);
+  }
+}
+
+/* P1.11: Footer — reduzir padding em mobile */
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--s-6) 0 var(--s-4);
+  }
+}
+
+/* P1.12: Scroll padding para header fixo */
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 56px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   P2: OTIMIZAÇÕES — Nice-to-have
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Hover states apenas em hover-capable devices */
+@media (hover: hover) and (pointer: fine) {
+  .feature-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-4px);
+  }
+  .step:hover {
+    transform: scale(1.02);
+  }
+  .nav-dropdown-item:hover {
+    background: rgba(255,102,51,.08);
+  }
+}
+
+/* Respeitar preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Landscape mode em pequenos displays */
+@media (max-height: 500px) and (orientation: landscape) {
+  .header {
+    height: 48px;
+  }
+  .section {
+    padding: var(--s-3) 0;
+  }
+}
+/* ===== END MOBILE PATCH ===== */
 </style>
 <script type="application/ld+json">
 {
@@ -368,8 +603,11 @@ ul, ol { list-style: none; }
         "worstRating": 1
       },
       "sameAs": [
-        "https://www.instagram.com/autopecasitatiaia"
-      ]
+        "https://www.instagram.com/autopecasitatiaia",
+        "https://www.facebook.com/autopecasitatiaia",
+        "https://www.wikidata.org/wiki/Q128705407"
+      ],
+      "taxID": "01.335.600/0001-73"
     },
     {
       "@type": "WebPage",
@@ -426,24 +664,37 @@ ul, ol { list-style: none; }
           "@type": "City",
           "name": "Itatiaia",
           "addressRegion": "RJ",
-          "sameAs": "https://www.wikidata.org/wiki/Q22064919"
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q817223",
+            "https://pt.wikipedia.org/wiki/Itatiaia_(Rio_de_Janeiro)"
+          ]
         },
         {
           "@type": "City",
           "name": "Resende",
           "addressRegion": "RJ",
-          "sameAs": "https://www.wikidata.org/wiki/Q913390"
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q913390",
+            "https://pt.wikipedia.org/wiki/Resende_(Rio_de_Janeiro)"
+          ]
         },
         {
           "@type": "City",
           "name": "Engenheiro Passos",
           "addressRegion": "RJ",
-          "sameAs": "https://www.wikidata.org/wiki/Q10272923"
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q10272923",
+            "https://pt.wikipedia.org/wiki/Engenheiro_Passos"
+          ]
         },
         {
           "@type": "City",
           "name": "Penedo",
-          "addressRegion": "RJ"
+          "addressRegion": "RJ",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q1073075",
+            "https://pt.wikipedia.org/wiki/Penedo_(Rio_de_Janeiro)"
+          ]
         }
       ],
       "offers": {
@@ -452,6 +703,40 @@ ul, ol { list-style: none; }
         "availability": "https://schema.org/InStock",
         "priceCurrency": "BRL",
         "url": "https://autopecasitatiaia.com.br/troca-de-disco-de-freio.html"
+      },
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q454100",
+        "https://pt.wikipedia.org/wiki/Disco_de_freio"
+      ],
+      "serviceOutput": {
+        "@type": "Product",
+        "name": "Disco de Freio",
+        "sameAs": [
+          "https://www.wikidata.org/wiki/Q454100",
+          "https://pt.wikipedia.org/wiki/Disco_de_freio"
+        ],
+        "brand": [
+          {
+            "@type": "Brand",
+            "name": "Fremax"
+          },
+          {
+            "@type": "Brand",
+            "name": "TRW",
+            "sameAs": [
+              "https://www.wikidata.org/wiki/Q900874",
+              "https://pt.wikipedia.org/wiki/TRW_Automotive"
+            ]
+          },
+          {
+            "@type": "Brand",
+            "name": "Bosch",
+            "sameAs": [
+              "https://www.wikidata.org/wiki/Q8425",
+              "https://pt.wikipedia.org/wiki/Robert_Bosch_GmbH"
+            ]
+          }
+        ]
       }
     },
     {

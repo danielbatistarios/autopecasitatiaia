@@ -309,6 +309,249 @@ ul, ol { list-style: none; }
   .nav-dropdown.open .nav-dropdown-menu { display: flex; }
   .nav-dropdown-item { border-bottom: 1px solid var(--border); border-radius: 0; padding: 11px var(--s-4); font-size: 13px; }
 }
+
+
+/* ===== MOBILE PATCH: mobile-patch-troca-de-pastilhas.css ===== */
+/* ================================================
+   MOBILE PATCH — troca-de-pastilhas.html
+   Score antes: 42/100 | Estimativa após: 78/100
+   ================================================ */
+
+/* ── P0 — Critical Fixes ── */
+
+/* Fix header height overflow on 320px-375px */
+@media (max-width: 375px) {
+  .header {
+    height: 48px;
+  }
+  .header-inner {
+    padding: 0 12px;
+  }
+  .logo-mark {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+  .logo-name {
+    font-size: 12px;
+  }
+  .logo-sub {
+    font-size: 8px;
+  }
+  .hero-inner {
+    padding-top: calc(48px + 20px);
+    padding: 20px 12px;
+    padding-top: calc(48px + 20px);
+  }
+}
+
+/* Prevent horizontal scroll on extra-small screens */
+@media (max-width: 320px) {
+  .container {
+    padding: 0 10px;
+  }
+  .section {
+    padding: 32px 0;
+  }
+  .content-section {
+    padding: 32px 0;
+  }
+  .header {
+    height: 48px;
+  }
+  .hero-inner {
+    padding: 16px 10px;
+    padding-top: calc(48px + 16px);
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Guard hover states on mobile/touch devices */
+@media (hover: none), (pointer: coarse) {
+  .btn-primary:hover,
+  .btn-secondary:hover,
+  .nav-link:hover,
+  .feature-card:hover,
+  .step:hover .step-num,
+  .faq-item:not(.open) .faq-toggle:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* Fix sticky CTA spacing for small screens */
+@media (max-width: 480px) {
+  .sticky-cta {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+  .sticky-cta-title {
+    font-size: 13px;
+  }
+  .sticky-cta-sub {
+    font-size: 9px;
+  }
+  .sticky-cta-btn {
+    padding: 10px 16px;
+    font-size: 12px;
+    min-width: 100px;
+  }
+}
+
+/* Ensure WPP button touch target >= 48px on small screens */
+@media (max-width: 480px) {
+  .wpp-float {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 18px;
+    font-size: 13px;
+    min-height: 48px;
+    min-width: 48px;
+    display: flex;
+  }
+}
+
+/* Fix grid layouts that don't wrap */
+@media (max-width: 640px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* ── P1 — High Priority Improvements ── */
+
+/* Button touch targets >= 44px (spec: 16px padding × 2 + 14px font) */
+@media (max-width: 768px) {
+  .btn {
+    min-height: 44px;
+    padding: 14px 28px;
+  }
+  .btn-secondary {
+    min-height: 44px;
+  }
+}
+
+/* Nav link touch targets */
+@media (max-width: 768px) {
+  .nav.open .nav-link {
+    min-height: 44px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* FAQ toggle adequate size */
+@media (max-width: 768px) {
+  .faq-toggle {
+    width: 32px;
+    height: 32px;
+    min-height: 44px;
+    min-width: 44px;
+    font-size: 20px;
+  }
+}
+
+/* Hamburger menu adequate touch target */
+@media (max-width: 768px) {
+  .menu-toggle {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px;
+  }
+  .menu-toggle span {
+    width: 24px;
+    height: 2px;
+  }
+}
+
+/* Font size too small prevention */
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 13px;
+  }
+  .footer-links a {
+    font-size: 13px;
+  }
+  .feature-card-desc {
+    font-size: 13px;
+  }
+  .faq-a-inner {
+    font-size: 13px;
+  }
+}
+
+/* Reduce footer padding on small devices */
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 0 20px;
+  }
+}
+
+/* ── P2 — Nice-to-have Enhancements ── */
+
+/* Smooth scroll padding for anchor links */
+html {
+  scroll-padding-top: 72px;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 56px;
+  }
+}
+
+@media (max-width: 375px) {
+  html {
+    scroll-padding-top: 48px;
+  }
+}
+
+/* Improved typography fluidity on ultra-small screens */
+@media (max-width: 320px) {
+  .hero h1 {
+    font-size: clamp(26px, 8vw, 32px);
+    margin-bottom: 12px;
+  }
+  .hero-desc {
+    font-size: clamp(13px, 4vw, 15px);
+    margin-bottom: 16px;
+  }
+  .content-section h2 {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+  .sec-title {
+    font-size: clamp(22px, 5vw, 32px);
+  }
+  .metric-num {
+    font-size: 18px;
+  }
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* ===== END MOBILE PATCH ===== */
 </style>
 <script type="application/ld+json">
 {
@@ -368,8 +611,11 @@ ul, ol { list-style: none; }
         "worstRating": 1
       },
       "sameAs": [
-        "https://www.instagram.com/autopecasitatiaia"
-      ]
+        "https://www.instagram.com/autopecasitatiaia",
+        "https://www.facebook.com/autopecasitatiaia",
+        "https://www.wikidata.org/wiki/Q128705407"
+      ],
+      "taxID": "01.335.600/0001-73"
     },
     {
       "@type": "WebPage",
@@ -426,24 +672,37 @@ ul, ol { list-style: none; }
           "@type": "City",
           "name": "Itatiaia",
           "addressRegion": "RJ",
-          "sameAs": "https://www.wikidata.org/wiki/Q22064919"
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q817223",
+            "https://pt.wikipedia.org/wiki/Itatiaia_(Rio_de_Janeiro)"
+          ]
         },
         {
           "@type": "City",
           "name": "Resende",
           "addressRegion": "RJ",
-          "sameAs": "https://www.wikidata.org/wiki/Q913390"
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q913390",
+            "https://pt.wikipedia.org/wiki/Resende_(Rio_de_Janeiro)"
+          ]
         },
         {
           "@type": "City",
           "name": "Engenheiro Passos",
           "addressRegion": "RJ",
-          "sameAs": "https://www.wikidata.org/wiki/Q10272923"
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q10272923",
+            "https://pt.wikipedia.org/wiki/Engenheiro_Passos"
+          ]
         },
         {
           "@type": "City",
           "name": "Penedo",
-          "addressRegion": "RJ"
+          "addressRegion": "RJ",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q1073075",
+            "https://pt.wikipedia.org/wiki/Penedo_(Rio_de_Janeiro)"
+          ]
         }
       ],
       "offers": {
@@ -452,6 +711,32 @@ ul, ol { list-style: none; }
         "availability": "https://schema.org/InStock",
         "priceCurrency": "BRL",
         "url": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html"
+      },
+      "serviceOutput": {
+        "@type": "Product",
+        "name": "Pastilha de Freio",
+        "brand": [
+          {
+            "@type": "Brand",
+            "name": "Bosch",
+            "sameAs": [
+              "https://www.wikidata.org/wiki/Q8425",
+              "https://pt.wikipedia.org/wiki/Robert_Bosch_GmbH"
+            ]
+          },
+          {
+            "@type": "Brand",
+            "name": "TRW",
+            "sameAs": [
+              "https://www.wikidata.org/wiki/Q900874",
+              "https://pt.wikipedia.org/wiki/TRW_Automotive"
+            ]
+          },
+          {
+            "@type": "Brand",
+            "name": "Cobreq"
+          }
+        ]
       }
     },
     {

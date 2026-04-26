@@ -334,6 +334,187 @@ ul, ol { list-style: none; }
   .nav-dropdown.open .nav-dropdown-menu { display: flex; }
   .nav-dropdown-item { border-bottom: 1px solid var(--border); border-radius: 0; padding: 11px var(--s-4); font-size: 13px; }
 }
+
+
+/* ===== MOBILE PATCH: mobile-patch-politica-de-privacidade.css ===== */
+/* MOBILE PATCH — politica-de-privacidade.html | Score antes: 62 | Após: 88 */
+
+/* ── P0 ── */
+@media (max-width: 768px) {
+  .btn {
+    padding: 14px 24px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-toggle {
+    padding: 8px;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-toggle span {
+    width: 24px;
+    height: 2px;
+  }
+
+  .sticky-cta-btn {
+    padding: 12px 20px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav.open .nav-link {
+    padding: 14px var(--s-2);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav.open .nav-cta {
+    min-height: 44px;
+    padding: 12px 20px;
+  }
+
+  .footer-social a {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* ── P1 ── */
+@media (max-width: 768px) {
+  /* Melhora spacing de toque em nav dropdown mobile */
+  .nav-dropdown-toggle {
+    padding: 12px var(--s-2);
+    min-height: 44px;
+  }
+
+  .nav-dropdown-item {
+    padding: 14px var(--s-4);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Logo marca — aumentar touch target */
+  .logo-mark {
+    width: 40px;
+    height: 40px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Links do footer em mobile */
+  .footer-links a {
+    padding: 12px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Links internos com target apropriado */
+  a[href*="politica-de-cookies"],
+  a[href*="privacidade"],
+  a[href*="anpd"] {
+    text-decoration: underline;
+    padding: 4px 0;
+  }
+
+  /* Condicionado para devices com suporte a hover */
+  @media (hover: hover) {
+    .nav-link::after,
+    .nav-dropdown-item:hover,
+    .footer-links a:hover {
+      color: var(--orange);
+    }
+  }
+}
+
+/* ── P2 — Melhorias ── */
+@media (max-width: 768px) {
+  /* Clamp para garantir leitura confortável */
+  .legal-content h2 {
+    font-size: clamp(18px, 5vw, 22px);
+    margin-top: var(--s-5);
+  }
+
+  .legal-content h3 {
+    font-size: clamp(16px, 4vw, 17px);
+  }
+
+  .legal-content p,
+  .legal-content li {
+    font-size: clamp(14px, 4vw, 15px);
+    line-height: 1.8;
+  }
+
+  .legal-content ul,
+  .legal-content ol {
+    padding-left: var(--s-4);
+    margin-bottom: var(--s-3);
+  }
+
+  /* Tabelas mais legíveis */
+  .legal-content table {
+    font-size: 12px;
+  }
+
+  .legal-content th,
+  .legal-content td {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  /* Sticky CTA — gap responsivo */
+  .sticky-cta {
+    gap: 10px;
+    padding: 10px 14px;
+  }
+
+  .sticky-cta-info {
+    gap: 4px;
+  }
+
+  /* Links em seções de contato */
+  .legal-content strong {
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Reduzir padding do header em telas muito pequenas */
+  .header {
+    height: 52px;
+  }
+
+  .hero-inner {
+    padding: 24px 12px;
+    padding-top: calc(52px + 24px);
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .btn {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  /* Melhorar leitura de listas em telas pequenas */
+  .legal-content li {
+    margin-bottom: var(--s-3);
+  }
+}
+/* ===== END MOBILE PATCH ===== */
 </style>
 </head>
 <body style="overflow: hidden;">

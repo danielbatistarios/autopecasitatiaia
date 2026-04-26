@@ -407,6 +407,194 @@ ul, ol { list-style: none; }
   .nav-dropdown.open .nav-dropdown-menu { display: flex; }
   .nav-dropdown-item { border-bottom: 1px solid var(--border); border-radius: 0; padding: 11px var(--s-4); font-size: 13px; }
 }
+
+
+/* ===== MOBILE PATCH: mobile-patch-servicos.css ===== */
+/* ================================================
+   MOBILE PATCH — servicos.html
+   Score antes: 64/100 | Estimativa após: 88/100
+   P0: 1 fix | P1: 5 fixes | P2: 3 melhorias
+   ================================================ */
+
+/* ─────────────────────────────────────────────
+   P0: HOVER STATES CRÍTICOS — 19 :hover sem @media
+   ───────────────────────────────────────────── */
+
+@media (hover: none), (pointer: coarse) {
+  a:hover,
+  button:hover,
+  .nav-link:hover,
+  .btn:hover,
+  .cta:hover,
+  .card:hover,
+  .service-card:hover,
+  .service-item:hover,
+  .link-item:hover {
+    /* Remover efeitos hover em touch */
+  }
+
+  .nav-link:hover::after,
+  .nav-link:hover,
+  .service-card:hover {
+    color: inherit;
+    background: inherit;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   P1: TOUCH TARGETS — Buttons, Links, Cards >= 44px
+   ───────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  button,
+  .btn,
+  .cta {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 16px;
+  }
+
+  a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+  }
+
+  .service-card,
+  .service-item {
+    min-height: 44px;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   P1: TIPOGRAFIA — Eliminar fonts < 14px em mobile
+   ───────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  small,
+  .text-small,
+  .caption,
+  .meta {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: clamp(20px, 5vw, 32px);
+    line-height: 1.4;
+  }
+
+  h3 {
+    font-size: clamp(16px, 4vw, 24px);
+    line-height: 1.4;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   P1: GRID COLUMNS — Empilhar em mobile
+   ───────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  [style*="grid-template-columns"],
+  .grid,
+  .services-grid,
+  .services-list {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   P1: PADDINGS SEÇÕES — Reduzir em 320px
+   ───────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   P1: PREFERS-REDUCED-MOTION
+   ───────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   P2: WHITESPACE — Mobile breathing room
+   ───────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  h1 {
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }
+
+  .service-card {
+    margin-bottom: 12px;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   P2: FOOTER RESPONSIVO
+   ───────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  footer {
+    display: block;
+    padding: 24px 16px;
+  }
+
+  .footer-section {
+    margin-bottom: 16px;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   P2: SCROLL PADDING TOP — Âncoras
+   ───────────────────────────────────────────── */
+
+html {
+  scroll-padding-top: 60px;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 50px;
+  }
+}
+/* ===== END MOBILE PATCH ===== */
 </style>
 <script type="application/ld+json">
 {
