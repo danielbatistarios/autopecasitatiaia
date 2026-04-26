@@ -724,6 +724,48 @@ ul, ol { list-style: none; }
   </div>
 </section>
 
+<section class="content-section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="reveal" style="max-width:720px;">
+      <div class="sec-label">Guia</div>
+      <h2>Troca de Disco de Freio em Itatiaia: Tudo que Você Precisa Saber</h2>
+      <p style="margin-top:var(--s-4);color:var(--text-secondary);">Espessura mínima, sinais de desgaste e por que as descidas da Serra de Itatiaia destroem discos mais rápido do que o normal.</p>
+    </div>
+    <div style="max-width:720px;margin-top:var(--s-6);">
+      <p class="reveal">O disco de freio trabalha convertendo energia cinética em calor. Em cada frenagem, as pastilhas comprimem o disco e geram atrito. Com o tempo, o disco perde espessura e a capacidade de dissipar calor cai junto. Um disco abaixo da espessura mínima pode trincar em frenagem de emergência.</p>
+      <p class="reveal">Em Itatiaia, as descidas da Serra da Bocaina e o trecho entre o Parque Nacional e a RJ-163 exigem frenagens prolongadas que aquecem os discos acima de 400°C. Esse ciclo térmico repetido acelera o desgaste e aumenta o risco de empenamento. Veículos que fazem esse trajeto diariamente devem verificar os discos a cada 20.000 km.</p>
+    </div>
+    <div id="artigo-disco" style="max-width:720px;overflow:hidden;max-height:0;transition:max-height .5s ease;">
+      <h3>Qual a Espessura Mínima do Disco de Freio</h3>
+      <p>Cada disco tem gravada na lateral sua espessura mínima de uso, chamada de "discard thickness". Quando o disco atinge esse limite, a troca é obrigatória. Valores comuns:</p>
+      <ul style="margin:var(--s-4) 0 var(--s-4) var(--s-5);line-height:1.9;">
+        <li>Discos dianteiros de carros compactos: espessura mínima entre 20 e 22 mm</li>
+        <li>Discos traseiros: geralmente 2 mm abaixo da espessura original</li>
+        <li>Discos ventilados (SUVs e picapes): verificar manual do fabricante</li>
+      </ul>
+      <h3>Sinais de que o Disco Precisa ser Trocado</h3>
+      <ul style="margin:var(--s-4) 0 var(--s-4) var(--s-5);line-height:1.9;">
+        <li>Vibração no pedal de freio ou no volante ao frear</li>
+        <li>Risco ou sulco visível na face do disco</li>
+        <li>Chiado metálico constante ao frear (pastilha no metal)</li>
+        <li>Carro puxa para um lado ao acionar o freio</li>
+        <li>Aumento do curso do pedal antes de o carro desacelerar</li>
+      </ul>
+      <h3>Trocar Disco e Pastilha Juntos ou Separados</h3>
+      <p>A regra geral é: se o disco está sendo trocado, as pastilhas do mesmo eixo também devem ser trocadas. Pastilhas velhas têm um perfil de desgaste que não se adapta bem ao disco novo, o que reduz a eficiência de frenagem nas primeiras semanas. Trocar os dois juntos garante contato uniforme desde o início.</p>
+      <h3>Troca de Disco de Freio em Itatiaia: Onde Fazer</h3>
+      <p>A Autopeças Itatiaia trabalha com discos de marcas homologadas pelo Inmetro. Fazemos a troca com alinhamento e verificação do sistema de freios completo. Atendemos em Itatiaia, Penedo, Engenheiro Passos e Vale das Videiras.</p>
+    </div>
+    <button
+      id="btn-ver-mais-disco"
+      onclick="(function(){var el=document.getElementById('artigo-disco');var btn=document.getElementById('btn-ver-mais-disco');var aberto=el.style.maxHeight!=='0px'&&el.style.maxHeight!=='';if(aberto){el.style.maxHeight='0';btn.innerHTML='Ver mais &#8595;';}else{el.style.maxHeight=el.scrollHeight+'px';btn.innerHTML='Ver menos &#8593;';}})()"
+      style="margin-top:var(--s-6);background:none;border:1px solid var(--border-orange);color:var(--orange);font-family:var(--font-mono);font-size:.8rem;letter-spacing:.08em;padding:var(--s-3) var(--s-5);border-radius:var(--r-full);cursor:pointer;transition:background .2s;"
+      onmouseover="this.style.background='var(--orange-soft)'"
+      onmouseout="this.style.background='none'"
+    >Ver mais &#8595;</button>
+  </div>
+</section>
+
 <section class="section">
   <div class="container">
     <div class="reveal"><div class="sec-label">Contato</div><h2 class="sec-title">Localização e Contato</h2></div>
