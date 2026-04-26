@@ -850,7 +850,8 @@ ul, ol { list-style: none; }
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 <script>
 /* LOADER */
-window.addEventListener('DOMContentLoaded', () => {
+/* DOM already ready — scripts at end of body */
+{
   const loader = document.getElementById('loader');
   const phrase = document.getElementById('loaderPhrase');
   const line = document.getElementById('loaderLine');
@@ -866,7 +867,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
     setTimeout(() => { loader.style.display = 'none'; initAnimations(); }, 700);
   }, 300 + words.length * 280 + 1000);
-});
+}
 const lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
 function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
 requestAnimationFrame(raf);

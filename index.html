@@ -2872,7 +2872,8 @@ ul, ol { list-style: none; }
      ============================================================ -->
 <script>
 /* ── LOADER ────────────────────────────────────────────────── */
-window.addEventListener('DOMContentLoaded', () => {
+/* DOM already ready — scripts at end of body */
+{
   const loader = document.getElementById('loader');
   const phrase = document.getElementById('loaderPhrase');
   const line = document.getElementById('loaderLine');

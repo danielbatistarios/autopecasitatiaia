@@ -581,7 +581,8 @@ ul, ol { list-style: none; }
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 <script>
-window.addEventListener('DOMContentLoaded', () => {
+/* DOM already ready — scripts at end of body */
+{
   const loader = document.getElementById('loader');
   const phrase = document.getElementById('loaderPhrase');
   const line = document.getElementById('loaderLine');
