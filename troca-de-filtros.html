@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Troca de Filtros em Itatiaia | Auto Peças Itatiaia</title>
-<meta name="description" content="Troca de filtros em Itatiaia: óleo, ar, combustível e cabine. Tecfil, Mann, Wega e Mahle. Inspeção gratuita. Auto Peças Itatiaia (24) 99309-9190.">
+<title>Troca de Filtros Itatiaia | 4 Tipos, Pronta Entrega</title>
+<meta name="description" content="Filtros de óleo, ar, combustível e cabine em Itatiaia. Tecfil, Mann, Wega e Mahle. Inspeção grátis. Estradas de terra desgastam filtro de ar mais rápido.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://autopecasitatiaia.com.br/troca-de-filtros.html">
 <meta property="og:title" content="Troca de Filtros em Itatiaia | Auto Pecas Itatiaia">
@@ -13,12 +13,327 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://autopecasitatiaia.com.br/troca-de-filtros.html">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/playfair-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
+<style>
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url('/assets/fonts/inter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/assets/fonts/space-grotesk-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700 900;
+  font-display: swap;
+  src: url('/assets/fonts/playfair-normal-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 700 800;
+  font-display: swap;
+  src: url('/assets/fonts/playfair-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+:root {
+  --orange: #FF6633;
+  --orange-hover: #FF7A4D;
+  --orange-soft: rgba(255, 102, 51, .08);
+  --orange-glow: rgba(255, 102, 51, .15);
+  --orange-border: rgba(255, 102, 51, .2);
+  --green-wpp: #25D366;
+  --green-wpp-hover: #1ebe5d;
+  --bg-primary: #000000;
+  --bg-secondary: #0A0A0A;
+  --bg-card: #111111;
+  --bg-card-hover: #1A1A1A;
+  --bg-elevated: #151515;
+  --bg-glass: rgba(10, 10, 10, .85);
+  --border: rgba(255, 255, 255, .06);
+  --border-hover: rgba(255, 255, 255, .12);
+  --border-orange: rgba(255, 102, 51, .25);
+  --text-primary: #FAFAFA;
+  --text-secondary: #999999;
+  --text-tertiary: #666666;
+  --text-muted: #444444;
+  --font-display: 'Inter', -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-mono: 'Space Grotesk', monospace;
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px;
+  --s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 80px; --s-10: 120px;
+  --r-sm: 6px; --r-md: 12px; --r-lg: 20px; --r-xl: 28px; --r-full: 100px;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,.3);
+  --shadow-md: 0 8px 32px rgba(0,0,0,.4);
+  --shadow-lg: 0 24px 64px rgba(0,0,0,.5);
+  --shadow-orange: 0 8px 32px rgba(255,102,51,.25);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+  --duration-fast: .2s;
+  --duration-normal: .4s;
+  --duration-slow: .7s;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: auto; -webkit-font-smoothing: antialiased; }
+body { background: var(--bg-primary); color: var(--text-secondary); font-family: var(--font-display); font-size: 16px; line-height: 1.6; overflow-x: hidden; cursor: none; }
+a { color: inherit; text-decoration: none; cursor: none; }
+img { max-width: 100%; display: block; }
+button { border: none; background: none; cursor: none; font-family: inherit; }
+ul, ol { list-style: none; }
+.loader { position: fixed; inset: 0; background: var(--bg-primary); z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 32px; }
+.loader-phrase { font-family: var(--font-serif); font-size: clamp(24px, 5vw, 48px); font-style: italic; color: rgba(255, 255, 255, .9); letter-spacing: .01em; text-align: center; max-width: 650px; padding: 0 24px; }
+.loader-phrase span { display: inline-block; opacity: 0; transform: translateY(14px); transition: opacity .45s ease, transform .45s ease; }
+.loader-phrase span.visible { opacity: 1; transform: translateY(0); }
+.loader-line { width: 56px; height: 1px; background: rgba(255, 255, 255, .1); position: relative; overflow: hidden; }
+.loader-line::after { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 0%; background: var(--orange); transition: width 2s var(--ease-out); }
+.loader-line.active::after { width: 100%; }
+.loader-brand { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--orange); opacity: 0; transition: opacity .6s ease .3s; }
+.loader-brand.visible { opacity: 1; }
+.loader.done { opacity: 0; transition: opacity .7s ease; pointer-events: none; }
+.cursor { position: fixed; width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid var(--orange); pointer-events: none; z-index: 10000; transition: width .3s var(--ease-out), height .3s var(--ease-out), border-color .3s, background .3s, opacity .3s; transform: translate(-50%, -50%); mix-blend-mode: difference; background: transparent; }
+.cursor.hover { width: 60px; height: 60px; background: rgba(255, 102, 51, .12); border-color: var(--orange-hover); }
+.cursor-label { position: fixed; pointer-events: none; z-index: 10001; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #fff; opacity: 0; transition: opacity .25s; transform: translate(-50%, -50%); font-family: var(--font-mono); }
+.cursor-label.visible { opacity: 1; }
+@média (hover: none), (pointer: coarse) { .cursor, .cursor-label { display: none !important; } body, a, button { cursor: auto; } }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes marqueeReverse { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+@keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, .4); } 50% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); } }
+@keyframes scrollLine { 0% { top: -50%; } 100% { top: 150%; } }
+@keyframes grain { 0%, 100% { transform: translate(0, 0); } 10% { transform: translate(-5%, -10%); } 30% { transform: translate(3%, -15%); } 50% { transform: translate(12%, 9%); } 70% { transform: translate(9%, 4%); } 90% { transform: translate(-1%, 7%); } }
+.noise::before { content: ''; position: absolute; inset: -50%; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E"); animation: grain 8s steps(10) infinite; pointer-events: none; z-index: 1; }
+.reveal { opacity: 0; transform: translateY(40px); }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 var(--s-7); }
+.section { padding: var(--s-10) 0; position: relative; }
+.header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: 72px; display: flex; align-items: center; background: transparent; transition: background var(--duration-normal), border-color var(--duration-normal); border-bottom: 1px solid transparent; }
+.header.scrolled { background: var(--bg-glass); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border-bottom-color: var(--border); }
+.header-inner { max-width: 1280px; margin: 0 auto; padding: 0 var(--s-7); width: 100%; display: flex; align-items: center; justify-content: space-between; }
+.logo { display: flex; align-items: center; gap: var(--s-3); }
+.logo-mark { width: 40px; height: 40px; background: var(--orange); border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: var(--bg-primary); letter-spacing: -.02em; }
+.logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+.logo-name { font-weight: 800; font-size: 15px; color: var(--text-primary); letter-spacing: -.02em; }
+.logo-sub { font-family: var(--font-mono); font-size: 10px; color: var(--text-tertiary); letter-spacing: .08em; text-transform: uppercase; }
+.nav { display: flex; align-items: center; gap: var(--s-6); }
+.nav-link { font-size: 13px; font-weight: 500; color: var(--text-secondary); letter-spacing: .02em; transition: color var(--duration-fast); position: relative; }
+.nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px; background: var(--orange); transition: width var(--duration-normal) var(--ease-out); }
+.nav-link:hover { color: var(--text-primary); }
+.nav-link:hover::after { width: 100%; }
+.nav-link.active { color: var(--orange); }
+.nav-link.active::after { width: 100%; }
+.nav-cta { background: var(--orange); color: var(--bg-primary); font-weight: 700; font-size: 13px; padding: 10px 22px; border-radius: var(--r-full); letter-spacing: .02em; transition: background var(--duration-fast), transform var(--duration-fast); position: relative; overflow: hidden; }
+.nav-cta::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent); transition: left .5s; }
+.nav-cta:hover { background: var(--orange-hover); transform: translateY(-1px); }
+.nav-cta:hover::before { left: 100%; }
+.menu-toggle { display: none; flex-direction: column; gap: 5px; padding: 4px; z-index: 1001; }
+.menu-toggle span { width: 24px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: all .3s var(--ease-out); }
+.menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.menu-toggle.active span:nth-child(2) { opacity: 0; }
+.menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+.hero { position: relative; min-height: 70vh; display: flex; align-items: center; overflow: hidden; background: var(--bg-primary); }
+.hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(255, 102, 51, .08) 0%, transparent 70%), radial-gradient(ellipse 60% 80% at 20% 80%, rgba(255, 102, 51, .05) 0%, transparent 60%); will-change: transform; }
+.hero-grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px); background-size: 80px 80px; }
+.hero-inner { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: var(--s-9) var(--s-7); padding-top: calc(72px + var(--s-9)); width: 100%; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: var(--s-2); font-family: var(--font-mono); font-size: 12px; font-weight: 500; color: var(--text-tertiary); letter-spacing: .1em; text-transform: uppercase; margin-bottom: var(--s-5); opacity: 0; }
+.hero-eyebrow .dot { width: 6px; height: 6px; background: var(--orange); border-radius: 50%; }
+.hero h1 { font-family: var(--font-display); font-size: clamp(40px, 5.5vw, 72px); font-weight: 900; line-height: .95; letter-spacing: -.04em; color: var(--text-primary); margin-bottom: var(--s-6); opacity: 0; }
+.hero h1 .highlight { color: var(--orange); position: relative; display: inline-block; }
+.hero h1 .highlight::after { content: ''; position: absolute; bottom: 2px; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--orange), transparent); transform: scaleX(0); transform-origin: left; }
+.hero-desc { font-size: 18px; font-weight: 300; color: var(--text-secondary); line-height: 1.7; max-width: 620px; margin-bottom: var(--s-7); opacity: 0; }
+.hero-desc strong { color: var(--text-primary); font-weight: 600; }
+.hero-actions { display: flex; gap: var(--s-4); flex-wrap: wrap; margin-bottom: var(--s-7); opacity: 0; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--s-3); font-weight: 700; font-size: 15px; padding: 16px 32px; border-radius: var(--r-full); transition: all var(--duration-fast) var(--ease-out); white-space: nowrap; position: relative; overflow: hidden; }
+.btn-primary::before, .btn-wpp::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent); transition: left .5s; }
+.btn-primary:hover::before, .btn-wpp:hover::before { left: 100%; }
+.btn-primary { background: var(--orange); color: var(--bg-primary); box-shadow: var(--shadow-orange); }
+.btn-primary:hover { background: var(--orange-hover); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(255,102,51,.35); }
+.btn-secondary { background: transparent; color: var(--text-primary); border: 1px solid var(--border-hover); }
+.btn-secondary:hover { border-color: var(--orange-border); background: var(--orange-soft); }
+.btn-wpp { background: var(--green-wpp); color: #fff; box-shadow: 0 8px 32px rgba(37, 211, 102, .3); }
+.btn-wpp:hover { background: var(--green-wpp-hover); transform: translateY(-2px); }
+.hero-metrics { display: flex; gap: var(--s-7); opacity: 0; }
+.metric { display: flex; flex-direction: column; }
+.metric-num { font-family: var(--font-display); font-size: 28px; font-weight: 900; color: var(--text-primary); letter-spacing: -.02em; line-height: 1; }
+.metric-num .accent { color: var(--orange); }
+.metric-label { font-family: var(--font-mono); font-size: 11px; color: var(--text-tertiary); letter-spacing: .06em; text-transform: uppercase; margin-top: var(--s-1); }
+.marquee-strip { background: var(--orange); padding: 14px 0; overflow: hidden; }
+.marquee-track { display: flex; white-space: nowrap; animation: marquee 30s linear infinite; width: max-content; }
+.marquee-item { display: inline-flex; align-items: center; gap: 14px; padding: 0 24px; font-family: var(--font-display); font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--bg-primary); }
+.marquee-sep { width: 5px; height: 5px; background: rgba(0,0,0,.25); border-radius: 50%; flex-shrink: 0; }
+.content-section { padding: var(--s-9) 0; position: relative; }
+.content-section:nth-child(even) { background: var(--bg-secondary); }
+.content-section h2 { font-family: var(--font-display); font-size: clamp(28px, 3.5vw, 42px); font-weight: 900; letter-spacing: -.03em; color: var(--text-primary); line-height: 1.05; margin-bottom: var(--s-5); }
+.content-section h3 { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--text-primary); margin-bottom: var(--s-3); }
+.content-section p { font-size: 16px; color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--s-5); }
+.content-section p strong { color: var(--text-primary); font-weight: 600; }
+.content-section ul { margin-bottom: var(--s-5); }
+.content-section ul li { font-size: 15px; color: var(--text-secondary); line-height: 1.7; padding: 8px 0; padding-left: 28px; position: relative; border-bottom: 1px solid var(--border); }
+.content-section ul li::before { content: ''; position: absolute; left: 0; top: 16px; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
+.content-section a { color: var(--orange); border-bottom: 1px solid rgba(255,102,51,.3); transition: border-color var(--duration-fast); }
+.content-section a:hover { border-bottom-color: var(--orange); }
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--s-4); margin-top: var(--s-6); }
+.feature-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-md); padding: var(--s-6); transition: all var(--duration-normal); }
+.feature-card:hover { border-color: var(--orange-border); transform: translateY(-3px); }
+.feature-card-icon { font-size: 28px; margin-bottom: var(--s-4); display: block; }
+.feature-card-title { font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: var(--s-2); }
+.feature-card-desc { font-size: 14px; color: var(--text-tertiary); line-height: 1.7; }
+.process-steps { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--s-5); margin-top: var(--s-7); }
+.step { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1; }
+.step-num { width: 54px; height: 54px; border-radius: 50%; background: var(--orange); color: var(--bg-primary); font-weight: 900; font-size: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--s-5); box-shadow: 0 0 0 5px var(--bg-primary), 0 0 0 7px var(--orange-border); transition: all var(--duration-normal); }
+.step:hover .step-num { box-shadow: 0 0 0 5px var(--bg-primary), 0 0 0 12px rgba(255,102,51,.3); transform: scale(1.08); }
+.step-card { background: var(--orange-soft); border: 1px solid var(--orange-border); border-top: 3px solid var(--orange); border-radius: var(--r-md); padding: var(--s-6) var(--s-5); width: 100%; transition: all var(--duration-normal); }
+.step:hover .step-card { background: var(--orange-glow); transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.step-title { font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: var(--s-2); }
+.step-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+.step-desc strong { color: var(--orange); }
+.sec-label { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-bottom: var(--s-3); display: flex; align-items: center; gap: var(--s-3); }
+.sec-label::before { content: ''; width: 24px; height: 1.5px; background: var(--orange); border-radius: 2px; }
+.sec-title { font-family: var(--font-display); font-size: clamp(32px, 4vw, 52px); font-weight: 900; letter-spacing: -.03em; color: var(--text-primary); line-height: 1; margin-bottom: var(--s-4); }
+.sec-sub { font-size: 16px; color: var(--text-tertiary); max-width: 520px; line-height: 1.7; }
+.faq-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: var(--s-8); align-items: start; }
+.faq-list { border: 1px solid var(--border); border-radius: var(--r-md); overflow: hidden; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { width: 100%; background: var(--bg-card); padding: var(--s-5); display: flex; justify-content: space-between; align-items: center; text-align: left; gap: var(--s-4); transition: background var(--duration-fast); }
+.faq-q:hover { background: var(--bg-card-hover); }
+.faq-q-text { font-size: 15px; font-weight: 600; color: var(--text-primary); line-height: 1.4; }
+.faq-toggle { width: 28px; height: 28px; flex-shrink: 0; border-radius: 50%; background: var(--orange-soft); border: 1px solid var(--orange-border); display: flex; align-items: center; justify-content: center; color: var(--orange); font-size: 18px; transition: all .3s var(--ease-out); }
+.faq-item.open .faq-toggle { transform: rotate(45deg); background: var(--orange); color: var(--bg-primary); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .4s var(--ease-out); }
+.faq-item.open .faq-a { max-height: 400px; }
+.faq-a-inner { padding: 0 var(--s-5) var(--s-5); font-size: 14px; color: var(--text-tertiary); line-height: 1.8; border-top: 1px solid var(--border); padding-top: var(--s-4); background: var(--bg-secondary); }
+.pre-cta { background: var(--bg-card); border-top: 1px solid var(--border); padding: var(--s-7) 0; }
+.pre-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--s-6); flex-wrap: wrap; }
+.pre-cta-title { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: var(--text-primary); letter-spacing: -.02em; }
+.pre-cta-sub { font-size: 14px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--s-8); align-items: start; }
+.contact-wpp { background: rgba(37,211,102,.05); border: 1px solid rgba(37,211,102,.15); border-radius: var(--r-md); padding: var(--s-6); display: flex; flex-direction: column; gap: var(--s-3); }
+.contact-wpp-label { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(37,211,102,.7); }
+.contact-info-card { display: flex; align-items: flex-start; gap: var(--s-4); padding: var(--s-5); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-md); transition: border-color var(--duration-fast); }
+.contact-info-card:hover { border-color: var(--border-orange); }
+.contact-info-icon { width: 40px; height: 40px; flex-shrink: 0; background: var(--orange-soft); border: 1px solid var(--orange-border); border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; color: var(--orange); }
+.contact-info-label { font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--orange); margin-bottom: 2px; }
+.contact-info-value { font-size: 14px; color: var(--text-primary); line-height: 1.5; }
+.contact-info-value a { transition: color var(--duration-fast); }
+.contact-info-value a:hover { color: var(--orange); }
+.map-wrapper { border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--border); height: 400px; }
+.map-wrapper iframe { width: 100%; height: 100%; border: none; display: block; filter: grayscale(.8) contrast(1.1); transition: filter var(--duration-normal); }
+.map-wrapper:hover iframe { filter: grayscale(.3) contrast(1); }
+.map-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--orange); margin-top: var(--s-3); transition: gap var(--duration-fast); }
+.map-link:hover { gap: 10px; }
+.footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: var(--s-8) 0 var(--s-6); }
+.footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: var(--s-7); margin-bottom: var(--s-7); }
+.footer-brand-desc { font-size: 14px; color: var(--text-tertiary); line-height: 1.7; max-width: 280px; margin-bottom: var(--s-3); }
+.footer-col-title { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-primary); margin-bottom: var(--s-4); }
+.footer-links { display: flex; flex-direction: column; gap: var(--s-3); }
+.footer-links a { font-size: 13px; color: var(--text-tertiary); transition: color var(--duration-fast); }
+.footer-links a:hover { color: var(--orange); }
+.footer-hours-row { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-tertiary); }
+.footer-hours-row strong { color: var(--text-primary); font-weight: 600; }
+.footer-bottom { padding-top: var(--s-5); border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--s-3); font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); }
+.wpp-float { position: fixed; bottom: 28px; right: 28px; z-index: 999; display: flex; align-items: center; gap: 10px; background: var(--green-wpp); color: #fff; font-weight: 700; font-size: 14px; padding: 14px 22px; border-radius: var(--r-full); box-shadow: 0 8px 32px rgba(37,211,102,.4); transition: all var(--duration-fast); animation: pulseGlow 3s ease infinite; opacity: 0; transform: translateY(16px); pointer-events: none; }
+.wpp-float.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.wpp-float:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 16px 48px rgba(37,211,102,.5); }
+.sticky-cta { display: none; }
+@média (max-width: 768px) {
+  .sticky-cta { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 998; background: var(--bg-glass); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border-top: 1px solid var(--border); padding: 12px 16px; align-items: center; justify-content: space-between; gap: 12px; transform: translateY(100%); transition: transform .4s var(--ease-out); }
+  .sticky-cta.visible { transform: translateY(0); }
+  .sticky-cta-info { display: flex; flex-direction: column; min-width: 0; }
+  .sticky-cta-title { font-size: 14px; font-weight: 700; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sticky-cta-sub { font-family: var(--font-mono); font-size: 10px; color: var(--text-tertiary); letter-spacing: .04em; }
+  .sticky-cta-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: var(--bg-primary); font-weight: 800; font-size: 13px; padding: 12px 20px; border-radius: var(--r-full); white-space: nowrap; flex-shrink: 0; transition: background var(--duration-fast), transform var(--duration-fast); position: relative; overflow: hidden; letter-spacing: .02em; }
+  .sticky-cta-btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent); transition: left .5s; }
+  .sticky-cta-btn:hover::before { left: 100%; }
+  .wpp-float { display: none !important; }
+}
+@média (max-width: 1024px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .faq-layout { grid-template-columns: 1fr; gap: var(--s-5); }
+}
+@média (max-width: 768px) {
+  body { cursor: auto; }
+  a, button { cursor: auto; }
+  .container { padding: 0 14px; }
+  .section { padding: 48px 0; }
+  .content-section { padding: 48px 0; }
+  .header { height: 56px; }
+  .logo-mark { width: 34px; height: 34px; font-size: 15px; }
+  .logo-name { font-size: 13px; }
+  .logo-sub { font-size: 9px; }
+  .nav { display: none; position: fixed; top: 56px; left: 0; right: 0; background: var(--bg-glass); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); padding: var(--s-3); flex-direction: column; align-items: stretch; gap: 0; z-index: 999; }
+  .nav.open { display: flex; }
+  .nav.open .nav-link { padding: 12px var(--s-2); border-bottom: 1px solid var(--border); font-size: 14px; }
+  .nav.open .nav-cta { margin-top: var(--s-2); padding: 14px; text-align: center; }
+  .menu-toggle { display: flex; }
+  .hero { min-height: auto; padding-bottom: 32px; }
+  .hero-inner { padding: 32px 14px; padding-top: calc(56px + 32px); }
+  .hero h1 { font-size: clamp(32px, 9vw, 44px); margin-bottom: 16px; }
+  .hero-eyebrow { font-size: 10px; margin-bottom: 12px; }
+  .hero-desc { font-size: 15px; margin-bottom: 24px; line-height: 1.6; }
+  .hero-actions { flex-direction: column; gap: 10px; }
+  .btn { width: 100%; justify-content: center; padding: 14px 24px; font-size: 14px; }
+  .hero-metrics { gap: 20px; }
+  .metric-num { font-size: 22px; }
+  .metric-label { font-size: 10px; }
+  .marquee-strip { padding: 10px 0; }
+  .marquee-item { font-size: 11px; padding: 0 16px; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr; gap: 16px; }
+  .faq-layout { grid-template-columns: 1fr; gap: 24px; }
+  .faq-q { padding: 16px; }
+  .faq-q-text { font-size: 14px; }
+  .faq-a-inner { font-size: 13px; padding: 0 16px 16px; padding-top: 12px; }
+  .pre-cta { padding: 32px 0; }
+  .pre-cta-inner { flex-direction: column; gap: 16px; text-align: center; }
+  .pre-cta-title { font-size: 20px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 20px; }
+  .map-wrapper { height: 220px; }
+  .footer { padding: 40px 0 24px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 6px; }
+  .sec-title { font-size: clamp(26px, 6vw, 36px); margin-bottom: 10px; }
+  .sec-sub { font-size: 14px; }
+  .sec-label { font-size: 10px; }
+  .footer { padding-bottom: 80px; }
+  .content-section h2 { font-size: clamp(24px, 6vw, 32px); }
+}
+@média (max-width: 480px) {
+  .hero h1 { font-size: clamp(28px, 8vw, 36px); }
+  .hero-desc { font-size: 14px; }
+}
+
+/* Dropdown nav */
+.nav-dropdown { position: relative; }
+.nav-dropdown-toggle { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 4px; font-family: inherit; padding: 0; }
+.dropdown-arrow { transition: transform var(--duration-fast); flex-shrink: 0; }
+.nav-dropdown.open .dropdown-arrow { transform: rotate(180deg); }
+.nav-dropdown-menu { position: absolute; top: calc(100% + 16px); left: 50%; transform: translateX(-50%); background: var(--bg-glass); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid var(--border); border-radius: var(--r-lg); padding: var(--s-2); min-width: 220px; display: none; flex-direction: column; gap: 2px; box-shadow: 0 16px 40px rgba(0,0,0,.4); z-index: 1100; }
+.nav-dropdown.open .nav-dropdown-menu { display: flex; }
+.nav-dropdown-item { font-size: 13px; font-weight: 500; color: var(--text-secondary); padding: 9px 14px; border-radius: var(--r-md); transition: background var(--duration-fast), color var(--duration-fast); white-space: nowrap; }
+.nav-dropdown-item:hover { background: rgba(255,102,51,.08); color: var(--orange); }
+@média (max-width: 768px) {
+  .nav-dropdown { width: 100%; }
+  .nav-dropdown-toggle { width: 100%; padding: 12px var(--s-2); border-bottom: 1px solid var(--border); font-size: 14px; justify-content: space-between; }
+  .nav-dropdown-menu { position: static; transform: none; background: rgba(255,102,51,.04); border: none; border-radius: 0; padding: 0; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .nav-dropdown.open .nav-dropdown-menu { display: flex; }
+  .nav-dropdown-item { border-bottom: 1px solid var(--border); border-radius: 0; padding: 11px var(--s-4); font-size: 13px; }
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -172,7 +487,7 @@
           "name": "Quanto custa trocar os filtros do carro em Itatiaia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Depende do tipo de filtro e da marca. Filtros de cabine sao os mais acessiveis; filtros de combustivel variam conforme o veiculo. Faca um orcamento pelo WhatsApp (24) 99309-9190."
+            "text": "Depende do tipo de filtro e da marca. Filtros de cabine sao os mais acessiveis; filtros de combustível variam conforme o veiculo. Faca um orcamento pelo WhatsApp (24) 99309-9190."
           }
         },
         {
@@ -180,7 +495,7 @@
           "name": "Qual filtro precisa ser trocado com mais frequencia na regiao serrana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "O filtro de ar do motor, por conta da poeira das estradas de terra que levam a Maromba, Maringa e ao Parque Nacional do Itatiaia. Recomendamos inspecao a cada 5.000 km nessas condicoes."
+            "text": "O filtro de ar do motor, por conta da poeira das estradas de terra que levam a Maromba, Maringa e ao Parque Nacional do Itatiaia. Recomendamos inspeção a cada 5.000 km nessas condições."
           }
         },
         {
@@ -193,10 +508,10 @@
         },
         {
           "@type": "Question",
-          "name": "Quando trocar o filtro de combustivel?",
+          "name": "Quando trocar o filtro de combustível?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "O intervalo recomendado e entre 20.000 e 40.000 km, dependendo da qualidade do combustivel. Se o carro engasgar, perder potencia em subidas ou tiver dificuldade para dar partida, o filtro de combustivel pode estar entupido."
+            "text": "O intervalo recomendado e entre 20.000 e 40.000 km, dependendo da qualidade do combustível. Se o carro engasgar, perder potencia em subidas ou tiver dificuldade para dar partida, o filtro de combustível pode estar entupido."
           }
         },
         {
@@ -204,7 +519,7 @@
           "name": "Vocês trocam filtros de veiculos importados?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim. Trabalhamos com Mann-Filter e Mahle que cobrem catalogo completo de importados. Consultamos a referencia exata do seu veiculo para garantir compatibilidade."
+            "text": "Sim. Trabalhamos com Mann-Filter e Mahle que cobrem catálogo completo de importados. Consultamos a referencia exata do seu veiculo para garantir compatibilidade."
           }
         },
         {
@@ -212,7 +527,7 @@
           "name": "A Auto Pecas Itatiaia vende filtros para mecanicos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim! Varios mecanicos de Itatiaia e Resende compram filtros conosco por conta do estoque completo e precos competitivos. Oferecemos condicoes especiais para compras recorrentes."
+            "text": "Sim! Varios mecanicos de Itatiaia e Resende compram filtros conosco por conta do estoque completo e precos competitivos. Oferecemos condições especiais para compras recorrentes."
           }
         }
       ]
@@ -220,289 +535,6 @@
   ]
 }
 </script>
-<style>
-:root {
-  --orange: #FF6633;
-  --orange-hover: #FF7A4D;
-  --orange-soft: rgba(255, 102, 51, .08);
-  --orange-glow: rgba(255, 102, 51, .15);
-  --orange-border: rgba(255, 102, 51, .2);
-  --green-wpp: #25D366;
-  --green-wpp-hover: #1ebe5d;
-  --bg-primary: #000000;
-  --bg-secondary: #0A0A0A;
-  --bg-card: #111111;
-  --bg-card-hover: #1A1A1A;
-  --bg-elevated: #151515;
-  --bg-glass: rgba(10, 10, 10, .85);
-  --border: rgba(255, 255, 255, .06);
-  --border-hover: rgba(255, 255, 255, .12);
-  --border-orange: rgba(255, 102, 51, .25);
-  --text-primary: #FAFAFA;
-  --text-secondary: #999999;
-  --text-tertiary: #666666;
-  --text-muted: #444444;
-  --font-display: 'Inter', -apple-system, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-mono: 'Space Grotesk', monospace;
-  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px;
-  --s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 80px; --s-10: 120px;
-  --r-sm: 6px; --r-md: 12px; --r-lg: 20px; --r-xl: 28px; --r-full: 100px;
-  --shadow-sm: 0 2px 8px rgba(0,0,0,.3);
-  --shadow-md: 0 8px 32px rgba(0,0,0,.4);
-  --shadow-lg: 0 24px 64px rgba(0,0,0,.5);
-  --shadow-orange: 0 8px 32px rgba(255,102,51,.25);
-  --ease-out: cubic-bezier(.16, 1, .3, 1);
-  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
-  --duration-fast: .2s;
-  --duration-normal: .4s;
-  --duration-slow: .7s;
-}
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: auto; -webkit-font-smoothing: antialiased; }
-body { background: var(--bg-primary); color: var(--text-secondary); font-family: var(--font-display); font-size: 16px; line-height: 1.6; overflow-x: hidden; cursor: none; }
-a { color: inherit; text-decoration: none; cursor: none; }
-img { max-width: 100%; display: block; }
-button { border: none; background: none; cursor: none; font-family: inherit; }
-ul, ol { list-style: none; }
-.loader { position: fixed; inset: 0; background: var(--bg-primary); z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 32px; }
-.loader-phrase { font-family: var(--font-serif); font-size: clamp(24px, 5vw, 48px); font-style: italic; color: rgba(255, 255, 255, .9); letter-spacing: .01em; text-align: center; max-width: 650px; padding: 0 24px; }
-.loader-phrase span { display: inline-block; opacity: 0; transform: translateY(14px); transition: opacity .45s ease, transform .45s ease; }
-.loader-phrase span.visible { opacity: 1; transform: translateY(0); }
-.loader-line { width: 56px; height: 1px; background: rgba(255, 255, 255, .1); position: relative; overflow: hidden; }
-.loader-line::after { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 0%; background: var(--orange); transition: width 2s var(--ease-out); }
-.loader-line.active::after { width: 100%; }
-.loader-brand { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--orange); opacity: 0; transition: opacity .6s ease .3s; }
-.loader-brand.visible { opacity: 1; }
-.loader.done { opacity: 0; transition: opacity .7s ease; pointer-events: none; }
-.cursor { position: fixed; width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid var(--orange); pointer-events: none; z-index: 10000; transition: width .3s var(--ease-out), height .3s var(--ease-out), border-color .3s, background .3s, opacity .3s; transform: translate(-50%, -50%); mix-blend-mode: difference; background: transparent; }
-.cursor.hover { width: 60px; height: 60px; background: rgba(255, 102, 51, .12); border-color: var(--orange-hover); }
-.cursor-label { position: fixed; pointer-events: none; z-index: 10001; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #fff; opacity: 0; transition: opacity .25s; transform: translate(-50%, -50%); font-family: var(--font-mono); }
-.cursor-label.visible { opacity: 1; }
-@media (hover: none), (pointer: coarse) { .cursor, .cursor-label { display: none !important; } body, a, button { cursor: auto; } }
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-@keyframes marqueeReverse { from { transform: translateX(-50%); } to { transform: translateX(0); } }
-@keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, .4); } 50% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); } }
-@keyframes scrollLine { 0% { top: -50%; } 100% { top: 150%; } }
-@keyframes grain { 0%, 100% { transform: translate(0, 0); } 10% { transform: translate(-5%, -10%); } 30% { transform: translate(3%, -15%); } 50% { transform: translate(12%, 9%); } 70% { transform: translate(9%, 4%); } 90% { transform: translate(-1%, 7%); } }
-.noise::before { content: ''; position: absolute; inset: -50%; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E"); animation: grain 8s steps(10) infinite; pointer-events: none; z-index: 1; }
-.reveal { opacity: 0; transform: translateY(40px); }
-.container { max-width: 1280px; margin: 0 auto; padding: 0 var(--s-7); }
-.section { padding: var(--s-10) 0; position: relative; }
-.header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: 72px; display: flex; align-items: center; background: transparent; transition: background var(--duration-normal), border-color var(--duration-normal); border-bottom: 1px solid transparent; }
-.header.scrolled { background: var(--bg-glass); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border-bottom-color: var(--border); }
-.header-inner { max-width: 1280px; margin: 0 auto; padding: 0 var(--s-7); width: 100%; display: flex; align-items: center; justify-content: space-between; }
-.logo { display: flex; align-items: center; gap: var(--s-3); }
-.logo-mark { width: 40px; height: 40px; background: var(--orange); border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: var(--bg-primary); letter-spacing: -.02em; }
-.logo-text { display: flex; flex-direction: column; line-height: 1.1; }
-.logo-name { font-weight: 800; font-size: 15px; color: var(--text-primary); letter-spacing: -.02em; }
-.logo-sub { font-family: var(--font-mono); font-size: 10px; color: var(--text-tertiary); letter-spacing: .08em; text-transform: uppercase; }
-.nav { display: flex; align-items: center; gap: var(--s-6); }
-.nav-link { font-size: 13px; font-weight: 500; color: var(--text-secondary); letter-spacing: .02em; transition: color var(--duration-fast); position: relative; }
-.nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px; background: var(--orange); transition: width var(--duration-normal) var(--ease-out); }
-.nav-link:hover { color: var(--text-primary); }
-.nav-link:hover::after { width: 100%; }
-.nav-link.active { color: var(--orange); }
-.nav-link.active::after { width: 100%; }
-.nav-cta { background: var(--orange); color: var(--bg-primary); font-weight: 700; font-size: 13px; padding: 10px 22px; border-radius: var(--r-full); letter-spacing: .02em; transition: background var(--duration-fast), transform var(--duration-fast); position: relative; overflow: hidden; }
-.nav-cta::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent); transition: left .5s; }
-.nav-cta:hover { background: var(--orange-hover); transform: translateY(-1px); }
-.nav-cta:hover::before { left: 100%; }
-.menu-toggle { display: none; flex-direction: column; gap: 5px; padding: 4px; z-index: 1001; }
-.menu-toggle span { width: 24px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: all .3s var(--ease-out); }
-.menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-.menu-toggle.active span:nth-child(2) { opacity: 0; }
-.menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-.hero { position: relative; min-height: 70vh; display: flex; align-items: center; overflow: hidden; background: var(--bg-primary); }
-.hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(255, 102, 51, .08) 0%, transparent 70%), radial-gradient(ellipse 60% 80% at 20% 80%, rgba(255, 102, 51, .05) 0%, transparent 60%); will-change: transform; }
-.hero-grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px); background-size: 80px 80px; }
-.hero-inner { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: var(--s-9) var(--s-7); padding-top: calc(72px + var(--s-9)); width: 100%; }
-.hero-eyebrow { display: inline-flex; align-items: center; gap: var(--s-2); font-family: var(--font-mono); font-size: 12px; font-weight: 500; color: var(--text-tertiary); letter-spacing: .1em; text-transform: uppercase; margin-bottom: var(--s-5); opacity: 0; }
-.hero-eyebrow .dot { width: 6px; height: 6px; background: var(--orange); border-radius: 50%; }
-.hero h1 { font-family: var(--font-display); font-size: clamp(40px, 5.5vw, 72px); font-weight: 900; line-height: .95; letter-spacing: -.04em; color: var(--text-primary); margin-bottom: var(--s-6); opacity: 0; }
-.hero h1 .highlight { color: var(--orange); position: relative; display: inline-block; }
-.hero h1 .highlight::after { content: ''; position: absolute; bottom: 2px; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--orange), transparent); transform: scaleX(0); transform-origin: left; }
-.hero-desc { font-size: 18px; font-weight: 300; color: var(--text-secondary); line-height: 1.7; max-width: 620px; margin-bottom: var(--s-7); opacity: 0; }
-.hero-desc strong { color: var(--text-primary); font-weight: 600; }
-.hero-actions { display: flex; gap: var(--s-4); flex-wrap: wrap; margin-bottom: var(--s-7); opacity: 0; }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--s-3); font-weight: 700; font-size: 15px; padding: 16px 32px; border-radius: var(--r-full); transition: all var(--duration-fast) var(--ease-out); white-space: nowrap; position: relative; overflow: hidden; }
-.btn-primary::before, .btn-wpp::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent); transition: left .5s; }
-.btn-primary:hover::before, .btn-wpp:hover::before { left: 100%; }
-.btn-primary { background: var(--orange); color: var(--bg-primary); box-shadow: var(--shadow-orange); }
-.btn-primary:hover { background: var(--orange-hover); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(255,102,51,.35); }
-.btn-secondary { background: transparent; color: var(--text-primary); border: 1px solid var(--border-hover); }
-.btn-secondary:hover { border-color: var(--orange-border); background: var(--orange-soft); }
-.btn-wpp { background: var(--green-wpp); color: #fff; box-shadow: 0 8px 32px rgba(37, 211, 102, .3); }
-.btn-wpp:hover { background: var(--green-wpp-hover); transform: translateY(-2px); }
-.hero-metrics { display: flex; gap: var(--s-7); opacity: 0; }
-.metric { display: flex; flex-direction: column; }
-.metric-num { font-family: var(--font-display); font-size: 28px; font-weight: 900; color: var(--text-primary); letter-spacing: -.02em; line-height: 1; }
-.metric-num .accent { color: var(--orange); }
-.metric-label { font-family: var(--font-mono); font-size: 11px; color: var(--text-tertiary); letter-spacing: .06em; text-transform: uppercase; margin-top: var(--s-1); }
-.marquee-strip { background: var(--orange); padding: 14px 0; overflow: hidden; }
-.marquee-track { display: flex; white-space: nowrap; animation: marquee 30s linear infinite; width: max-content; }
-.marquee-item { display: inline-flex; align-items: center; gap: 14px; padding: 0 24px; font-family: var(--font-display); font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--bg-primary); }
-.marquee-sep { width: 5px; height: 5px; background: rgba(0,0,0,.25); border-radius: 50%; flex-shrink: 0; }
-.content-section { padding: var(--s-9) 0; position: relative; }
-.content-section:nth-child(even) { background: var(--bg-secondary); }
-.content-section h2 { font-family: var(--font-display); font-size: clamp(28px, 3.5vw, 42px); font-weight: 900; letter-spacing: -.03em; color: var(--text-primary); line-height: 1.05; margin-bottom: var(--s-5); }
-.content-section h3 { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--text-primary); margin-bottom: var(--s-3); }
-.content-section p { font-size: 16px; color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--s-5); }
-.content-section p strong { color: var(--text-primary); font-weight: 600; }
-.content-section ul { margin-bottom: var(--s-5); }
-.content-section ul li { font-size: 15px; color: var(--text-secondary); line-height: 1.7; padding: 8px 0; padding-left: 28px; position: relative; border-bottom: 1px solid var(--border); }
-.content-section ul li::before { content: ''; position: absolute; left: 0; top: 16px; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
-.content-section a { color: var(--orange); border-bottom: 1px solid rgba(255,102,51,.3); transition: border-color var(--duration-fast); }
-.content-section a:hover { border-bottom-color: var(--orange); }
-.feature-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--s-4); margin-top: var(--s-6); }
-.feature-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-md); padding: var(--s-6); transition: all var(--duration-normal); }
-.feature-card:hover { border-color: var(--orange-border); transform: translateY(-3px); }
-.feature-card-icon { font-size: 28px; margin-bottom: var(--s-4); display: block; }
-.feature-card-title { font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: var(--s-2); }
-.feature-card-desc { font-size: 14px; color: var(--text-tertiary); line-height: 1.7; }
-.process-steps { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--s-5); margin-top: var(--s-7); }
-.step { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1; }
-.step-num { width: 54px; height: 54px; border-radius: 50%; background: var(--orange); color: var(--bg-primary); font-weight: 900; font-size: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: var(--s-5); box-shadow: 0 0 0 5px var(--bg-primary), 0 0 0 7px var(--orange-border); transition: all var(--duration-normal); }
-.step:hover .step-num { box-shadow: 0 0 0 5px var(--bg-primary), 0 0 0 12px rgba(255,102,51,.3); transform: scale(1.08); }
-.step-card { background: var(--orange-soft); border: 1px solid var(--orange-border); border-top: 3px solid var(--orange); border-radius: var(--r-md); padding: var(--s-6) var(--s-5); width: 100%; transition: all var(--duration-normal); }
-.step:hover .step-card { background: var(--orange-glow); transform: translateY(-4px); box-shadow: var(--shadow-md); }
-.step-title { font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: var(--s-2); }
-.step-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
-.step-desc strong { color: var(--orange); }
-.sec-label { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-bottom: var(--s-3); display: flex; align-items: center; gap: var(--s-3); }
-.sec-label::before { content: ''; width: 24px; height: 1.5px; background: var(--orange); border-radius: 2px; }
-.sec-title { font-family: var(--font-display); font-size: clamp(32px, 4vw, 52px); font-weight: 900; letter-spacing: -.03em; color: var(--text-primary); line-height: 1; margin-bottom: var(--s-4); }
-.sec-sub { font-size: 16px; color: var(--text-tertiary); max-width: 520px; line-height: 1.7; }
-.faq-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: var(--s-8); align-items: start; }
-.faq-list { border: 1px solid var(--border); border-radius: var(--r-md); overflow: hidden; }
-.faq-item { border-bottom: 1px solid var(--border); }
-.faq-item:last-child { border-bottom: none; }
-.faq-q { width: 100%; background: var(--bg-card); padding: var(--s-5); display: flex; justify-content: space-between; align-items: center; text-align: left; gap: var(--s-4); transition: background var(--duration-fast); }
-.faq-q:hover { background: var(--bg-card-hover); }
-.faq-q-text { font-size: 15px; font-weight: 600; color: var(--text-primary); line-height: 1.4; }
-.faq-toggle { width: 28px; height: 28px; flex-shrink: 0; border-radius: 50%; background: var(--orange-soft); border: 1px solid var(--orange-border); display: flex; align-items: center; justify-content: center; color: var(--orange); font-size: 18px; transition: all .3s var(--ease-out); }
-.faq-item.open .faq-toggle { transform: rotate(45deg); background: var(--orange); color: var(--bg-primary); }
-.faq-a { max-height: 0; overflow: hidden; transition: max-height .4s var(--ease-out); }
-.faq-item.open .faq-a { max-height: 400px; }
-.faq-a-inner { padding: 0 var(--s-5) var(--s-5); font-size: 14px; color: var(--text-tertiary); line-height: 1.8; border-top: 1px solid var(--border); padding-top: var(--s-4); background: var(--bg-secondary); }
-.pre-cta { background: var(--bg-card); border-top: 1px solid var(--border); padding: var(--s-7) 0; }
-.pre-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--s-6); flex-wrap: wrap; }
-.pre-cta-title { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: var(--text-primary); letter-spacing: -.02em; }
-.pre-cta-sub { font-size: 14px; color: var(--text-tertiary); font-family: var(--font-mono); }
-.contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--s-8); align-items: start; }
-.contact-wpp { background: rgba(37,211,102,.05); border: 1px solid rgba(37,211,102,.15); border-radius: var(--r-md); padding: var(--s-6); display: flex; flex-direction: column; gap: var(--s-3); }
-.contact-wpp-label { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(37,211,102,.7); }
-.contact-info-card { display: flex; align-items: flex-start; gap: var(--s-4); padding: var(--s-5); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-md); transition: border-color var(--duration-fast); }
-.contact-info-card:hover { border-color: var(--border-orange); }
-.contact-info-icon { width: 40px; height: 40px; flex-shrink: 0; background: var(--orange-soft); border: 1px solid var(--orange-border); border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; color: var(--orange); }
-.contact-info-label { font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--orange); margin-bottom: 2px; }
-.contact-info-value { font-size: 14px; color: var(--text-primary); line-height: 1.5; }
-.contact-info-value a { transition: color var(--duration-fast); }
-.contact-info-value a:hover { color: var(--orange); }
-.map-wrapper { border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--border); height: 400px; }
-.map-wrapper iframe { width: 100%; height: 100%; border: none; display: block; filter: grayscale(.8) contrast(1.1); transition: filter var(--duration-normal); }
-.map-wrapper:hover iframe { filter: grayscale(.3) contrast(1); }
-.map-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--orange); margin-top: var(--s-3); transition: gap var(--duration-fast); }
-.map-link:hover { gap: 10px; }
-.footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: var(--s-8) 0 var(--s-6); }
-.footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: var(--s-7); margin-bottom: var(--s-7); }
-.footer-brand-desc { font-size: 14px; color: var(--text-tertiary); line-height: 1.7; max-width: 280px; margin-bottom: var(--s-3); }
-.footer-col-title { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-primary); margin-bottom: var(--s-4); }
-.footer-links { display: flex; flex-direction: column; gap: var(--s-3); }
-.footer-links a { font-size: 13px; color: var(--text-tertiary); transition: color var(--duration-fast); }
-.footer-links a:hover { color: var(--orange); }
-.footer-hours-row { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-tertiary); }
-.footer-hours-row strong { color: var(--text-primary); font-weight: 600; }
-.footer-bottom { padding-top: var(--s-5); border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--s-3); font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); }
-.wpp-float { position: fixed; bottom: 28px; right: 28px; z-index: 999; display: flex; align-items: center; gap: 10px; background: var(--green-wpp); color: #fff; font-weight: 700; font-size: 14px; padding: 14px 22px; border-radius: var(--r-full); box-shadow: 0 8px 32px rgba(37,211,102,.4); transition: all var(--duration-fast); animation: pulseGlow 3s ease infinite; opacity: 0; transform: translateY(16px); pointer-events: none; }
-.wpp-float.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
-.wpp-float:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 16px 48px rgba(37,211,102,.5); }
-.sticky-cta { display: none; }
-@media (max-width: 768px) {
-  .sticky-cta { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 998; background: var(--bg-glass); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border-top: 1px solid var(--border); padding: 12px 16px; align-items: center; justify-content: space-between; gap: 12px; transform: translateY(100%); transition: transform .4s var(--ease-out); }
-  .sticky-cta.visible { transform: translateY(0); }
-  .sticky-cta-info { display: flex; flex-direction: column; min-width: 0; }
-  .sticky-cta-title { font-size: 14px; font-weight: 700; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .sticky-cta-sub { font-family: var(--font-mono); font-size: 10px; color: var(--text-tertiary); letter-spacing: .04em; }
-  .sticky-cta-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: var(--bg-primary); font-weight: 800; font-size: 13px; padding: 12px 20px; border-radius: var(--r-full); white-space: nowrap; flex-shrink: 0; transition: background var(--duration-fast), transform var(--duration-fast); position: relative; overflow: hidden; letter-spacing: .02em; }
-  .sticky-cta-btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent); transition: left .5s; }
-  .sticky-cta-btn:hover::before { left: 100%; }
-  .wpp-float { display: none !important; }
-}
-@media (max-width: 1024px) {
-  .contact-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .faq-layout { grid-template-columns: 1fr; gap: var(--s-5); }
-}
-@media (max-width: 768px) {
-  body { cursor: auto; }
-  a, button { cursor: auto; }
-  .container { padding: 0 14px; }
-  .section { padding: 48px 0; }
-  .content-section { padding: 48px 0; }
-  .header { height: 56px; }
-  .logo-mark { width: 34px; height: 34px; font-size: 15px; }
-  .logo-name { font-size: 13px; }
-  .logo-sub { font-size: 9px; }
-  .nav { display: none; position: fixed; top: 56px; left: 0; right: 0; background: var(--bg-glass); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); padding: var(--s-3); flex-direction: column; align-items: stretch; gap: 0; z-index: 999; }
-  .nav.open { display: flex; }
-  .nav.open .nav-link { padding: 12px var(--s-2); border-bottom: 1px solid var(--border); font-size: 14px; }
-  .nav.open .nav-cta { margin-top: var(--s-2); padding: 14px; text-align: center; }
-  .menu-toggle { display: flex; }
-  .hero { min-height: auto; padding-bottom: 32px; }
-  .hero-inner { padding: 32px 14px; padding-top: calc(56px + 32px); }
-  .hero h1 { font-size: clamp(32px, 9vw, 44px); margin-bottom: 16px; }
-  .hero-eyebrow { font-size: 10px; margin-bottom: 12px; }
-  .hero-desc { font-size: 15px; margin-bottom: 24px; line-height: 1.6; }
-  .hero-actions { flex-direction: column; gap: 10px; }
-  .btn { width: 100%; justify-content: center; padding: 14px 24px; font-size: 14px; }
-  .hero-metrics { gap: 20px; }
-  .metric-num { font-size: 22px; }
-  .metric-label { font-size: 10px; }
-  .marquee-strip { padding: 10px 0; }
-  .marquee-item { font-size: 11px; padding: 0 16px; }
-  .feature-grid { grid-template-columns: 1fr; }
-  .process-steps { grid-template-columns: 1fr; gap: 16px; }
-  .faq-layout { grid-template-columns: 1fr; gap: 24px; }
-  .faq-q { padding: 16px; }
-  .faq-q-text { font-size: 14px; }
-  .faq-a-inner { font-size: 13px; padding: 0 16px 16px; padding-top: 12px; }
-  .pre-cta { padding: 32px 0; }
-  .pre-cta-inner { flex-direction: column; gap: 16px; text-align: center; }
-  .pre-cta-title { font-size: 20px; }
-  .contact-grid { grid-template-columns: 1fr; gap: 20px; }
-  .map-wrapper { height: 220px; }
-  .footer { padding: 40px 0 24px; }
-  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
-  .footer-bottom { flex-direction: column; text-align: center; gap: 6px; }
-  .sec-title { font-size: clamp(26px, 6vw, 36px); margin-bottom: 10px; }
-  .sec-sub { font-size: 14px; }
-  .sec-label { font-size: 10px; }
-  .footer { padding-bottom: 80px; }
-  .content-section h2 { font-size: clamp(24px, 6vw, 32px); }
-}
-@media (max-width: 480px) {
-  .hero h1 { font-size: clamp(28px, 8vw, 36px); }
-  .hero-desc { font-size: 14px; }
-}
-
-/* Dropdown nav */
-.nav-dropdown { position: relative; }
-.nav-dropdown-toggle { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 4px; font-family: inherit; padding: 0; }
-.dropdown-arrow { transition: transform var(--duration-fast); flex-shrink: 0; }
-.nav-dropdown.open .dropdown-arrow { transform: rotate(180deg); }
-.nav-dropdown-menu { position: absolute; top: calc(100% + 16px); left: 50%; transform: translateX(-50%); background: var(--bg-glass); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid var(--border); border-radius: var(--r-lg); padding: var(--s-2); min-width: 220px; display: none; flex-direction: column; gap: 2px; box-shadow: 0 16px 40px rgba(0,0,0,.4); z-index: 1100; }
-.nav-dropdown.open .nav-dropdown-menu { display: flex; }
-.nav-dropdown-item { font-size: 13px; font-weight: 500; color: var(--text-secondary); padding: 9px 14px; border-radius: var(--r-md); transition: background var(--duration-fast), color var(--duration-fast); white-space: nowrap; }
-.nav-dropdown-item:hover { background: rgba(255,102,51,.08); color: var(--orange); }
-@media (max-width: 768px) {
-  .nav-dropdown { width: 100%; }
-  .nav-dropdown-toggle { width: 100%; padding: 12px var(--s-2); border-bottom: 1px solid var(--border); font-size: 14px; justify-content: space-between; }
-  .nav-dropdown-menu { position: static; transform: none; background: rgba(255,102,51,.04); border: none; border-radius: 0; padding: 0; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
-  .nav-dropdown.open .nav-dropdown-menu { display: flex; }
-  .nav-dropdown-item { border-bottom: 1px solid var(--border); border-radius: 0; padding: 11px var(--s-4); font-size: 13px; }
-}
-</style>
 </head>
 <body style="overflow: hidden;">
 
@@ -566,12 +598,12 @@ ul, ol { list-style: none; }
   <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
   <div class="hero-grid-bg" aria-hidden="true"></div>
   <div class="hero-inner" id="heroContent">
-    <div class="hero-eyebrow" id="heroEyebrow"><span class="dot"></span> Itatiaia, RJ &mdash; Filtros Automotivos</div>
-    <h1 id="heroH1">Troca de <span class="highlight">Filtros</span> em Itatiaia</h1>
-    <p class="hero-desc" id="heroDesc">Filtros de oleo, ar do motor, combustivel e cabine (ar-condicionado) das marcas <strong>Tecfil, Mann, Wega, Fram e Mahle</strong>. Estradas de terra, poeira das trilhas do Parque Nacional e o <strong>polen da Mata Atlantica</strong> entopem filtros muito mais rapido na regiao de Itatiaia.</p>
+    <div class="hero-eyebrow" id="heroEyebrow"><span class="dot"></span> Itatiaia, RJ | Filtros Automotivos</div>
+    <h1 id="heroH1">Troca de <span class="highlight">Filtros</span> em Itatiaia para Todos os Tipos</h1>
+    <p class="hero-desc" id="heroDesc">Filtros de oleo, ar do motor, combustível e cabine (ar-condicionado) das marcas <strong>Tecfil, Mann, Wega, Fram e Mahle</strong>. Estradas de terra, poeira das trilhas do Parque Nacional e o <strong>polen da Mata Atlantica</strong> entopem filtros muito mais rápido na regiao de Itatiaia.</p>
     <div class="hero-actions" id="heroActions">
-      <a href="https://wa.me/5524993099190?text=Ol%C3%A1!%20Preciso%20de%20um%20or%C3%A7amento." class="btn btn-wpp" target="_blank" rel="noopener" data-cursor="Chamar"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Solicitar Orcamento</a>
-      <a href="/servicos.html" class="btn btn-secondary" data-cursor="Ver">Ver Todos os Servicos <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
+      <a href="https://wa.me/5524993099190?text=Ol%C3%A1!%20Preciso%20de%20um%20or%C3%A7amento." class="btn btn-wpp" target="_blank" rel="noopener" data-cursor="Chamar"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Solicitar Orçamento</a>
+      <a href="/servicos.html" class="btn btn-secondary" data-cursor="Ver">Ver Todos os Serviços <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
     </div>
     <div class="hero-metrics" id="heroMetrics">
       <div class="metric"><div class="metric-num">4.9<span class="accent">/5</span></div><div class="metric-label">Google Reviews</div></div>
@@ -586,24 +618,24 @@ ul, ol { list-style: none; }
 
 <section class="content-section">
   <div class="container">
-    <div class="reveal"><div class="sec-label">Servico</div><h2>Qual a Importancia dos Filtros Para Veiculos na Regiao Serrana?</h2></div>
-    <p class="reveal">Os filtros automotivos sao a primeira linha de defesa do motor contra impurezas. Na regiao de Itatiaia, tres fatores aceleram o desgaste dos filtros: a <strong>poeira das estradas nao-pavimentadas</strong> que levam a Maromba, Maringa e ao Parque Nacional; o <strong>polen e particulas organicas da Mata Atlantica</strong> que saturam o filtro de cabine; e a <strong>umidade elevada</strong> da Serra da Mantiqueira que favorece a formacao de fungos no sistema de ar-condicionado.</p>
-    <p class="reveal">Um filtro de ar entupido pode aumentar o consumo de combustivel em ate <strong>10%</strong> e reduzir a potencia do motor. Um filtro de cabine saturado causa mau cheiro, embasamento do para-brisa e crises alergicas. Na <strong>Auto Pecas Itatiaia</strong>, verificamos todos os filtros gratuitamente e indicamos apenas as trocas realmente necessarias.</p>
+    <div class="reveal"><div class="sec-label">Servico</div><h2>Filtro de Ar Entope Mais Rápido em Estradas de Terra do Parque Nacional</h2></div>
+    <p class="reveal">Os filtros automotivos sao a primeira linha de defesa do motor contra impurezas. Na regiao de Itatiaia, três fatores aceleram o desgaste dos filtros: a <strong>poeira das estradas não-pavimentadas</strong> que levam a Maromba, Maringa e ao Parque Nacional; o <strong>polen e particulas organicas da Mata Atlantica</strong> que saturam o filtro de cabine; e a <strong>umidade elevada</strong> da Serra da Mantiqueira que favorece a formacao de fungos no sistema de ar-condicionado.</p>
+    <p class="reveal">Um filtro de ar entupido pode aumentar o consumo de combustível em até <strong>10%</strong> e reduzir a potencia do motor. Um filtro de cabine saturado causa mau cheiro, embasamento do para-brisa e crises alergicas. Na <strong>Auto Pecas Itatiaia</strong>, verificamos todos os filtros gratuitamente e indicamos apenas as trocas realmente necessarias.</p>
     <ul class="reveal">
-      <li><strong>Filtro de oleo</strong> &mdash; retira particulas metalicas e residuos da combustao; trocado junto com o <a href="/troca-de-oleo.html">oleo lubrificante</a></li>
-      <li><strong>Filtro de ar do motor</strong> &mdash; impede poeira e particulas de entrar no motor; vida util reduzida em estradas de terra</li>
-      <li><strong>Filtro de combustivel</strong> &mdash; filtra impurezas do tanque e do combustivel; essencial para proteger os bicos injetores</li>
-      <li><strong>Filtro de cabine (ar-condicionado)</strong> &mdash; filtra polen, poeira e fungos; fundamental no clima umido de Itatiaia</li>
+      <li><strong>Filtro de oleo</strong>, retira particulas metalicas e residuos da combustao; trocado junto com o <a href="/troca-de-oleo.html">oleo lubrificante</a></li>
+      <li><strong>Filtro de ar do motor</strong>, impede poeira e particulas de entrar no motor; vida útil reduzida em estradas de terra</li>
+      <li><strong>Filtro de combustível</strong>, filtra impurezas do tanque e do combustível; essencial para proteger os bicos injetores</li>
+      <li><strong>Filtro de cabine (ar-condicionado)</strong>, filtra polen, poeira e fungos; fundamental no clima umido de Itatiaia</li>
     </ul>
   </div>
 </section>
 
 <section class="content-section">
   <div class="container">
-    <div class="reveal"><h2>Etapas da Verificacao e Troca de Filtros</h2></div>
+    <div class="reveal"><h2>Serviço Completo: Óleo, Ar, Combustível e Cabine</h2></div>
     <div class="process-steps">
-      <div class="step reveal"><div class="step-num">1</div><div class="step-card"><h3 class="step-title">Inspecao Visual Gratuita</h3><div class="step-desc">Verificamos o estado de cada filtro visualmente. Mostramos a voce a diferenca entre um filtro novo e o usado &mdash; voce decide se quer trocar. <strong>Zero pressao.</strong></div></div></div>
-      <div class="step reveal"><div class="step-num">2</div><div class="step-card"><h3 class="step-title">Selecao do Filtro Correto</h3><div class="step-desc">Consultamos o catalogo tecnico para garantir <strong>compatibilidade exata</strong> com seu veiculo. Nao usamos filtros genericos &mdash; so Tecfil, Mann, Wega, Fram ou Mahle.</div></div></div>
+      <div class="step reveal"><div class="step-num">1</div><div class="step-card"><h3 class="step-title">Inspeção Visual Gratuita</h3><div class="step-desc">Verificamos o estado de cada filtro visualmente. Mostramos a você a diferença entre um filtro novo e o usado, você decide se quer trocar. <strong>Zero pressão.</strong></div></div></div>
+      <div class="step reveal"><div class="step-num">2</div><div class="step-card"><h3 class="step-title">Selecao do Filtro Correto</h3><div class="step-desc">Consultamos o catálogo técnico para garantir <strong>compatibilidade exata</strong> com seu veiculo. Não usamos filtros genericos, só Tecfil, Mann, Wega, Fram ou Mahle.</div></div></div>
       <div class="step reveal"><div class="step-num">3</div><div class="step-card"><h3 class="step-title">Substituicao e Teste</h3><div class="step-desc">Trocamos o(s) filtro(s) e verificamos a vedacao. No caso do filtro de cabine, <strong>higienizamos o duto</strong> do ar-condicionado com spray bactericida.</div></div></div>
     </div>
   </div>
@@ -611,37 +643,37 @@ ul, ol { list-style: none; }
 
 <section class="content-section">
   <div class="container">
-    <div class="reveal"><h2>Marcas de Filtros Automotivos em Estoque</h2></div>
+    <div class="reveal"><h2>4 Marcas com Pronta Entrega: Tecfil, Mann, Wega e Mahle</h2></div>
     <div class="feature-grid">
       <div class="feature-card reveal"><div class="feature-card-icon">&#128736;</div><div class="feature-card-title">Tecfil</div><div class="feature-card-desc">Marca brasileira lider em filtragem automotiva. Linha completa para veiculos nacionais e importados. Excelente vedacao e capacidade de retencao de particulas.</div></div>
       <div class="feature-card reveal"><div class="feature-card-icon">&#128736;</div><div class="feature-card-title">Mann-Filter</div><div class="feature-card-desc">Marca alema premium. Tecnologia de filtragem em multiplas camadas com eficiencia superior a 99%. Recomendada para veiculos que trafegam em estradas de terra.</div></div>
       <div class="feature-card reveal"><div class="feature-card-icon">&#128736;</div><div class="feature-card-title">Wega</div><div class="feature-card-desc">Melhor custo-beneficio do mercado. Aprovada por montadoras brasileiras. Opcao ideal para veiculos de uso urbano em Itatiaia e Resende.</div></div>
-      <div class="feature-card reveal"><div class="feature-card-icon">&#128736;</div><div class="feature-card-title">Fram / Mahle</div><div class="feature-card-desc">Marcas com presenca global e catalogo extenso para veiculos importados. Filtros de alto desempenho com certificacao ISO e OE (equipamento original).</div></div>
+      <div class="feature-card reveal"><div class="feature-card-icon">&#128736;</div><div class="feature-card-title">Fram / Mahle</div><div class="feature-card-desc">Marcas com presenca global e catálogo extenso para veiculos importados. Filtros de alto desempenho com certificação ISO e OE (equipamento original).</div></div>
     </div>
   </div>
 </section>
 
 <section class="content-section">
   <div class="container">
-    <div class="reveal"><h2>Como Saber Quando os Filtros Precisam Ser Trocados?</h2></div>
+    <div class="reveal"><h2>Quando Trocar: Indicadores Visuais e Sinais de Alerta</h2></div>
     <ul class="reveal">
-      <li><strong>Perda de potencia na subida</strong> &mdash; filtro de ar entupido restringe a entrada de oxigenio, e o motor perde forca justamente nas ladeiras da RJ-163</li>
-      <li><strong>Consumo de combustivel aumentou</strong> &mdash; o motor compensa a falta de ar queimando mais combustivel; troca do filtro resolve em 80% dos casos</li>
-      <li><strong>Mau cheiro no ar-condicionado</strong> &mdash; filtro de cabine com fungos e bacterias proliferados pela umidade da serra</li>
-      <li><strong>Motor falhando ou engasgando</strong> &mdash; pode ser filtro de combustivel entupido impedindo a passagem correta para os bicos injetores</li>
-      <li><strong>Mais de 10.000 km desde a ultima troca</strong> &mdash; em estradas de terra da regiao, recomendamos trocar o filtro de ar a cada 7.000 km</li>
+      <li><strong>Perda de potencia na subida</strong>, filtro de ar entupido restringe a entrada de oxigenio, e o motor perde forca justamente nas ladeiras da RJ-163</li>
+      <li><strong>Consumo de combustível aumentou</strong>, o motor compensa a falta de ar queimando mais combustível; troca do filtro resolve em 80% dos casos</li>
+      <li><strong>Mau cheiro no ar-condicionado</strong>, filtro de cabine com fungos e bacterias proliferados pela umidade da serra</li>
+      <li><strong>Motor falhando ou engasgando</strong>, pode ser filtro de combustível entupido impedindo a passagem correta para os bicos injetores</li>
+      <li><strong>Mais de 10.000 km desde a última troca</strong>, em estradas de terra da regiao, recomendamos trocar o filtro de ar a cada 7.000 km</li>
     </ul>
-    <p class="reveal">Na duvida, passe na <strong>Auto Pecas Itatiaia</strong> para uma inspecao rapida e gratuita. Tambem oferecemos <a href="/troca-de-bateria.html">teste de bateria</a> e <a href="/troca-de-palhetas.html">troca de palhetas</a> para completar a revisao.</p>
+    <p class="reveal">Na duvida, passe na <strong>Auto Pecas Itatiaia</strong> para uma inspeção rápida e gratuita. Tambem oferecemos <a href="/troca-de-bateria.html">teste de bateria</a> e <a href="/troca-de-palhetas.html">troca de palhetas</a> para completar a revisao.</p>
   </div>
 </section>
 
 <section class="content-section">
   <div class="container">
-    <div class="reveal"><h2>Aplicacoes em Itatiaia: Onde os Filtros Desgastam Mais Rapido</h2></div>
+    <div class="reveal"><h2>Quem Anda Mais pela Serra: Motoristas de Penedo e Maromba</h2></div>
     <div class="feature-grid">
-      <div class="feature-card reveal"><div class="feature-card-icon">&#127956;</div><div class="feature-card-title">Veiculos nas Estradas de Terra (Maromba/Maringa)</div><div class="feature-card-desc">Acessos nao-pavimentados geram nuvens de poeira que entopem o filtro de ar em metade do tempo. Recomendamos <strong>inspecao a cada 5.000 km</strong> para esses veiculos.</div></div>
+      <div class="feature-card reveal"><div class="feature-card-icon">&#127956;</div><div class="feature-card-title">Veiculos nas Estradas de Terra (Maromba/Maringa)</div><div class="feature-card-desc">Acessos não-pavimentados geram nuvens de poeira que entopem o filtro de ar em metade do tempo. Recomendamos <strong>inspeção a cada 5.000 km</strong> para esses veiculos.</div></div>
       <div class="feature-card reveal"><div class="feature-card-icon">&#128663;</div><div class="feature-card-title">Carros com Ar-condicionado (Clima Umido)</div><div class="feature-card-desc">A umidade elevada de Itatiaia favorece fungos no filtro de cabine. Troca do filtro + higienizacao do duto elimina o mau cheiro e previne <strong>problemas respiratorios</strong>.</div></div>
-      <div class="feature-card reveal"><div class="feature-card-icon">&#128666;</div><div class="feature-card-title">Frotas Comerciais e de Pousadas</div><div class="feature-card-desc">Veiculos com alta quilometragem mensal precisam de filtros trocados com frequencia. Oferecemos <strong>condicoes especiais para frotas</strong> com 5+ veiculos.</div></div>
+      <div class="feature-card reveal"><div class="feature-card-icon">&#128666;</div><div class="feature-card-title">Frotas Comerciais e de Pousadas</div><div class="feature-card-desc">Veiculos com alta quilometragem mensal precisam de filtros trocados com frequência. Oferecemos <strong>condições especiais para frotas</strong> com 5+ veiculos.</div></div>
       <div class="feature-card reveal"><div class="feature-card-icon">&#128663;</div><div class="feature-card-title">Veiculos de Turistas (Parque Nacional)</div><div class="feature-card-desc">Carros que acessam as trilhas do Parque Nacional do Itatiaia pegam estradas de terra e pedra. Uma troca preventiva de filtro de ar <strong>antes de subir</strong> evita problemas na volta.</div></div>
     </div>
   </div>
@@ -649,23 +681,23 @@ ul, ol { list-style: none; }
 
 <section class="content-section">
   <div class="container">
-    <div class="reveal"><h2>Por Que Trocar Filtros na Auto Pecas Itatiaia</h2></div>
+    <div class="reveal"><h2>Por Que Confiar: Filtros Legítimos, Diagnóstico Visual Incluído</h2></div>
     <div class="feature-grid">
-      <div class="feature-card reveal"><div class="feature-card-icon">&#9989;</div><div class="feature-card-title">Inspecao Gratuita</div><div class="feature-card-desc">Verificamos todos os filtros sem custo. So indicamos troca quando realmente necessario &mdash; transparencia que gerou <strong>4.9 estrelas</strong> no Google.</div></div>
-      <div class="feature-card reveal"><div class="feature-card-icon">&#128230;</div><div class="feature-card-title">5 Marcas em Estoque Permanente</div><div class="feature-card-desc">Tecfil, Mann, Wega, Fram e Mahle para veiculos nacionais e importados. Sem espera por encomenda &mdash; troca na hora.</div></div>
+      <div class="feature-card reveal"><div class="feature-card-icon">&#9989;</div><div class="feature-card-title">Inspeção Gratuita</div><div class="feature-card-desc">Verificamos todos os filtros sem custo. So indicamos troca quando realmente necessário, transparencia que gerou <strong>4.9 estrelas</strong> no Google.</div></div>
+      <div class="feature-card reveal"><div class="feature-card-icon">&#128230;</div><div class="feature-card-title">5 Marcas em Estoque Permanente</div><div class="feature-card-desc">Tecfil, Mann, Wega, Fram e Mahle para veiculos nacionais e importados. Sem espera por encomenda, troca na hora.</div></div>
       <div class="feature-card reveal"><div class="feature-card-icon">&#128167;</div><div class="feature-card-title">Higienizacao do Ar-condicionado</div><div class="feature-card-desc">Junto com a troca do filtro de cabine, aplicamos spray bactericida nos dutos. Eliminamos <strong>fungos, acaros e bacterias</strong> em 15 minutos.</div></div>
-      <div class="feature-card reveal"><div class="feature-card-icon">&#128205;</div><div class="feature-card-title">Referencia na Regiao</div><div class="feature-card-desc">Clientes de Itatiaia, Resende, Penedo e Engenheiro Passos confiam na Auto Pecas Itatiaia. Mecanicos da regiao compram filtros conosco.</div></div>
+      <div class="feature-card reveal"><div class="feature-card-icon">&#128205;</div><div class="feature-card-title">Referência na Regiao</div><div class="feature-card-desc">Clientes de Itatiaia, Resende, Penedo e Engenheiro Passos confiam na Auto Pecas Itatiaia. Mecanicos da regiao compram filtros conosco.</div></div>
     </div>
   </div>
 </section>
 
 <section class="content-section">
   <div class="container">
-    <div class="reveal"><div class="sec-label">Depoimentos</div><h2>Relatos de Clientes Sobre Troca de Filtros</h2></div>
+    <div class="reveal"><div class="sec-label">Depoimentos</div><h2>O Que Clientes Dizem sobre Nosso Serviço</h2></div>
     <div class="feature-grid">
-      <div class="feature-card reveal"><div class="feature-card-icon">&#128100;</div><div class="feature-card-title">Rodrigo Mendes &mdash; Motorista, Campo Alegre</div><div class="feature-card-desc">&ldquo;Meu carro estava gastando muito combustivel e perdia forca nas subidas. Troquei o filtro de ar na Auto Pecas e a diferenca foi imediata &mdash; voltou a ter potencia. O antigo estava completamente preto de poeira da estrada de terra.&rdquo; <strong>Cliente desde 2024</strong></div></div>
-      <div class="feature-card reveal"><div class="feature-card-icon">&#128100;</div><div class="feature-card-title">Juliana Santos &mdash; Entregadora, Itatiaia</div><div class="feature-card-desc">&ldquo;O ar-condicionado do meu carro estava com um cheiro horrivel. Troquei o filtro de cabine e fizeram a higienizacao do duto. Ficou como novo! E o preco foi bem menor do que me pediram em Resende.&rdquo; <strong>Cliente desde 2023</strong></div></div>
-      <div class="feature-card reveal"><div class="feature-card-icon">&#128100;</div><div class="feature-card-title">Antonio Pereira &mdash; Mecanico, Itatiaia</div><div class="feature-card-desc">&ldquo;Compro filtros Tecfil e Mann pra minha oficina na Auto Pecas. Sempre tem em estoque, preco de mecanico e nao empurram marca que eu nao pedi. Parceria de confianca ha anos.&rdquo; <strong>Cliente desde 2021</strong></div></div>
+      <div class="feature-card reveal"><div class="feature-card-icon">&#128100;</div><div class="feature-card-title">Rodrigo Mendes, Motorista, Campo Alegre</div><div class="feature-card-desc">&ldquo;Meu carro estava gastando muito combustível e perdia forca nas subidas. Troquei o filtro de ar na Auto Pecas e a diferença foi imediata, voltou a ter potencia. O antigo estava completamente preto de poeira da estrada de terra.&rdquo; <strong>Cliente desde 2024</strong></div></div>
+      <div class="feature-card reveal"><div class="feature-card-icon">&#128100;</div><div class="feature-card-title">Juliana Santos, Entregadora, Itatiaia</div><div class="feature-card-desc">&ldquo;O ar-condicionado do meu carro estava com um cheiro horrivel. Troquei o filtro de cabine e fizeram a higienizacao do duto. Ficou como novo! E o preco foi bem menor do que me pediram em Resende.&rdquo; <strong>Cliente desde 2023</strong></div></div>
+      <div class="feature-card reveal"><div class="feature-card-icon">&#128100;</div><div class="feature-card-title">Antonio Pereira, Mecanico, Itatiaia</div><div class="feature-card-desc">&ldquo;Compro filtros Tecfil e Mann pra minha oficina na Auto Pecas. Sempre tem em estoque, preco de mecanico e não empurram marca que eu não pedi. Parceria de confianca ha anos.&rdquo; <strong>Cliente desde 2021</strong></div></div>
     </div>
   </div>
 </section>
@@ -675,17 +707,17 @@ ul, ol { list-style: none; }
     <div class="faq-layout">
       <div class="reveal">
         <div class="sec-label">FAQ</div>
-        <h2 class="sec-title">Duvidas Frequentes</h2>
-        <div class="sec-sub">Nao encontrou sua resposta? Fale com a equipe da Auto Pecas Itatiaia pelo WhatsApp.</div>
+        <h2 class="sec-title">Dúvidas Frequentes</h2>
+        <div class="sec-sub">Não encontrou sua resposta? Fale com a equipe da Auto Pecas Itatiaia pelo WhatsApp.</div>
         <a href="https://wa.me/5524993099190?text=Ol%C3%A1!%20Vim%20pelo%20site." class="btn btn-wpp" target="_blank" rel="noopener" style="margin-top:var(--s-6);" data-cursor="Chamar"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Tirar Duvida</a>
       </div>
       <div class="faq-list">
-        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Quanto custa trocar os filtros do carro em Itatiaia?</span><span class="faq-toggle">+</span></button><div class="faq-a"><div class="faq-a-inner">Depende do tipo de filtro e da marca. Filtros de cabine sao os mais acessiveis; filtros de combustivel variam conforme o veiculo. Faca um orcamento pelo WhatsApp (24) 99309-9190.</div></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Qual filtro precisa ser trocado com mais frequencia na regiao serrana?</span><span class="faq-toggle">+</span></button><div class="faq-a"><div class="faq-a-inner">O filtro de ar do motor, por conta da poeira das estradas de terra que levam a Maromba, Maringa e ao Parque Nacional do Itatiaia. Recomendamos inspecao a cada 5.000 km nessas condicoes.</div></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">O filtro de cabine pode causar alergia?</span><span class="faq-toggle">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim. Um filtro de cabine saturado acumula fungos, acaros, polen da Mata Atlantica e bacterias &mdash; especialmente no clima umido de Itatiaia. A troca do filtro + higienizacao elimina esses riscos.</div></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Quando trocar o filtro de combustivel?</span><span class="faq-toggle">+</span></button><div class="faq-a"><div class="faq-a-inner">O intervalo recomendado e entre 20.000 e 40.000 km, dependendo da qualidade do combustivel. Se o carro engasgar, perder potencia em subidas ou tiver dificuldade para dar partida, o filtro de combustivel pode estar entupido.</div></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Vocês trocam filtros de veiculos importados?</span><span class="faq-toggle">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim. Trabalhamos com Mann-Filter e Mahle que cobrem catalogo completo de importados. Consultamos a referencia exata do seu veiculo para garantir compatibilidade.</div></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">A Auto Pecas Itatiaia vende filtros para mecanicos?</span><span class="faq-toggle">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim! Varios mecanicos de Itatiaia e Resende compram filtros conosco por conta do estoque completo e precos competitivos. Oferecemos condicoes especiais para compras recorrentes.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Quanto custa trocar os filtros do carro em Itatiaia?</span><span class="faq-toggle">+</span></button><div class="faq-a"><div class="faq-a-inner">Depende do tipo de filtro e da marca. Filtros de cabine sao os mais acessiveis; filtros de combustível variam conforme o veiculo. Faca um orçamento pelo WhatsApp (24) 99309-9190.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Qual filtro precisa ser trocado com mais frequência na regiao serrana?</span><span class="faq-toggle">+</span></button><div class="faq-a"><div class="faq-a-inner">O filtro de ar do motor, por conta da poeira das estradas de terra que levam a Maromba, Maringa e ao Parque Nacional do Itatiaia. Recomendamos inspeção a cada 5.000 km nessas condições.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">O filtro de cabine pode causar alergia?</span><span class="faq-toggle">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim. Um filtro de cabine saturado acumula fungos, acaros, polen da Mata Atlantica e bacterias, especialmente no clima umido de Itatiaia. A troca do filtro + higienizacao elimina esses riscos.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Quando trocar o filtro de combustível?</span><span class="faq-toggle">+</span></button><div class="faq-a"><div class="faq-a-inner">O intervalo recomendado e entre 20.000 e 40.000 km, dependendo da qualidade do combustível. Se o carro engasgar, perder potencia em subidas ou tiver dificuldade para dar partida, o filtro de combustível pode estar entupido.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Vocês trocam filtros de veiculos importados?</span><span class="faq-toggle">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim. Trabalhamos com Mann-Filter e Mahle que cobrem catálogo completo de importados. Consultamos a referência exata do seu veiculo para garantir compatibilidade.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">A Auto Pecas Itatiaia vende filtros para mecanicos?</span><span class="faq-toggle">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim! Varios mecanicos de Itatiaia e Resende compram filtros conosco por conta do estoque completo e precos competitivos. Oferecemos condições especiais para compras recorrentes.</div></div></div>
       </div>
     </div>
   </div>
@@ -693,27 +725,27 @@ ul, ol { list-style: none; }
 
 <section class="content-section">
   <div class="container">
-    <div class="reveal"><div class="sec-label">Area de Atendimento</div><h2>Atendemos Itatiaia e Toda a Regiao do Sul Fluminense</h2></div>
+    <div class="reveal"><div class="sec-label">Área de Atendimento</div><h2>Atendemos Itatiaia, Resende, Penedo e Engenheiro Passos</h2></div>
     <p class="reveal">A <strong>Auto Pecas Itatiaia</strong> atende motoristas, mecanicos e frotas de toda a regiao. Nossa localizacao no Centro de Itatiaia, a poucos metros da <strong>Via Dutra (BR-116)</strong>, facilita o acesso para quem vem de cidades vizinhas:</p>
     <ul class="reveal">
-      <li><strong>Itatiaia</strong> &mdash; Centro, Vila Florida, Campo Alegre, Maringa, Maromba, Penedo</li>
-      <li><strong>Resende</strong> &mdash; 8 km pela Via Dutra, menos de 10 minutos de carro</li>
-      <li><strong>Penedo</strong> &mdash; 12 km pela RJ-163, acesso direto pela estrada da serra</li>
-      <li><strong>Engenheiro Passos</strong> &mdash; 25 km, acesso pela BR-354 pela regiao serrana</li>
+      <li><strong>Itatiaia</strong>, Centro, Vila Florida, Campo Alegre, Maringa, Maromba, Penedo</li>
+      <li><strong>Resende</strong>, 8 km pela Via Dutra, menos de 10 minutos de carro</li>
+      <li><strong>Penedo</strong>, 12 km pela RJ-163, acesso direto pela estrada da serra</li>
+      <li><strong>Engenheiro Passos</strong>, 25 km, acesso pela BR-354 pela regiao serrana</li>
     </ul>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="reveal"><div class="sec-label">Contato</div><h2 class="sec-title">Localizacao e Contato</h2></div>
+    <div class="reveal"><div class="sec-label">Contato</div><h2 class="sec-title">Localização e Contato</h2></div>
     <div class="contact-grid" style="margin-top:var(--s-7);">
       <div style="display:flex;flex-direction:column;gap:var(--s-3);">
         <div class="contact-wpp reveal">
           <div class="contact-wpp-label">WhatsApp principal</div>
           <a href="https://wa.me/5524993099190?text=Ol%C3%A1!%20Vim%20pelo%20site." class="btn btn-wpp" target="_blank" rel="noopener" style="width:100%;" data-cursor="Chamar"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> (24) 99309-9190</a>
         </div>
-        <div class="contact-info-card reveal"><div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="contact-info-label">Endereco</div><div class="contact-info-value">Av. dos Expedicionarios, 275 - loja 5 - Centro<br>Itatiaia &mdash; RJ, 27580-216</div></div></div>
+        <div class="contact-info-card reveal"><div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="contact-info-label">Endereco</div><div class="contact-info-value">Av. dos Expedicionarios, 275 - loja 5 - Centro<br>Itatiaia, RJ, 27580-216</div></div></div>
         <div class="contact-info-card reveal"><div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><div class="contact-info-label">Horario</div><div class="contact-info-value">Seg&ndash;Sex: 08h&ndash;18h<br>Sabado: 08h&ndash;13h</div></div></div>
         <div class="contact-info-card reveal"><div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="contact-info-label">Telefone</div><div class="contact-info-value"><a href="tel:+5524993099190">(24) 99309-9190</a></div></div></div>
       </div>
@@ -728,8 +760,8 @@ ul, ol { list-style: none; }
 <div class="pre-cta">
   <div class="container">
     <div class="pre-cta-inner">
-      <div><h2 class="pre-cta-title">Precisa de Pecas Automotivas em Itatiaia?</h2><div class="pre-cta-sub">Orcamento rapido pelo WhatsApp &mdash; (24) 99309-9190</div></div>
-      <a href="https://wa.me/5524993099190?text=Ol%C3%A1!%20Preciso%20de%20um%20or%C3%A7amento." class="btn btn-wpp" target="_blank" rel="noopener" data-cursor="Chamar"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Pedir Orcamento</a>
+      <div><h2 class="pre-cta-title">Precisa de Peças Automotivas em Itatiaia?</h2><div class="pre-cta-sub">Orçamento rápido pelo WhatsApp, (24) 99309-9190</div></div>
+      <a href="https://wa.me/5524993099190?text=Ol%C3%A1!%20Preciso%20de%20um%20or%C3%A7amento." class="btn btn-wpp" target="_blank" rel="noopener" data-cursor="Chamar"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Pedir Orçamento</a>
     </div>
   </div>
 </div>
@@ -740,7 +772,7 @@ ul, ol { list-style: none; }
       <div>
         <div class="logo" style="margin-bottom:var(--s-4);"><div class="logo-mark">AP</div><div class="logo-text"><span class="logo-name">Auto Pe&#231;as Itatiaia</span><span class="logo-sub">Itatiaia &middot; RJ</span></div></div>
         <p class="footer-brand-desc">Refer&#234;ncia em auto pe&#231;as na regi&#227;o desde 2019. Mais de 40 marcas, atendimento especializado para mec&#226;nicos, motoristas e frotas.</p>
-        <div style="font-family:var(--font-mono);font-size:11px;color:var(--orange);letter-spacing:.06em;">&#11088; 4.9/5 &mdash; 347 AVALIA&#199;&#213;ES</div>
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--orange);letter-spacing:.06em;">&#11088; 4.9/5, 347 AVALIA&#199;&#213;ES</div>
       </div>
       <div>
         <div class="footer-col-title">Empresa</div>
@@ -759,17 +791,17 @@ ul, ol { list-style: none; }
           <a href="/troca-de-oleo.html">Troca de &#211;leo</a>
           <a href="/troca-de-filtros.html">Troca de Filtros</a>
           <a href="/troca-de-pastilhas.html">Troca de Pastilhas</a>
-          <a href="/troca-de-disco-de-freio.html">Disco de Freio</a>
-          <a href="/troca-de-lampadas.html">L&#226;mpadas</a>
-          <a href="/troca-de-palhetas.html">Palhetas</a>
-          <a href="/troca-de-fluido-de-freio.html">Fluido de Freio</a>
+          <a href="/troca-de-disco-de-freio.html">Troca de Disco de Freio</a>
+          <a href="/troca-de-lampadas.html">Troca de Lâmpadas</a>
+          <a href="/troca-de-palhetas.html">Troca de Palhetas</a>
+          <a href="/troca-de-fluido-de-freio.html">Troca de Fluido de Freio</a>
         </div>
       </div>
       <div>
         <div class="footer-col-title">Hor&#225;rio</div>
         <div style="display:flex;flex-direction:column;gap:var(--s-2);">
-          <div class="footer-hours-row"><span>Segunda a Sexta</span><strong>08h &mdash; 18h</strong></div>
-          <div class="footer-hours-row"><span>S&#225;bado</span><strong>08h &mdash; 13h</strong></div>
+          <div class="footer-hours-row"><span>Segunda a Sexta</span><strong>08h, 18h</strong></div>
+          <div class="footer-hours-row"><span>S&#225;bado</span><strong>08h, 13h</strong></div>
           <div class="footer-hours-row"><span>Domingo</span><strong>Fechado</strong></div>
         </div>
         <div style="margin-top:var(--s-5);">
@@ -782,7 +814,7 @@ ul, ol { list-style: none; }
       </div>
     </div>
     <div class="footer-bottom">
-      <div>&copy; 2025 Auto Pe&#231;as Itatiaia &mdash; Pe&#231;as Automotivas em Itatiaia, RJ</div>
+      <div>&copy; 2025 Auto Pe&#231;as Itatiaia, Pe&#231;as Automotivas em Itatiaia, RJ</div>
       <div style="display:flex;gap:var(--s-4);flex-wrap:wrap;">
         <a href="/politica-de-privacidade.html" style="color:var(--text-muted);text-decoration:none;">Pol&#237;tica de Privacidade</a>
         <a href="/termos-de-uso.html" style="color:var(--text-muted);text-decoration:none;">Termos de Uso</a>
