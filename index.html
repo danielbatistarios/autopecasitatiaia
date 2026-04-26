@@ -23,9 +23,7 @@
 <link rel="preload" href="/assets/fonts/playfair-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 
 <!-- GSAP + ScrollTrigger + Lenis -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
+
 
 <style>
 @font-face {
@@ -2866,14 +2864,14 @@ ul, ol { list-style: none; }
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 <!-- ============================================================
      JAVASCRIPT — Loader + GSAP + Lenis + Custom Cursor
      ============================================================ -->
 <script>
 /* ── LOADER ────────────────────────────────────────────────── */
-let _loaderDone = false, _gsapReady = false;
-function _tryInitAnimations() { if (_loaderDone && _gsapReady) initAnimations(); }
-
 window.addEventListener('DOMContentLoaded', () => {
   const loader = document.getElementById('loader');
   const phrase = document.getElementById('loaderPhrase');
@@ -2995,8 +2993,6 @@ document.querySelectorAll('a, button, [data-cursor]').forEach(el => {
 });
 
 /* ── GSAP + LENIS (carregados com defer — aguarda window load) */
-window.addEventListener('load', () => {
-
 /* ── LENIS SMOOTH SCROLL ─────────────────────────────────── */
 const lenis = new Lenis({
   duration: 1.2,
@@ -3011,8 +3007,6 @@ gsap.ticker.lagSmoothing(0);
 
 /* ── GSAP ANIMATIONS ─────────────────────────────────────── */
 gsap.registerPlugin(ScrollTrigger);
-_gsapReady = true;
-_tryInitAnimations();
 
 function initAnimations() {
   // Hero entrance timeline
@@ -3156,8 +3150,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) { lenis.scrollTo(target); }
   });
-
-}); /* end window load */
 </script>
 </body>
 </html>
