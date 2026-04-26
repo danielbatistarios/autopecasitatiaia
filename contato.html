@@ -203,7 +203,7 @@ ul, ol { list-style: none; }
 .about-mini-num { font-size: 28px; font-weight: 900; color: var(--orange); margin-bottom: 4px; }
 .about-mini-label { font-size: 12px; color: var(--text-tertiary); font-family: var(--font-mono); letter-spacing: .04em; }
 
-/* SERVICE CARDS — grid version */
+/* SERVICE CARDS . grid version */
 .svc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--s-4); margin-top: var(--s-7); }
 .svc-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-md); padding: var(--s-6); position: relative; overflow: hidden; transition: all var(--duration-normal) var(--ease-out); display: flex; flex-direction: column; }
 .svc-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--orange); transform: scaleX(0); transition: transform .5s var(--ease-out); }
@@ -215,7 +215,7 @@ ul, ol { list-style: none; }
 .svc-card-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--orange); letter-spacing: .04em; text-transform: uppercase; transition: gap var(--duration-fast); }
 .svc-card-link:hover { gap: 10px; }
 
-/* CONTENT SECTIONS — for service pages */
+/* CONTENT SECTIONS . for service pages */
 .content-section { padding: var(--s-9) 0; position: relative; }
 .content-section:nth-child(even) { background: var(--bg-secondary); }
 .content-section h2 { font-family: var(--font-display); font-size: clamp(28px, 3.5vw, 42px); font-weight: 900; letter-spacing: -.03em; color: var(--text-primary); line-height: 1.05; margin-bottom: var(--s-5); }
@@ -226,7 +226,7 @@ ul, ol { list-style: none; }
 .content-section ul li { font-size: 15px; color: var(--text-secondary); line-height: 1.7; padding: 8px 0; padding-left: 28px; position: relative; border-bottom: 1px solid var(--border); }
 .content-section ul li::before { content: ''; position: absolute; left: 0; top: 16px; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
 
-/* GRID CARDS — for values, features, etc */
+/* GRID CARDS . for values, features, etc */
 .feature-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--s-4); margin-top: var(--s-6); }
 .feature-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-md); padding: var(--s-6); transition: all var(--duration-normal); }
 .feature-card:hover { border-color: var(--orange-border); transform: translateY(-3px); }
@@ -499,6 +499,7 @@ ul, ol { list-style: none; }
   </div>
 </header>
 
+<main>
 
 <section class="hero noise" id="hero">
   <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
@@ -557,8 +558,8 @@ ul, ol { list-style: none; }
   <div class="container">
     <div class="reveal"><div class="sec-label">Horário</div><h2 class="sec-title">Horário de Funcionamento</h2></div>
     <div class="feature-grid" style="margin-top:var(--s-6);max-width:600px;">
-      <div class="feature-card reveal"><div class="feature-card-title">Segunda a Sexta</div><div class="feature-card-desc" style="font-size:24px;font-weight:900;color:var(--orange);">08h — 18h</div></div>
-      <div class="feature-card reveal"><div class="feature-card-title">Sábado</div><div class="feature-card-desc" style="font-size:24px;font-weight:900;color:var(--orange);">08h — 13h</div></div>
+      <div class="feature-card reveal"><div class="feature-card-title">Segunda a Sexta</div><div class="feature-card-desc" style="font-size:24px;font-weight:900;color:var(--orange);">08h . 18h</div></div>
+      <div class="feature-card reveal"><div class="feature-card-title">Sábado</div><div class="feature-card-desc" style="font-size:24px;font-weight:900;color:var(--orange);">08h . 13h</div></div>
     </div>
     <p class="reveal" style="margin-top:var(--s-5);font-size:15px;color:var(--text-tertiary);">Domingos e feriados: fechado. Para urgências, envie mensagem pelo WhatsApp que respondemos no próximo dia útil.</p>
   </div>
@@ -650,8 +651,8 @@ ul, ol { list-style: none; }
       <div>
         <div class="footer-col-title">Hor&#225;rio</div>
         <div style="display:flex;flex-direction:column;gap:var(--s-2);">
-          <div class="footer-hours-row"><span>Segunda a Sexta</span><strong>08h &mdash; 18h</strong></div>
-          <div class="footer-hours-row"><span>S&#225;bado</span><strong>08h &mdash; 13h</strong></div>
+          <div class="footer-hours-row"><span>Segunda a Sexta</span><strong>08h . 18h</strong></div>
+          <div class="footer-hours-row"><span>S&#225;bado</span><strong>08h . 13h</strong></div>
           <div class="footer-hours-row"><span>Domingo</span><strong>Fechado</strong></div>
         </div>
         <div style="margin-top:var(--s-5);">
@@ -663,17 +664,17 @@ ul, ol { list-style: none; }
         </div>
       </div>
     </div>
-    <div class="footer-nap" itemscope itemprop="address" itemtype="https://schema.org/PostalAddress">
-      <span itemprop="streetAddress">Av. dos Expedicioni&#225;rios, 275, Loja 5</span> &mdash;
+    <address class="footer-nap" itemscope itemprop="address" itemtype="https://schema.org/PostalAddress">
+      <span itemprop="streetAddress">Av. dos Expedicioni&#225;rios, 275, Loja 5</span>.
       <span itemprop="addressLocality">Itatiaia</span>,
       <span itemprop="addressRegion">RJ</span>,
       CEP <span itemprop="postalCode">27580-216</span> &nbsp;&bull;&nbsp;
       Tel. <a href="tel:+5524993099190">(24) 99309-9190</a> &nbsp;&bull;&nbsp;
       CNPJ: <span itemprop="taxID">01.335.600/0001-73</span> &nbsp;&bull;&nbsp;
       <a href="https://www.google.com/maps/dir/-22.478611,-44.4983747/auto+pe%C3%A7as+itatiaia/@-22.4769945,-44.5735169,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x9e79e3e3a07d47:0xce6aced7aeeef147!2m2!1d-44.5626694!2d-22.4924217" target="_blank" rel="noopener" aria-label="Ver rota no Google Maps">Como chegar &#x2192;</a>
-    </div>
+    </address>
     <div class="footer-bottom">
-      <div>&copy; 2025 Auto Pe&#231;as Itatiaia &mdash; Pe&#231;as Automotivas em Itatiaia, RJ</div>
+      <div>&copy; 2025 Auto Pe&#231;as Itatiaia. Pe&#231;as Automotivas em Itatiaia, RJ</div>
       <div style="display:flex;gap:var(--s-4);flex-wrap:wrap;">
         <a href="/politica-de-privacidade.html" style="color:var(--text-muted);text-decoration:none;">Pol&#237;tica de Privacidade</a>
         <a href="/termos-de-uso.html" style="color:var(--text-muted);text-decoration:none;">Termos de Uso</a>
@@ -682,12 +683,14 @@ ul, ol { list-style: none; }
     </div>
   </div>
 </footer>
+
+</main>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 <script>
 /* LOADER */
-/* DOM already ready — scripts at end of body */
+/* DOM already ready . scripts at end of body */
 {
   const loader = document.getElementById('loader');
   const phrase = document.getElementById('loaderPhrase');
