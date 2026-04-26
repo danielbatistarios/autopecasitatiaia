@@ -22,45 +22,201 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "AutoPartsStore",
-  "name": "Auto Pecas Itatiaia",
-  "url": "https://autopecasitatiaia.com.br",
-  "telephone": "+55-24-99309-9190",
-  "address": { "@type": "PostalAddress", "streetAddress": "Av. dos Expedicionarios, 275 - loja 5 - Centro", "addressLocality": "Itatiaia", "addressRegion": "RJ", "postalCode": "27580-216", "addressCountry": "BR" },
-  "geo": { "@type": "GeoCoordinates", "latitude": "-22.4939592", "longitude": "-44.5614109" },
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "13:00" }
-  ],
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "347" }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Troca de Fluido de Freio",
-  "description": "Servico de troca de fluido de freio em Itatiaia-RJ na Auto Pecas Itatiaia.",
-  "provider": {
-    "@type": "AutoPartsStore",
-    "name": "Auto Pecas Itatiaia",
-    "telephone": "+55-24-99309-9190",
-    "address": { "@type": "PostalAddress", "streetAddress": "Av. dos Expedicionarios, 275 - loja 5 - Centro", "addressLocality": "Itatiaia", "addressRegion": "RJ", "postalCode": "27580-216", "addressCountry": "BR" }
-  },
-  "areaServed": ["Itatiaia","Resende","Penedo","Engenheiro Passos"]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "Quanto custa a troca de fluido de freio em Itatiaia?", "acceptedAnswer": { "@type": "Answer", "text": "O valor depende do tipo de fluido (DOT 3, DOT 4 ou DOT 5.1) e da quantidade necessaria para o seu veiculo. A sangria completa esta inclusa. Consulte pelo WhatsApp (24) 99309-9190." } },
-    { "@type": "Question", "name": "O que e vapor lock e como evitar?", "acceptedAnswer": { "@type": "Answer", "text": "Vapor lock ocorre quando o fluido de freio ferve, formando bolhas de gas que impedem a transmissao de pressao hidraulica. O pedal afunda e o carro nao freia. Para evitar: mantenha o fluido novo (troca a cada 2 anos) e use DOT 4 ou superior se dirige em serra." } },
-    { "@type": "Question", "name": "Qual a diferenca entre DOT 3 e DOT 4?", "acceptedAnswer": { "@type": "Answer", "text": "O DOT 4 tem ponto de ebulicao mais alto (230&deg;C seco vs 205&deg;C do DOT 3). Para motoristas de Itatiaia que descem serra regularmente, o DOT 4 e o minimo recomendado. DOT 5.1 e ainda mais resistente ao calor." } },
-    { "@type": "Question", "name": "De quanto em quanto tempo devo trocar o fluido de freio?", "acceptedAnswer": { "@type": "Answer", "text": "A recomendacao geral e a cada 2 anos ou 40.000 km. Em uso de serra (Itatiaia, Penedo, Maromba), recomendamos antecipar para 18 meses. Frotas de turismo devem trocar anualmente." } },
-    { "@type": "Question", "name": "A Auto Pecas Itatiaia faz o teste do fluido?", "acceptedAnswer": { "@type": "Answer", "text": "Sim! Temos refratometro digital que mede o ponto de ebulicao e o teor de umidade do fluido em 30 segundos. O teste e gratuito e voce ve o resultado no visor." } },
-    { "@type": "Question", "name": "Posso misturar marcas de fluido de freio?", "acceptedAnswer": { "@type": "Answer", "text": "Fluidos de mesma especificacao (ex: DOT 4 de marcas diferentes) podem ser misturados, mas o ideal e drenar o antigo completamente e usar uma marca so. Na sangria que fazemos, removemos todo o fluido velho." } }
+  "@graph": [
+    {
+      "@type": "AutoPartsStore",
+      "@id": "https://autopecasitatiaia.com.br/#organization",
+      "name": "Auto Peças Itatiaia",
+      "url": "https://autopecasitatiaia.com.br",
+      "telephone": "+55-24-99309-9190",
+      "hasMap": "https://www.google.com/maps/place/Auto+Pe%C3%A7as+Itatiaia/@-22.4939592,-44.5614109,17z/data=!4m2!3m1!1s0x0:0xce6aced7aeeef147",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. dos Expedicionários, 275 - loja 5 - Centro",
+        "addressLocality": "Itatiaia",
+        "addressRegion": "RJ",
+        "postalCode": "27580-216",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -22.4939592,
+        "longitude": -44.5614109
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "00:00",
+          "closes": "00:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.9,
+        "reviewCount": 347,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "sameAs": [
+        "https://www.instagram.com/autopecasitatiaia"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#webpage",
+      "url": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html",
+      "name": "Troca de Fluido de Freio em Itatiaia | Auto Peças Itatiaia",
+      "description": "Troca de fluido de freio em Itatiaia. Bosch, TRW e Varga DOT 3, DOT 4 e DOT 5.1. Frenagem segura nas descidas da serra. Auto Peças Itatiaia (24) 99309-9190.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://autopecasitatiaia.com.br/#website"
+      },
+      "about": {
+        "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#service"
+      },
+      "breadcrumb": {
+        "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://autopecasitatiaia.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Serviços",
+          "item": "https://autopecasitatiaia.com.br/servicos.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Troca de Fluido de Freio em Itatiaia",
+          "item": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#service",
+      "name": "Troca de Fluido de Freio em Itatiaia",
+      "serviceType": "Troca de Fluido de Freio",
+      "description": "Serviço de troca de fluido de freio em Itatiaia RJ. Fluidos DOT 3, DOT 4 e DOT 5.1 com sangria completa do sistema.",
+      "provider": {
+        "@id": "https://autopecasitatiaia.com.br/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Itatiaia",
+          "addressRegion": "RJ",
+          "sameAs": "https://www.wikidata.org/wiki/Q22064919"
+        },
+        {
+          "@type": "City",
+          "name": "Resende",
+          "addressRegion": "RJ",
+          "sameAs": "https://www.wikidata.org/wiki/Q913390"
+        },
+        {
+          "@type": "City",
+          "name": "Engenheiro Passos",
+          "addressRegion": "RJ",
+          "sameAs": "https://www.wikidata.org/wiki/Q10272923"
+        },
+        {
+          "@type": "City",
+          "name": "Penedo",
+          "addressRegion": "RJ"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "name": "Troca de Fluido de Freio em Itatiaia",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "BRL",
+        "url": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quanto custa a troca de fluido de freio em Itatiaia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O valor depende do tipo de fluido (DOT 3, DOT 4 ou DOT 5.1) e da quantidade necessaria para o seu veiculo. A sangria completa esta inclusa. Consulte pelo WhatsApp (24) 99309-9190."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que e vapor lock e como evitar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vapor lock ocorre quando o fluido de freio ferve, formando bolhas de gas que impedem a transmissao de pressao hidraulica. O pedal afunda e o carro nao freia. Para evitar: mantenha o fluido novo (troca a cada 2 anos) e use DOT 4 ou superior se dirige em serra."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferenca entre DOT 3 e DOT 4?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O DOT 4 tem ponto de ebulicao mais alto (230&deg;C seco vs 205&deg;C do DOT 3). Para motoristas de Itatiaia que descem serra regularmente, o DOT 4 e o minimo recomendado. DOT 5.1 e ainda mais resistente ao calor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De quanto em quanto tempo devo trocar o fluido de freio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A recomendacao geral e a cada 2 anos ou 40.000 km. Em uso de serra (Itatiaia, Penedo, Maromba), recomendamos antecipar para 18 meses. Frotas de turismo devem trocar anualmente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A Auto Pecas Itatiaia faz o teste do fluido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Temos refratometro digital que mede o ponto de ebulicao e o teor de umidade do fluido em 30 segundos. O teste e gratuito e voce ve o resultado no visor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso misturar marcas de fluido de freio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fluidos de mesma especificacao (ex: DOT 4 de marcas diferentes) podem ser misturados, mas o ideal e drenar o antigo completamente e usar uma marca so. Na sangria que fazemos, removemos todo o fluido velho."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>

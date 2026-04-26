@@ -22,45 +22,202 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "AutoPartsStore",
-  "name": "Auto Pecas Itatiaia",
-  "url": "https://autopecasitatiaia.com.br",
-  "telephone": "+55-24-99309-9190",
-  "address": { "@type": "PostalAddress", "streetAddress": "Av. dos Expedicionarios, 275 - loja 5 - Centro", "addressLocality": "Itatiaia", "addressRegion": "RJ", "postalCode": "27580-216", "addressCountry": "BR" },
-  "geo": { "@type": "GeoCoordinates", "latitude": "-22.4939592", "longitude": "-44.5614109" },
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "13:00" }
-  ],
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "347" }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Troca de Oleo",
-  "description": "Servico de troca de oleo em Itatiaia-RJ na Auto Pecas Itatiaia.",
-  "provider": {
-    "@type": "AutoPartsStore",
-    "name": "Auto Pecas Itatiaia",
-    "telephone": "+55-24-99309-9190",
-    "address": { "@type": "PostalAddress", "streetAddress": "Av. dos Expedicionarios, 275 - loja 5 - Centro", "addressLocality": "Itatiaia", "addressRegion": "RJ", "postalCode": "27580-216", "addressCountry": "BR" }
-  },
-  "areaServed": ["Itatiaia","Resende","Penedo","Engenheiro Passos"]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "Quanto custa a troca de oleo em Itatiaia?", "acceptedAnswer": { "@type": "Answer", "text": "O valor depende do tipo de oleo (mineral, semi-sintetico ou sintetico) e da quantidade necessaria para o seu motor. O filtro de oleo esta incluso. Consulte pelo WhatsApp (24) 99309-9190 para orcamento com a marca e viscosidade do seu veiculo." } },
-    { "@type": "Question", "name": "Qual a diferenca entre oleo sintetico e semi-sintetico?", "acceptedAnswer": { "@type": "Answer", "text": "O oleo sintetico oferece protecao superior em temperaturas extremas e dura mais (ate 10.000 km). O semi-sintetico e mais acessivel e atende bem veiculos de uso misto. Para quem dirige em serra (Itatiaia a Maromba), o sintetico e recomendado." } },
-    { "@type": "Question", "name": "De quantos em quantos km devo trocar o oleo em estradas de serra?", "acceptedAnswer": { "@type": "Answer", "text": "Em uso predominante de serra (subidas, descidas ingremes), recomendamos reduzir o intervalo em 20%: se o manual indica 10.000 km, troque a cada 8.000 km. Para uso misto (serra + cidade), 7.000-8.000 km e seguro." } },
-    { "@type": "Question", "name": "A troca de oleo inclui o filtro?", "acceptedAnswer": { "@type": "Answer", "text": "Sim! Toda troca de oleo na Auto Pecas Itatiaia inclui a substituicao do filtro de oleo (Tecfil, Mann ou Wega) sem custo adicional pela mao de obra. Filtro saturado contamina o oleo novo e reduz sua vida util." } },
-    { "@type": "Question", "name": "Voces fazem troca de oleo para vans e caminhoes?", "acceptedAnswer": { "@type": "Answer", "text": "Nao trabalhamos com troca de oleo para vans e caminhoes. Atendemos apenas carros de passeio." } },
-    { "@type": "Question", "name": "Posso trocar o oleo sem agendar?", "acceptedAnswer": { "@type": "Answer", "text": "Sim, atendemos por ordem de chegada, sem necessidade de agendamento. Atendemos por ordem de chegada. Funcionamos de segunda a sexta (08h-18h) e sabado (08h-13h). Estamos na Av. dos Expedicionarios, 275, Centro de Itatiaia." } }
+  "@graph": [
+    {
+      "@type": "AutoPartsStore",
+      "@id": "https://autopecasitatiaia.com.br/#organization",
+      "name": "Auto Peças Itatiaia",
+      "url": "https://autopecasitatiaia.com.br",
+      "telephone": "+55-24-99309-9190",
+      "hasMap": "https://www.google.com/maps/place/Auto+Pe%C3%A7as+Itatiaia/@-22.4939592,-44.5614109,17z/data=!4m2!3m1!1s0x0:0xce6aced7aeeef147",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. dos Expedicionários, 275 - loja 5 - Centro",
+        "addressLocality": "Itatiaia",
+        "addressRegion": "RJ",
+        "postalCode": "27580-216",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -22.4939592,
+        "longitude": -44.5614109
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "00:00",
+          "closes": "00:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.9,
+        "reviewCount": 347,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "sameAs": [
+        "https://www.instagram.com/autopecasitatiaia"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#webpage",
+      "url": "https://autopecasitatiaia.com.br/troca-de-oleo.html",
+      "name": "Troca de Óleo em Itatiaia | Auto Peças Itatiaia",
+      "description": "Troca de óleo em Itatiaia com filtro incluso. Óleos Mobil, Shell, Castrol e Lubrax. Análise do óleo usado sem custo. Auto Peças Itatiaia (24) 99309-9190.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://autopecasitatiaia.com.br/#website"
+      },
+      "about": {
+        "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#service"
+      },
+      "breadcrumb": {
+        "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://autopecasitatiaia.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Serviços",
+          "item": "https://autopecasitatiaia.com.br/servicos.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Troca de Óleo em Itatiaia",
+          "item": "https://autopecasitatiaia.com.br/troca-de-oleo.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#service",
+      "name": "Troca de Óleo em Itatiaia",
+      "serviceType": "Troca de Óleo Automotivo",
+      "description": "Serviço de troca de óleo em Itatiaia RJ com filtro incluído. Óleos Mobil, Shell, Lubrax e Petronas para carros de passeio.",
+      "provider": {
+        "@id": "https://autopecasitatiaia.com.br/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Itatiaia",
+          "addressRegion": "RJ",
+          "sameAs": "https://www.wikidata.org/wiki/Q22064919"
+        },
+        {
+          "@type": "City",
+          "name": "Resende",
+          "addressRegion": "RJ",
+          "sameAs": "https://www.wikidata.org/wiki/Q913390"
+        },
+        {
+          "@type": "City",
+          "name": "Engenheiro Passos",
+          "addressRegion": "RJ",
+          "sameAs": "https://www.wikidata.org/wiki/Q10272923"
+        },
+        {
+          "@type": "City",
+          "name": "Penedo",
+          "addressRegion": "RJ"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "name": "Troca de Óleo em Itatiaia",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "BRL",
+        "url": "https://autopecasitatiaia.com.br/troca-de-oleo.html"
+      },
+      "sameAs": "https://www.wikidata.org/wiki/Q297392"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quanto custa a troca de oleo em Itatiaia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O valor depende do tipo de oleo (mineral, semi-sintetico ou sintetico) e da quantidade necessaria para o seu motor. O filtro de oleo esta incluso. Consulte pelo WhatsApp (24) 99309-9190 para orcamento com a marca e viscosidade do seu veiculo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferenca entre oleo sintetico e semi-sintetico?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O oleo sintetico oferece protecao superior em temperaturas extremas e dura mais (ate 10.000 km). O semi-sintetico e mais acessivel e atende bem veiculos de uso misto. Para quem dirige em serra (Itatiaia a Maromba), o sintetico e recomendado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De quantos em quantos km devo trocar o oleo em estradas de serra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Em uso predominante de serra (subidas, descidas ingremes), recomendamos reduzir o intervalo em 20%: se o manual indica 10.000 km, troque a cada 8.000 km. Para uso misto (serra + cidade), 7.000-8.000 km e seguro."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A troca de oleo inclui o filtro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Toda troca de oleo na Auto Pecas Itatiaia inclui a substituicao do filtro de oleo (Tecfil, Mann ou Wega) sem custo adicional pela mao de obra. Filtro saturado contamina o oleo novo e reduz sua vida util."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Voces fazem troca de oleo para vans e caminhoes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nao trabalhamos com troca de oleo para vans e caminhoes. Atendemos apenas carros de passeio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso trocar o oleo sem agendar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, atendemos por ordem de chegada, sem necessidade de agendamento. Atendemos por ordem de chegada. Funcionamos de segunda a sexta (08h-18h) e sabado (08h-13h). Estamos na Av. dos Expedicionarios, 275, Centro de Itatiaia."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>

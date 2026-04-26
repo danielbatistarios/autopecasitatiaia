@@ -22,45 +22,201 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "AutoPartsStore",
-  "name": "Auto Pecas Itatiaia",
-  "url": "https://autopecasitatiaia.com.br",
-  "telephone": "+55-24-99309-9190",
-  "address": { "@type": "PostalAddress", "streetAddress": "Av. dos Expedicionarios, 275 - loja 5 - Centro", "addressLocality": "Itatiaia", "addressRegion": "RJ", "postalCode": "27580-216", "addressCountry": "BR" },
-  "geo": { "@type": "GeoCoordinates", "latitude": "-22.4939592", "longitude": "-44.5614109" },
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "13:00" }
-  ],
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "347" }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Troca de Pastilhas de Freio",
-  "description": "Servico de troca de pastilhas de freio em Itatiaia-RJ na Auto Pecas Itatiaia.",
-  "provider": {
-    "@type": "AutoPartsStore",
-    "name": "Auto Pecas Itatiaia",
-    "telephone": "+55-24-99309-9190",
-    "address": { "@type": "PostalAddress", "streetAddress": "Av. dos Expedicionarios, 275 - loja 5 - Centro", "addressLocality": "Itatiaia", "addressRegion": "RJ", "postalCode": "27580-216", "addressCountry": "BR" }
-  },
-  "areaServed": ["Itatiaia","Resende","Penedo","Engenheiro Passos"]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "Quanto custa trocar pastilhas de freio em Itatiaia?", "acceptedAnswer": { "@type": "Answer", "text": "O valor depende do veiculo e da marca das pastilhas. Trabalhamos com Cobreq, Ecopads, TRW e Frasle. Solicite orcamento pelo WhatsApp (24) 99309-9190 informando marca e modelo do carro." } },
-    { "@type": "Question", "name": "Pastilhas ceramicas valem a pena para uso em serra?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Pastilhas ceramicas mantem o coeficiente de atrito mais estavel em altas temperaturas (acima de 300&deg;C), geram menos po e desgastam menos o disco. Para quem desce serra regularmente em Itatiaia, o investimento se paga." } },
-    { "@type": "Question", "name": "De quantos em quantos km devo trocar as pastilhas na regiao de serra?", "acceptedAnswer": { "@type": "Answer", "text": "Em uso predominante de serra (Itatiaia, Penedo, Maromba), as pastilhas duram entre 20.000 e 35.000 km &mdash; dependendo da marca, peso do veiculo e estilo de conducao. Em terreno plano, duram ate 50.000 km." } },
-    { "@type": "Question", "name": "Posso trocar so as pastilhas dianteiras?", "acceptedAnswer": { "@type": "Answer", "text": "Sim, as pastilhas dianteiras desgastam mais rapido (60-70% da frenagem e feita pelo eixo dianteiro). Mas recomendamos inspecionar as traseiras ao mesmo tempo. Na Auto Pecas Itatiaia, verificamos ambos os eixos gratuitamente." } },
-    { "@type": "Question", "name": "Qual a diferenca entre pastilha organica e semi-metalica?", "acceptedAnswer": { "@type": "Answer", "text": "Organicas sao mais silenciosas e desgastam menos o disco, mas perdem eficiencia em altas temperaturas. Semi-metalicas aguentam mais calor e sao melhores para serra. Para Itatiaia, recomendamos semi-metalicas ou ceramicas." } },
-    { "@type": "Question", "name": "A Auto Pecas Itatiaia tem pastilhas para caminhao?", "acceptedAnswer": { "@type": "Answer", "text": "Sim! Trabalhamos com Frasle Lonaflex para veiculos pesados e utilitarios. Estoque permanente para atender caminhoneiros da Via Dutra sem espera por encomenda." } }
+  "@graph": [
+    {
+      "@type": "AutoPartsStore",
+      "@id": "https://autopecasitatiaia.com.br/#organization",
+      "name": "Auto Peças Itatiaia",
+      "url": "https://autopecasitatiaia.com.br",
+      "telephone": "+55-24-99309-9190",
+      "hasMap": "https://www.google.com/maps/place/Auto+Pe%C3%A7as+Itatiaia/@-22.4939592,-44.5614109,17z/data=!4m2!3m1!1s0x0:0xce6aced7aeeef147",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. dos Expedicionários, 275 - loja 5 - Centro",
+        "addressLocality": "Itatiaia",
+        "addressRegion": "RJ",
+        "postalCode": "27580-216",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -22.4939592,
+        "longitude": -44.5614109
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "00:00",
+          "closes": "00:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.9,
+        "reviewCount": 347,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "sameAs": [
+        "https://www.instagram.com/autopecasitatiaia"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#webpage",
+      "url": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html",
+      "name": "Troca de Pastilhas de Freio em Itatiaia | Auto Peças",
+      "description": "Troca de pastilhas de freio em Itatiaia. Cobreq, TRW e Frasle. Serra da Mantiqueira desgasta pastilhas mais rápido. Solicite orçamento (24) 99309-9190.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://autopecasitatiaia.com.br/#website"
+      },
+      "about": {
+        "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#service"
+      },
+      "breadcrumb": {
+        "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://autopecasitatiaia.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Serviços",
+          "item": "https://autopecasitatiaia.com.br/servicos.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Troca de Pastilhas de Freio em Itatiaia",
+          "item": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#service",
+      "name": "Troca de Pastilhas de Freio em Itatiaia",
+      "serviceType": "Troca de Pastilhas de Freio",
+      "description": "Serviço de troca de pastilhas de freio em Itatiaia RJ. Pastilhas Bosch, TRW e Cobreq com instalação e teste de frenagem.",
+      "provider": {
+        "@id": "https://autopecasitatiaia.com.br/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Itatiaia",
+          "addressRegion": "RJ",
+          "sameAs": "https://www.wikidata.org/wiki/Q22064919"
+        },
+        {
+          "@type": "City",
+          "name": "Resende",
+          "addressRegion": "RJ",
+          "sameAs": "https://www.wikidata.org/wiki/Q913390"
+        },
+        {
+          "@type": "City",
+          "name": "Engenheiro Passos",
+          "addressRegion": "RJ",
+          "sameAs": "https://www.wikidata.org/wiki/Q10272923"
+        },
+        {
+          "@type": "City",
+          "name": "Penedo",
+          "addressRegion": "RJ"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "name": "Troca de Pastilhas de Freio em Itatiaia",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "BRL",
+        "url": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quanto custa trocar pastilhas de freio em Itatiaia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O valor depende do veiculo e da marca das pastilhas. Trabalhamos com Cobreq, Ecopads, TRW e Frasle. Solicite orcamento pelo WhatsApp (24) 99309-9190 informando marca e modelo do carro."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pastilhas ceramicas valem a pena para uso em serra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Pastilhas ceramicas mantem o coeficiente de atrito mais estavel em altas temperaturas (acima de 300&deg;C), geram menos po e desgastam menos o disco. Para quem desce serra regularmente em Itatiaia, o investimento se paga."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De quantos em quantos km devo trocar as pastilhas na regiao de serra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Em uso predominante de serra (Itatiaia, Penedo, Maromba), as pastilhas duram entre 20.000 e 35.000 km - dependendo da marca, peso do veiculo e estilo de conducao. Em terreno plano, duram ate 50.000 km."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso trocar so as pastilhas dianteiras?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, as pastilhas dianteiras desgastam mais rapido (60-70% da frenagem e feita pelo eixo dianteiro). Mas recomendamos inspecionar as traseiras ao mesmo tempo. Na Auto Pecas Itatiaia, verificamos ambos os eixos gratuitamente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferenca entre pastilha organica e semi-metalica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Organicas sao mais silenciosas e desgastam menos o disco, mas perdem eficiencia em altas temperaturas. Semi-metalicas aguentam mais calor e sao melhores para serra. Para Itatiaia, recomendamos semi-metalicas ou ceramicas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A Auto Pecas Itatiaia tem pastilhas para caminhao?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Trabalhamos com Frasle Lonaflex para veiculos pesados e utilitarios. Estoque permanente para atender caminhoneiros da Via Dutra sem espera por encomenda."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
