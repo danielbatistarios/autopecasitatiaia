@@ -1996,6 +1996,23 @@ ul, ol { list-style: none; }
   .stat-number { font-size: 28px; }
   .about-mini-cards { grid-template-columns: 1fr 1fr; }
 }
+
+/* Dropdown nav */
+.nav-dropdown { position: relative; }
+.nav-dropdown-toggle { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 4px; font-family: inherit; padding: 0; }
+.dropdown-arrow { transition: transform var(--duration-fast); flex-shrink: 0; }
+.nav-dropdown.open .dropdown-arrow { transform: rotate(180deg); }
+.nav-dropdown-menu { position: absolute; top: calc(100% + 16px); left: 50%; transform: translateX(-50%); background: var(--bg-glass); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid var(--border); border-radius: var(--r-lg); padding: var(--s-2); min-width: 220px; display: none; flex-direction: column; gap: 2px; box-shadow: 0 16px 40px rgba(0,0,0,.4); z-index: 1100; }
+.nav-dropdown.open .nav-dropdown-menu { display: flex; }
+.nav-dropdown-item { font-size: 13px; font-weight: 500; color: var(--text-secondary); padding: 9px 14px; border-radius: var(--r-md); transition: background var(--duration-fast), color var(--duration-fast); white-space: nowrap; }
+.nav-dropdown-item:hover { background: rgba(255,102,51,.08); color: var(--orange); }
+@media (max-width: 768px) {
+  .nav-dropdown { width: 100%; }
+  .nav-dropdown-toggle { width: 100%; padding: 12px var(--s-2); border-bottom: 1px solid var(--border); font-size: 14px; justify-content: space-between; }
+  .nav-dropdown-menu { position: static; transform: none; background: rgba(255,102,51,.04); border: none; border-radius: 0; padding: 0; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .nav-dropdown.open .nav-dropdown-menu { display: flex; }
+  .nav-dropdown-item { border-bottom: 1px solid var(--border); border-radius: 0; padding: 11px var(--s-4); font-size: 13px; }
+}
 </style>
 </head>
 <body style="overflow: hidden;">
@@ -2038,25 +2055,32 @@ ul, ol { list-style: none; }
      ============================================================ -->
 <header class="header" id="header">
   <div class="header-inner">
-    <a href="#" class="logo" data-cursor="Início">
+    <a href="/" class="logo" data-cursor="In&#237;cio">
       <div class="logo-mark">AP</div>
       <div class="logo-text">
-        <span class="logo-name">Auto Peças Itatiaia</span>
+        <span class="logo-name">Auto Pe&#231;as Itatiaia</span>
         <span class="logo-sub">Itatiaia &middot; RJ &middot; Centro</span>
       </div>
     </a>
-
     <nav class="nav" id="nav">
-      <a href="#sobre" class="nav-link">Sobre</a>
-      <a href="#categorias" class="nav-link">Catálogo</a>
-      <a href="#servicos" class="nav-link">Serviços</a>
-      <a href="#marcas" class="nav-link">Marcas</a>
-      <a href="#avaliacoes" class="nav-link">Avaliações</a>
-      <a href="#faq" class="nav-link">FAQ</a>
-      <a href="#contato" class="nav-link">Contato</a>
+      <a href="/" class="nav-link active">In&#237;cio</a>
+      <a href="/sobre.html" class="nav-link">Sobre</a>
+      <div class="nav-dropdown">
+        <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Servi&#231;os <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="/troca-de-bateria.html" class="nav-dropdown-item" role="menuitem">Troca de Bateria</a>
+          <a href="/troca-de-oleo.html" class="nav-dropdown-item" role="menuitem">Troca de &#211;leo</a>
+          <a href="/troca-de-filtros.html" class="nav-dropdown-item" role="menuitem">Troca de Filtros</a>
+          <a href="/troca-de-disco-de-freio.html" class="nav-dropdown-item" role="menuitem">Troca de Disco de Freio</a>
+          <a href="/troca-de-lampadas.html" class="nav-dropdown-item" role="menuitem">Troca de L&#226;mpadas</a>
+          <a href="/troca-de-palhetas.html" class="nav-dropdown-item" role="menuitem">Troca de Palhetas</a>
+          <a href="/troca-de-fluido-de-freio.html" class="nav-dropdown-item" role="menuitem">Troca de Fluido de Freio</a>
+          <a href="/troca-de-pastilhas.html" class="nav-dropdown-item" role="menuitem">Troca de Pastilhas</a>
+        </div>
+      </div>
+      <a href="/contato.html" class="nav-link">Contato</a>
       <a href="https://wa.me/5524993099190?text=Ol%C3%A1!%20Vim%20pelo%20site." class="nav-cta" target="_blank" rel="noopener" data-cursor="Chamar">WhatsApp</a>
     </nav>
-
     <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -2533,26 +2557,56 @@ ul, ol { list-style: none; }
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="logo" style="margin-bottom:var(--s-4);"><div class="logo-mark">AP</div><div class="logo-text"><span class="logo-name">Auto Peças Itatiaia</span><span class="logo-sub">Itatiaia &middot; RJ</span></div></div>
-        <p class="footer-brand-desc">Referência em autopeças na região. Mais de 40 marcas, atendimento especializado para mecânicos, motoristas e frotas.</p>
-        <div style="font-family:var(--font-mono);font-size:11px;color:var(--orange);letter-spacing:.06em;">&#11088; 4.9/5 — 347 AVALIAÇÕES</div>
+        <div class="logo" style="margin-bottom:var(--s-4);"><div class="logo-mark">AP</div><div class="logo-text"><span class="logo-name">Auto Pe&#231;as Itatiaia</span><span class="logo-sub">Itatiaia &middot; RJ</span></div></div>
+        <p class="footer-brand-desc">Refer&#234;ncia em auto pe&#231;as na regi&#227;o desde 2019. Mais de 40 marcas, atendimento especializado para mec&#226;nicos, motoristas e frotas.</p>
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--orange);letter-spacing:.06em;">&#11088; 4.9/5 &mdash; 347 AVALIA&#199;&#213;ES</div>
       </div>
       <div>
-        <div class="footer-col-title">Navegação</div>
-        <div class="footer-links"><a href="#sobre">Sobre Nós</a><a href="#categorias">Catálogo de Peças</a><a href="#servicos">Serviços</a><a href="#marcas">Marcas</a><a href="#avaliacoes">Avaliações</a><a href="#faq">Perguntas Frequentes</a><a href="#contato">Contato</a></div>
+        <div class="footer-col-title">Empresa</div>
+        <div class="footer-links">
+          <a href="/">In&#237;cio</a>
+          <a href="/sobre.html">Sobre N&#243;s</a>
+          <a href="/servicos.html">Servi&#231;os</a>
+          <a href="/contato.html">Contato</a>
+          <a href="/trabalhe-conosco.html">Trabalhe Conosco</a>
+        </div>
       </div>
       <div>
-        <div class="footer-col-title">Horário</div>
+        <div class="footer-col-title">Servi&#231;os</div>
+        <div class="footer-links">
+          <a href="/troca-de-bateria.html">Troca de Bateria</a>
+          <a href="/troca-de-oleo.html">Troca de &#211;leo</a>
+          <a href="/troca-de-filtros.html">Troca de Filtros</a>
+          <a href="/troca-de-pastilhas.html">Troca de Pastilhas</a>
+          <a href="/troca-de-disco-de-freio.html">Disco de Freio</a>
+          <a href="/troca-de-lampadas.html">L&#226;mpadas</a>
+          <a href="/troca-de-palhetas.html">Palhetas</a>
+          <a href="/troca-de-fluido-de-freio.html">Fluido de Freio</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Hor&#225;rio</div>
         <div style="display:flex;flex-direction:column;gap:var(--s-2);">
-          <div class="footer-hours-row"><span>Segunda a Sexta</span><strong>08h — 18h</strong></div>
-          <div class="footer-hours-row"><span>Sábado</span><strong>08h — 13h</strong></div>
+          <div class="footer-hours-row"><span>Segunda a Sexta</span><strong>08h &mdash; 18h</strong></div>
+          <div class="footer-hours-row"><span>S&#225;bado</span><strong>08h &mdash; 13h</strong></div>
           <div class="footer-hours-row"><span>Domingo</span><strong>Fechado</strong></div>
+        </div>
+        <div style="margin-top:var(--s-5);">
+          <div class="footer-col-title">Contato</div>
+          <div class="footer-links">
+            <a href="tel:+5524993099190">(24) 99309-9190</a>
+            <a href="https://wa.me/5524993099190?text=Ol%C3%A1!%20Vim%20pelo%20site." target="_blank" rel="noopener">WhatsApp</a>
+          </div>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div>&copy; 2025 Auto Peças Itatiaia &mdash; Peças Automotivas em Itatiaia, RJ</div>
-      <div>Av. dos Expedicionários, 275 - loja 5 - Centro, Itatiaia - RJ | (24) 99309-9190</div>
+      <div>&copy; 2025 Auto Pe&#231;as Itatiaia &mdash; Pe&#231;as Automotivas em Itatiaia, RJ</div>
+      <div style="display:flex;gap:var(--s-4);flex-wrap:wrap;">
+        <a href="/politica-de-privacidade.html" style="color:var(--text-muted);text-decoration:none;">Pol&#237;tica de Privacidade</a>
+        <a href="/termos-de-uso.html" style="color:var(--text-muted);text-decoration:none;">Termos de Uso</a>
+        <a href="/politica-de-cookies.html" style="color:var(--text-muted);text-decoration:none;">Cookies</a>
+      </div>
     </div>
   </div>
 </footer>
