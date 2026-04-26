@@ -1247,6 +1247,7 @@ ul, ol { list-style: none; }
 
 .service-card:hover { border-color: var(--border-orange); transform: translateY(-4px); box-shadow: var(--shadow-md); }
 .service-card:hover::after { transform: scaleX(1); }
+a.service-card { text-decoration: none; color: inherit; display: flex; flex-direction: column; cursor: pointer; }
 
 .service-icon { font-size: 28px; margin-bottom: var(--s-4); display: block; }
 .service-name { font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: var(--s-2); }
@@ -2355,14 +2356,14 @@ ul, ol { list-style: none; }
       </div>
 
       <h1 id="heroH1">
-        Auto Peças<br>
-        <span class="highlight">Itatiaia</span>
+        Peças Automotivas e Serviços<br>
+        <span class="highlight">para Seu Carro em Itatiaia</span>
       </h1>
 
       <p class="hero-desc" id="heroDesc">
         Há mais de <strong>6 anos</strong>, a Auto Peças Itatiaia é referência em peças automotivas
         no Sul Fluminense. <strong>40+ marcas</strong> para carros nacionais e importados.
-        Atendemos mecânicos, motoristas e frotistas em <strong>Itatiaia, Resende, Penedo, Engenheiro Passos e região</strong>.
+        Troca de óleo, bateria, freios, filtros e mais, com atendimento para mecânicos, motoristas e frotistas em <strong>Itatiaia, Resende, Penedo, Engenheiro Passos e região</strong>.
       </p>
 
       <div class="hero-actions" id="heroActions">
@@ -2581,7 +2582,7 @@ ul, ol { list-style: none; }
       <div class="carousel-header">
         <div>
           <div class="sec-label">Serviços</div>
-          <h2 class="sec-title">Serviços Especializados<br>em Autopeças</h2>
+          <h2 class="sec-title">Troca de Óleo, Bateria,<br>Freios e Mais em Itatiaia</h2>
         </div>
         <div style="display:flex;align-items:center;gap:var(--s-4);">
           <div class="carousel-counter"><span class="current" id="svcCurrent">01</span> / <span id="svcTotal">08</span></div>
@@ -2598,15 +2599,18 @@ ul, ol { list-style: none; }
 
       <div class="carousel-track-wrap">
         <div class="carousel-track" id="svcTrack">
-          <div class="service-card"><span class="service-icon">&#128267;</span><div class="service-name">Troca de Baterias</div><div class="service-desc">Moura, Tudor, Zetta. Teste gratuito + instalação na hora. Garantia de fábrica.</div><div class="service-tag">&#8594; sem agendamento</div></div>
-          <div class="service-card"><span class="service-icon">&#128711;</span><div class="service-name">Troca de Disco de Freio</div><div class="service-desc">Disco, pastilha e fluido. Verificação completa do sistema de frenagem.</div><div class="service-tag">&#8594; verificação grátis</div></div>
-          <div class="service-card"><span class="service-icon">&#128167;</span><div class="service-name">Troca de Óleo</div><div class="service-desc">Mobil, Shell, Lubrax, Petronas. Mineral, semi e sintético. Filtro incluso.</div><div class="service-tag">&#8594; em 20 minutos</div></div>
-          <div class="service-card"><span class="service-icon">&#128296;</span><div class="service-name">Troca de Filtros</div><div class="service-desc">Ar, óleo, combustível e ar condicionado. Tecfil, Mann, Wega.</div><div class="service-tag">&#8594; todas as marcas</div></div>
-          <div class="service-card"><span class="service-icon">&#128161;</span><div class="service-name">Troca de Lâmpadas</div><div class="service-desc">Philips, Osram, halógena e LED. Farol, lanterna e sinalização.</div><div class="service-tag">&#8594; serviço de instalação</div></div>
-          <div class="service-card"><span class="service-icon">&#127783;&#65039;</span><div class="service-name">Troca de Palhetas</div><div class="service-desc">Várias marcas. Todos os tamanhos. Verificação do sistema limpador.</div><div class="service-tag">&#8594; instalação na hora</div></div>
-          <div class="service-card"><span class="service-icon">&#9940;</span><div class="service-name">Troca de Pastilhas</div><div class="service-desc">Cobreq, Ecopads, TRW. Pastilhas cerâmicas e convencionais.</div><div class="service-tag">&#8594; garantia inclusa</div></div>
-          <div class="service-card"><span class="service-icon">&#128375;</span><div class="service-name">Troca de Fluido de Freio</div><div class="service-desc">DOT 3 e DOT 4. Sangria completa do sistema. Segurança primeiro.</div><div class="service-tag">&#8594; check completo</div></div>
+          <a class="service-card" href="troca-de-bateria.html"><span class="service-icon">&#128267;</span><div class="service-name">Troca de Baterias</div><div class="service-desc">Moura, Tudor, Zetta. Teste gratuito + instalação na hora. Garantia de fábrica.</div><div class="service-tag">&#8594; sem agendamento</div></a>
+          <a class="service-card" href="troca-de-disco-de-freio.html"><span class="service-icon">&#128711;</span><div class="service-name">Troca de Disco de Freio</div><div class="service-desc">Disco, pastilha e fluido. Verificação completa do sistema de frenagem.</div><div class="service-tag">&#8594; verificação grátis</div></a>
+          <a class="service-card" href="troca-de-oleo.html"><span class="service-icon">&#128167;</span><div class="service-name">Troca de Óleo</div><div class="service-desc">Mobil, Shell, Lubrax, Petronas. Mineral, semi e sintético. Filtro incluso.</div><div class="service-tag">&#8594; em 20 minutos</div></a>
+          <a class="service-card" href="troca-de-filtros.html"><span class="service-icon">&#128296;</span><div class="service-name">Troca de Filtros</div><div class="service-desc">Ar, óleo, combustível e ar condicionado. Tecfil, Mann, Wega.</div><div class="service-tag">&#8594; todas as marcas</div></a>
+          <a class="service-card" href="troca-de-lampadas.html"><span class="service-icon">&#128161;</span><div class="service-name">Troca de Lâmpadas</div><div class="service-desc">Philips, Osram, halógena e LED. Farol, lanterna e sinalização.</div><div class="service-tag">&#8594; serviço de instalação</div></a>
+          <a class="service-card" href="troca-de-palhetas.html"><span class="service-icon">&#127783;&#65039;</span><div class="service-name">Troca de Palhetas</div><div class="service-desc">Várias marcas. Todos os tamanhos. Verificação do sistema limpador.</div><div class="service-tag">&#8594; instalação na hora</div></a>
+          <a class="service-card" href="troca-de-pastilhas.html"><span class="service-icon">&#9940;</span><div class="service-name">Troca de Pastilhas</div><div class="service-desc">Cobreq, Ecopads, TRW. Pastilhas cerâmicas e convencionais.</div><div class="service-tag">&#8594; garantia inclusa</div></a>
+          <a class="service-card" href="troca-de-fluido-de-freio.html"><span class="service-icon">&#128375;</span><div class="service-name">Troca de Fluido de Freio</div><div class="service-desc">DOT 3 e DOT 4. Sangria completa do sistema. Segurança primeiro.</div><div class="service-tag">&#8594; check completo</div></a>
         </div>
+      </div>
+      <div style="text-align:center;margin-top:var(--s-6);">
+        <a href="servicos.html" class="btn btn-secondary" data-cursor="Ver todos">Ver Todos os Serviços &#8594;</a>
       </div>
     </div>
   </div>
