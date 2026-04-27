@@ -277,9 +277,10 @@ ul, ol { list-style: none; }
   .content-section { padding: 48px 0; }
   .header { height: 56px; }
   .logo-mark { width: 34px; height: 34px; font-size: 15px; }
-  .logo-text { display: none; }
-  .logo-name { font-size: 13px; }
-  .logo-sub { font-size: 9px; }
+  .logo-mark { display: none; }
+  .logo-text { display: flex; }
+  .logo-name { font-size: 13px; color: var(--orange); letter-spacing: .04em; }
+  .logo-sub { display: none; }
   .nav { display: none; position: fixed; top: 56px; left: 0; right: 0; background: var(--bg-glass); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); padding: var(--s-3); flex-direction: column; align-items: stretch; gap: 0; z-index: 999; }
   .nav.open { display: flex; }
   .nav.open .nav-link { padding: 12px var(--s-2); border-bottom: 1px solid var(--border); font-size: 14px; }
