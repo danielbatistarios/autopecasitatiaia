@@ -15,6 +15,11 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://autopecasitatiaia.com.br/">
+<meta property="og:image" content="https://autopecasitatiaia.com.br/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://autopecasitatiaia.com.br/assets/og-image.jpg">
 
 <!-- Fonts -->
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -291,6 +296,10 @@ ul, ol { list-style: none; }
   animation: grain 8s steps(10) infinite;
   pointer-events: none;
   z-index: 1;
+}
+@media (max-width: 768px) {
+  .noise::before { inset: 0; }
+  .noise { contain: layout; }
 }
 
 /* Reveal base (GSAP handles animation) */
