@@ -214,15 +214,17 @@ ul, ol { list-style: none; }
   .btn { width: 100%; justify-content: center; padding: 14px 24px; font-size: 14px; }
   .marquee-strip { padding: 10px 0; } .marquee-item { font-size: 11px; padding: 0 16px; }
   .pre-cta { padding: 32px 0; } .pre-cta-inner { flex-direction: column; gap: 16px; text-align: center; } .pre-cta-title { font-size: 20px; }
-  .footer { padding: 40px 0 24px; padding-bottom: 80px; } .footer-grid { grid-template-columns: 1fr; gap: 24px; } .footer-bottom { flex-direction: column; text-align: center; gap: 6px; }
-  .footer-links a { min-height: 0; padding: 10px 0; font-size: 14px; display: block; }
-  .footer-hours-row { gap: 8px; flex-wrap: wrap; }
-  .footer-nap { font-size: 11px; word-break: break-word; overflow-wrap: break-word; line-height: 1.6; }
-  .footer-social a { width: 48px; height: 48px; }
+  .footer { padding: 32px 0 100px; } .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px 16px; } .footer-grid > div:first-child { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 12px; } .footer-brand-desc { display: none; } .footer-bottom { flex-direction: column; text-align: center; gap: 6px; } .footer-bottom > div:last-child { justify-content: center; }
+  .footer-links a { min-height: 0; padding: 8px 0; font-size: 13px; display: block; }
+  .footer-hours-row { gap: 4px; flex-wrap: wrap; font-size: 12px; }
+  .footer-nap { font-size: 10px; word-break: break-word; overflow-wrap: break-word; line-height: 1.7; }
+  .footer-social { margin-top: 0; gap: 8px; }
+  .footer-social a { width: 40px; height: 40px; }
   .footer .logo-mark { display: none; }
   .footer .logo-text { display: flex; }
-  .footer .logo-name { font-size: 14px; color: var(--orange); white-space: nowrap; }
+  .footer .logo-name { font-size: 13px; color: var(--orange); white-space: nowrap; }
   .footer .logo-sub { display: none; }
+  .footer-col-title { font-size: 10px; margin-bottom: 8px; }
   .legal-content { padding: 0 14px; } .legal-content h2 { font-size: 19px; }
   .legal-content table { display: block; overflow-x: auto; }
 }
