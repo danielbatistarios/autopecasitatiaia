@@ -535,10 +535,14 @@ ul, ol { list-style: none; }
   .footer { padding: 40px 0 24px; }
   .footer-grid { grid-template-columns: 1fr; gap: 24px; }
   .footer-bottom { flex-direction: column; text-align: center; gap: 6px; }
-  .footer-links a { min-height: 44px; display: flex; align-items: center; padding: 2px 0; font-size: 14px; }
+  .footer-links a { min-height: 0; padding: 10px 0; font-size: 14px; display: block; }
   .footer-hours-row { gap: 8px; flex-wrap: wrap; }
-  .footer-nap { font-size: 11px; word-break: break-word; }
+  .footer-nap { font-size: 11px; word-break: break-word; overflow-wrap: break-word; line-height: 1.6; }
   .footer-social a { width: 48px; height: 48px; }
+  .footer .logo-mark { display: none; }
+  .footer .logo-text { display: flex; }
+  .footer .logo-name { font-size: 14px; color: var(--orange); white-space: nowrap; }
+  .footer .logo-sub { display: none; }
   .sec-title { font-size: clamp(26px, 6vw, 36px); margin-bottom: 10px; }
   .sec-sub { font-size: 14px; }
   .sec-label { font-size: 10px; }
