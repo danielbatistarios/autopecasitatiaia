@@ -110,7 +110,7 @@
 
 /* RESET */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: auto; -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: auto; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 body {
   background: var(--bg-primary);
   color: var(--text-secondary);
@@ -1776,7 +1776,7 @@ a.service-card { text-decoration: none; color: inherit; display: flex; flex-dire
   .logo-mark { width: 34px; height: 34px; font-size: 15px; }
   .logo-mark { display: none; }
   .logo-text { display: flex; }
-  .logo-name { font-size: 13px; color: var(--orange); letter-spacing: .04em; }
+  .logo-name { font-size: 11px; color: var(--orange); letter-spacing: .03em; white-space: nowrap; }
   .logo-sub { display: none; }
   .nav {
     display: none;
