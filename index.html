@@ -2195,70 +2195,6 @@ a.service-card { text-decoration: none; color: inherit; display: flex; flex-dire
 }
 
 /* ─────────────────────────────────────────────
-   P2: WHITESPACE & BREATHING ROOM — Mobile
-   ───────────────────────────────────────────── */
-
-@media (max-width: 768px) {
-  /* Margins entre elementos */
-  h1 {
-    margin-bottom: 16px;
-  }
-
-  h2 {
-    margin-top: 20px;
-    margin-bottom: 12px;
-  }
-
-  p {
-    margin-bottom: 12px;
-  }
-
-  /* Cards spacing */
-  .card {
-    margin-bottom: 16px;
-  }
-}
-
-/* ─────────────────────────────────────────────
-   P2: FOOTER RESPONSIVO
-   ───────────────────────────────────────────── */
-
-@media (max-width: 768px) {
-  footer {
-    display: block;
-    padding: 32px 16px;
-  }
-
-  .footer-section {
-    margin-bottom: 20px;
-  }
-
-  .footer-links {
-    flex-direction: column;
-  }
-}
-
-/* ─────────────────────────────────────────────
-   P2: BOTÃO WHATSAPP FLUTUANTE
-   ───────────────────────────────────────────── */
-
-@media (max-width: 768px) {
-  .whatsapp-float,
-  .whatsapp-button,
-  .floating-action {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 56px;
-    height: 56px;
-    min-height: 56px;
-    z-index: 99;
-    /* Não cobrir conteúdo crucial */
-    margin-bottom: 0;
-  }
-}
-
-/* ─────────────────────────────────────────────
    P2: SCROLL PADDING TOP — Âncoras
    ───────────────────────────────────────────── */
 
@@ -2283,17 +2219,24 @@ html {
       "@id": "https://autopecasitatiaia.com.br/#organization",
       "name": "Auto Peças Itatiaia",
       "legalName": "Auto Peças Itatiaia",
-      "description": "Loja de autopeças em Itatiaia RJ com 40+ marcas. Peças originais e alternativas para todas as marcas, troca de óleo, bateria, freios e mais.",
-      "foundingDate": "2019",
+      "description": "Loja de autopeças em Itatiaia RJ com 40+ marcas. Peças originais e alternativas para todas as marcas, troca de óleo, bateria, freios e mais. Atendemos mecânicos, oficinas e motoristas de Itatiaia, Resende e região.",
+      "foundingDate": "2019-01-01",
       "url": "https://autopecasitatiaia.com.br",
       "telephone": "+55-24-99309-9190",
       "hasMap": "https://www.google.com/maps/place/Auto+Pe%C3%A7as+Itatiaia/@-22.4939592,-44.5614109,17z/data=!4m2!3m1!1s0x0:0xce6aced7aeeef147",
-      "image": "https://autopecasitatiaia.com.br/favicon.svg",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://autopecasitatiaia.com.br/assets/og-image.jpg",
+        "width": 1200,
+        "height": 630,
+        "description": "Fachada Auto Peças Itatiaia — Av. dos Expedicionários, 275, Centro, Itatiaia RJ"
+      },
       "logo": {
         "@type": "ImageObject",
-        "url": "https://autopecasitatiaia.com.br/favicon.svg",
-        "width": 512,
-        "height": 512
+        "url": "https://autopecasitatiaia.com.br/assets/logo-auto-pecas-itatiaia.png",
+        "width": 300,
+        "height": 80,
+        "description": "Logo Auto Peças Itatiaia"
       },
       "address": {
         "@type": "PostalAddress",
@@ -2312,17 +2255,41 @@ html {
         {
           "@type": "City",
           "name": "Itatiaia",
-          "sameAs": "https://www.wikidata.org/wiki/Q1686604"
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -22.4939592,
+            "longitude": -44.5614109
+          },
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q1686604",
+            "https://pt.wikipedia.org/wiki/Itatiaia"
+          ]
         },
         {
           "@type": "City",
           "name": "Engenheiro Passos",
-          "sameAs": "https://www.wikidata.org/wiki/Q10283028"
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -22.4261,
+            "longitude": -44.4897
+          },
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q10283028",
+            "https://pt.wikipedia.org/wiki/Engenheiro_Passos"
+          ]
         },
         {
           "@type": "City",
           "name": "Resende",
-          "sameAs": "https://www.wikidata.org/wiki/Q950836"
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -22.4689,
+            "longitude": -44.4506
+          },
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q950836",
+            "https://pt.wikipedia.org/wiki/Resende_(Rio_de_Janeiro)"
+          ]
         }
       ],
       "openingHoursSpecification": [
@@ -2345,15 +2312,15 @@ html {
           "closes": "00:00"
         }
       ],
-      "paymentAccepted": "Dinheiro, PIX, Cartão de Débito, Cartão de Crédito",
+      "paymentAccepted": ["Dinheiro", "PIX", "Cartão de Débito", "Cartão de Crédito"],
       "currenciesAccepted": "BRL",
       "priceRange": "$$",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "347",
-        "bestRating": "5",
-        "worstRating": "1"
+        "ratingValue": 4.9,
+        "reviewCount": 347,
+        "bestRating": 5,
+        "worstRating": 1
       },
       "sameAs": [
         "https://www.instagram.com/autopecasitatiaia",
@@ -2362,23 +2329,23 @@ html {
       "knowsAbout": [
         {
           "@type": "DefinedTerm",
-          "name": "Peças Automotivas",
-          "inDefinedTermSet": "https://www.wikidata.org/wiki/Q754579"
+          "@id": "https://www.wikidata.org/wiki/Q754579",
+          "name": "Peças Automotivas"
         },
         {
           "@type": "DefinedTerm",
-          "name": "Troca de Óleo",
-          "inDefinedTermSet": "https://www.wikidata.org/wiki/Q1330968"
+          "@id": "https://www.wikidata.org/wiki/Q1330968",
+          "name": "Troca de Óleo"
         },
         {
           "@type": "DefinedTerm",
-          "name": "Bateria Automotiva",
-          "inDefinedTermSet": "https://www.wikidata.org/wiki/Q193318"
+          "@id": "https://www.wikidata.org/wiki/Q193318",
+          "name": "Bateria Automotiva"
         },
         {
           "@type": "DefinedTerm",
-          "name": "Sistema de Freios",
-          "inDefinedTermSet": "https://www.wikidata.org/wiki/Q178354"
+          "@id": "https://www.wikidata.org/wiki/Q178354",
+          "name": "Sistema de Freios"
         }
       ],
       "hasOfferCatalog": {
@@ -2391,6 +2358,7 @@ html {
               "@type": "Service",
               "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#service",
               "name": "Troca de Bateria",
+              "description": "Troca de bateria automotiva com instalação na hora. Baterias das melhores marcas: Moura, Heliar, Bosch e outras.",
               "url": "https://autopecasitatiaia.com.br/troca-de-bateria.html"
             }
           },
@@ -2400,6 +2368,7 @@ html {
               "@type": "Service",
               "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#service",
               "name": "Troca de Óleo",
+              "description": "Troca de óleo com agendamento ou por ordem de chegada. Mobil, Shell, Lubrax, Petronas e outras marcas premium.",
               "url": "https://autopecasitatiaia.com.br/troca-de-oleo.html"
             }
           },
@@ -2409,6 +2378,7 @@ html {
               "@type": "Service",
               "@id": "https://autopecasitatiaia.com.br/troca-de-filtros.html#service",
               "name": "Troca de Filtros",
+              "description": "Filtros de ar, óleo, combustível e cabine. Peças originais e alternativas de alta qualidade.",
               "url": "https://autopecasitatiaia.com.br/troca-de-filtros.html"
             }
           },
@@ -2418,6 +2388,7 @@ html {
               "@type": "Service",
               "@id": "https://autopecasitatiaia.com.br/troca-de-disco-de-freio.html#service",
               "name": "Troca de Disco de Freio",
+              "description": "Discos de freio das melhores marcas: Fremax, Brembo, TRW. Instalação técnica com segurança.",
               "url": "https://autopecasitatiaia.com.br/troca-de-disco-de-freio.html"
             }
           },
@@ -2427,6 +2398,7 @@ html {
               "@type": "Service",
               "@id": "https://autopecasitatiaia.com.br/troca-de-lampadas.html#service",
               "name": "Troca de Lâmpadas",
+              "description": "Lâmpadas automotivas comuns, halógenas e LED. Instalação inclusa na compra.",
               "url": "https://autopecasitatiaia.com.br/troca-de-lampadas.html"
             }
           },
@@ -2436,6 +2408,7 @@ html {
               "@type": "Service",
               "@id": "https://autopecasitatiaia.com.br/troca-de-palhetas.html#service",
               "name": "Troca de Palhetas",
+              "description": "Palhetas dianteiras e traseiras para todos os modelos. Bosch, Dyna, Trico e outras.",
               "url": "https://autopecasitatiaia.com.br/troca-de-palhetas.html"
             }
           },
@@ -2445,6 +2418,7 @@ html {
               "@type": "Service",
               "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#service",
               "name": "Troca de Fluido de Freio",
+              "description": "Fluido de freio DOT3 e DOT4 para todos os veículos. Revisão completa do sistema de frenagem.",
               "url": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html"
             }
           },
@@ -2454,10 +2428,22 @@ html {
               "@type": "Service",
               "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#service",
               "name": "Troca de Pastilhas de Freio",
+              "description": "Pastilhas de freio originais e de alto desempenho: Cofap, Nakata, TRW. Instalação técnica garantida.",
               "url": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html"
             }
           }
         ]
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-24-99309-9190",
+        "contactType": "customer support",
+        "areaServed": "BR",
+        "availableLanguage": "Portuguese",
+        "contactOption": "TollFree"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://autopecasitatiaia.com.br/#webpage"
       }
     },
     {
@@ -2470,14 +2456,12 @@ html {
         "@id": "https://autopecasitatiaia.com.br/#organization"
       },
       "inLanguage": "pt-BR",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://autopecasitatiaia.com.br/?s={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
+      "significantLink": [
+        "https://autopecasitatiaia.com.br/troca-de-oleo.html",
+        "https://autopecasitatiaia.com.br/troca-de-bateria.html",
+        "https://autopecasitatiaia.com.br/troca-de-pastilhas.html",
+        "https://autopecasitatiaia.com.br/servicos.html"
+      ]
     },
     {
       "@type": "WebPage",
@@ -2488,12 +2472,28 @@ html {
       "isPartOf": {
         "@id": "https://autopecasitatiaia.com.br/#website"
       },
+      "mainEntity": {
+        "@id": "https://autopecasitatiaia.com.br/#organization"
+      },
       "about": {
+        "@id": "https://autopecasitatiaia.com.br/#organization"
+      },
+      "publisher": {
         "@id": "https://autopecasitatiaia.com.br/#organization"
       },
       "inLanguage": "pt-BR",
       "breadcrumb": {
         "@id": "https://autopecasitatiaia.com.br/#breadcrumb"
+      },
+      "hasPart": [
+        {
+          "@id": "https://autopecasitatiaia.com.br/#faq"
+        }
+      ],
+      "dateModified": "2026-04-27",
+      "speakableSpecification": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", ".faq__answer"]
       }
     },
     {
@@ -2506,11 +2506,20 @@ html {
           "name": "Início",
           "item": "https://autopecasitatiaia.com.br/"
         }
-      ]
+      ],
+      "isPartOf": {
+        "@id": "https://autopecasitatiaia.com.br/#webpage"
+      }
     },
     {
       "@type": "FAQPage",
       "@id": "https://autopecasitatiaia.com.br/#faq",
+      "about": {
+        "@id": "https://autopecasitatiaia.com.br/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://autopecasitatiaia.com.br/#webpage"
+      },
       "mainEntity": [
         {
           "@type": "Question",
@@ -2525,7 +2534,7 @@ html {
           "name": "Fazem troca de óleo na hora?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim! Realizamos troca de óleo com agendamento ou por ordem de chegada. Trabalhamos com Mobil, Shell, Lubrax, Petronas e outras marcas premium."
+            "text": "Sim. Realizamos troca de óleo com agendamento ou por ordem de chegada. Trabalhamos com Mobil, Shell, Lubrax, Petronas e outras marcas premium."
           }
         },
         {
@@ -2533,7 +2542,7 @@ html {
           "name": "Atendem mecânicos e oficinas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim, temos condições especiais para mecânicos, oficinas e frotas. Entre em contato pelo WhatsApp para negociar."
+            "text": "Sim, temos condições especiais para mecânicos, oficinas e frotas. Entre em contato pelo WhatsApp (24) 99309-9190 para negociar."
           }
         },
         {
@@ -2549,7 +2558,7 @@ html {
           "name": "Vocês entregam peças?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim, fazemos entrega para oficinas e mecânicos na região de Itatiaia e cidades vizinhas."
+            "text": "Sim, fazemos entrega para oficinas e mecânicos na região de Itatiaia, Engenheiro Passos e Resende."
           }
         },
         {
@@ -2557,7 +2566,7 @@ html {
           "name": "Aceitam cartão de crédito e PIX?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim! Aceitamos todas as formas de pagamento: dinheiro, PIX, cartão de débito e crédito (parcelamos em até 6x sem juros)."
+            "text": "Sim. Aceitamos todas as formas de pagamento: dinheiro, PIX, cartão de débito e crédito (parcelamos em até 6x sem juros)."
           }
         }
       ]
@@ -2566,31 +2575,66 @@ html {
       "@type": "SiteNavigationElement",
       "@id": "https://autopecasitatiaia.com.br/#nav-inicio",
       "name": "Início",
-      "url": "https://autopecasitatiaia.com.br/"
+      "url": "https://autopecasitatiaia.com.br/",
+      "isPartOf": {
+        "@id": "https://autopecasitatiaia.com.br/#website"
+      },
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://autopecasitatiaia.com.br/"
+      }
     },
     {
       "@type": "SiteNavigationElement",
       "@id": "https://autopecasitatiaia.com.br/#nav-sobre",
       "name": "Sobre Nós",
-      "url": "https://autopecasitatiaia.com.br/sobre.html"
+      "url": "https://autopecasitatiaia.com.br/sobre.html",
+      "isPartOf": {
+        "@id": "https://autopecasitatiaia.com.br/#website"
+      },
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://autopecasitatiaia.com.br/sobre.html"
+      }
     },
     {
       "@type": "SiteNavigationElement",
       "@id": "https://autopecasitatiaia.com.br/#nav-servicos",
       "name": "Serviços",
-      "url": "https://autopecasitatiaia.com.br/servicos.html"
+      "url": "https://autopecasitatiaia.com.br/servicos.html",
+      "isPartOf": {
+        "@id": "https://autopecasitatiaia.com.br/#website"
+      },
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://autopecasitatiaia.com.br/servicos.html"
+      }
     },
     {
       "@type": "SiteNavigationElement",
       "@id": "https://autopecasitatiaia.com.br/#nav-contato",
       "name": "Contato",
-      "url": "https://autopecasitatiaia.com.br/contato.html"
+      "url": "https://autopecasitatiaia.com.br/contato.html",
+      "isPartOf": {
+        "@id": "https://autopecasitatiaia.com.br/#website"
+      },
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://autopecasitatiaia.com.br/contato.html"
+      }
     },
     {
       "@type": "SiteNavigationElement",
       "@id": "https://autopecasitatiaia.com.br/#nav-trabalhe",
       "name": "Trabalhe Conosco",
-      "url": "https://autopecasitatiaia.com.br/trabalhe-conosco.html"
+      "url": "https://autopecasitatiaia.com.br/trabalhe-conosco.html",
+      "isPartOf": {
+        "@id": "https://autopecasitatiaia.com.br/#website"
+      },
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://autopecasitatiaia.com.br/trabalhe-conosco.html"
+      }
     }
   ]
 }
