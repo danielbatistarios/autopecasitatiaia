@@ -632,64 +632,17 @@ ul, ol { list-style: none; }
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "AutoPartsStore",
-      "@id": "https://autopecasitatiaia.com.br/#organization",
-      "name": "Auto Peças Itatiaia",
+      "@type": "WebSite",
+      "@id": "https://autopecasitatiaia.com.br/#website",
       "url": "https://autopecasitatiaia.com.br",
-      "telephone": "+55-24-99309-9190",
-      "hasMap": "https://www.google.com/maps/place/Auto+Pe%C3%A7as+Itatiaia/@-22.4939592,-44.5614109,17z/data=!4m2!3m1!1s0x0:0xce6aced7aeeef147",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Av. dos Expedicionários, 275 - loja 5 - Centro",
-        "addressLocality": "Itatiaia",
-        "addressRegion": "RJ",
-        "postalCode": "27580-216",
-        "addressCountry": "BR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -22.4939592,
-        "longitude": -44.5614109
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "08:00",
-          "closes": "18:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "08:00",
-          "closes": "13:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Sunday",
-          "opens": "00:00",
-          "closes": "00:00"
-        }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.9,
-        "reviewCount": 347,
-        "bestRating": 5,
-        "worstRating": 1
-      },
-      "sameAs": [
-        "https://www.instagram.com/autopecasitatiaia",
-        "https://www.facebook.com/autopecasitatiaia",
-        "https://www.wikidata.org/wiki/Q128705407"
-      ],
-      "taxID": "01.335.600/0001-73"
+      "name": "Auto Peças Itatiaia",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://autopecasitatiaia.com.br/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": { "@type": "EntryPoint", "urlTemplate": "https://autopecasitatiaia.com.br/?s={search_term_string}" },
+        "query-input": "required name=search_term_string"
+      }
     },
     {
       "@type": "WebPage",
@@ -698,19 +651,22 @@ ul, ol { list-style: none; }
       "name": "Troca de Bateria em Itatiaia | Auto Peças Itatiaia",
       "description": "Troca de bateria em Itatiaia com teste gratuito. Baterias Moura, Tudor e Zetta com garantia de fábrica, 45Ah a 70Ah. Auto Peças Itatiaia (24) 99309-9190.",
       "inLanguage": "pt-BR",
-      "isPartOf": {
-        "@id": "https://autopecasitatiaia.com.br/#website"
+      "isPartOf": { "@id": "https://autopecasitatiaia.com.br/#website" },
+      "about": { "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#service" },
+      "mainEntity": { "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#service" },
+      "publisher": { "@id": "https://autopecasitatiaia.com.br/#organization" },
+      "breadcrumb": { "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#breadcrumb" },
+      "hasPart": [{ "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#faq" }],
+      "speakableSpecification": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", ".faq__answer"]
       },
-      "about": {
-        "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#service"
-      },
-      "breadcrumb": {
-        "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#breadcrumb"
-      }
+      "dateModified": "2026-04-27"
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#breadcrumb",
+      "isPartOf": { "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#webpage" },
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -733,50 +689,132 @@ ul, ol { list-style: none; }
       ]
     },
     {
+      "@type": "AutoPartsStore",
+      "@id": "https://autopecasitatiaia.com.br/#organization",
+      "name": "Auto Peças Itatiaia",
+      "legalName": "Auto Peças Itatiaia",
+      "url": "https://autopecasitatiaia.com.br",
+      "telephone": "+55-24-99309-9190",
+      "taxID": "01.335.600/0001-73",
+      "foundingDate": "2019-01-01",
+      "hasMap": "https://www.google.com/maps/place/Auto+Pe%C3%A7as+Itatiaia/@-22.4939592,-44.5614109,17z",
+      "mainEntityOfPage": { "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#webpage" },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://autopecasitatiaia.com.br/images/og-image.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://autopecasitatiaia.com.br/images/logo-auto-pecas-itatiaia.png",
+        "width": 300,
+        "height": 80
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. dos Expedicionários, 275 - loja 5 - Centro",
+        "addressLocality": "Itatiaia",
+        "addressRegion": "RJ",
+        "postalCode": "27580-216",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -22.4939592,
+        "longitude": -44.5614109
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "13:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.9,
+        "reviewCount": 347,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "paymentAccepted": ["Dinheiro", "PIX", "Cartão de Débito", "Cartão de Crédito"],
+      "priceRange": "$$",
+      "currenciesAccepted": "BRL",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Itatiaia",
+          "geo": { "@type": "GeoCoordinates", "latitude": -22.4939592, "longitude": -44.5614109 },
+          "sameAs": ["https://www.wikidata.org/wiki/Q1686604","https://pt.wikipedia.org/wiki/Itatiaia"]
+        },
+        {
+          "@type": "City",
+          "name": "Resende",
+          "geo": { "@type": "GeoCoordinates", "latitude": -22.4688, "longitude": -44.4507 },
+          "sameAs": ["https://www.wikidata.org/wiki/Q913390","https://pt.wikipedia.org/wiki/Resende_(Rio_de_Janeiro)"]
+        },
+        {
+          "@type": "City",
+          "name": "Engenheiro Passos",
+          "sameAs": ["https://www.wikidata.org/wiki/Q10272923","https://pt.wikipedia.org/wiki/Engenheiro_Passos"]
+        },
+        {
+          "@type": "City",
+          "name": "Penedo",
+          "sameAs": ["https://www.wikidata.org/wiki/Q1073075","https://pt.wikipedia.org/wiki/Penedo_(Rio_de_Janeiro)"]
+        }
+      ],
+      "knowsAbout": [
+        { "@type": "DefinedTerm", "@id": "https://www.wikidata.org/wiki/Q902054", "name": "Bateria Automotiva" },
+        { "@type": "DefinedTerm", "@id": "https://www.wikidata.org/wiki/Q754579", "name": "Peças Automotivas" },
+        { "@type": "DefinedTerm", "@id": "https://www.wikidata.org/wiki/Q11032", "name": "Manutenção Automotiva" }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/autopecasitatiaia",
+        "https://www.facebook.com/autopecasitatiaia",
+        "https://www.wikidata.org/wiki/Q128705407"
+      ]
+    },
+    {
       "@type": "Service",
       "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#service",
       "name": "Troca de Bateria em Itatiaia",
       "serviceType": "Troca de Bateria Automotiva",
       "description": "Serviço de troca de bateria automotiva em Itatiaia RJ com teste de carga gratuito. Baterias Moura, Tudor e Zetta de 45Ah a 70Ah com garantia de fábrica.",
-      "provider": {
-        "@id": "https://autopecasitatiaia.com.br/#organization"
-      },
+      "provider": { "@id": "https://autopecasitatiaia.com.br/#organization" },
+      "sameAs": "https://www.wikidata.org/wiki/Q902054",
       "areaServed": [
         {
           "@type": "City",
           "name": "Itatiaia",
           "addressRegion": "RJ",
-          "sameAs": [
-            "https://www.wikidata.org/wiki/Q817223",
-            "https://pt.wikipedia.org/wiki/Itatiaia_(Rio_de_Janeiro)"
-          ]
+          "sameAs": ["https://www.wikidata.org/wiki/Q1686604","https://pt.wikipedia.org/wiki/Itatiaia"]
         },
         {
           "@type": "City",
           "name": "Resende",
           "addressRegion": "RJ",
-          "sameAs": [
-            "https://www.wikidata.org/wiki/Q913390",
-            "https://pt.wikipedia.org/wiki/Resende_(Rio_de_Janeiro)"
-          ]
+          "sameAs": ["https://www.wikidata.org/wiki/Q913390","https://pt.wikipedia.org/wiki/Resende_(Rio_de_Janeiro)"]
         },
         {
           "@type": "City",
           "name": "Engenheiro Passos",
           "addressRegion": "RJ",
-          "sameAs": [
-            "https://www.wikidata.org/wiki/Q10272923",
-            "https://pt.wikipedia.org/wiki/Engenheiro_Passos"
-          ]
+          "sameAs": ["https://www.wikidata.org/wiki/Q10272923","https://pt.wikipedia.org/wiki/Engenheiro_Passos"]
         },
         {
           "@type": "City",
           "name": "Penedo",
           "addressRegion": "RJ",
-          "sameAs": [
-            "https://www.wikidata.org/wiki/Q1073075",
-            "https://pt.wikipedia.org/wiki/Penedo_(Rio_de_Janeiro)"
-          ]
+          "sameAs": ["https://www.wikidata.org/wiki/Q1073075","https://pt.wikipedia.org/wiki/Penedo_(Rio_de_Janeiro)"]
         }
       ],
       "offers": {
@@ -788,24 +826,19 @@ ul, ol { list-style: none; }
       },
       "serviceOutput": {
         "@type": "Product",
+        "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#product-bateria",
         "name": "Bateria Automotiva",
         "sameAs": "https://www.wikidata.org/wiki/Q902054",
         "brand": [
           {
             "@type": "Brand",
             "name": "Baterias Moura",
-            "sameAs": [
-              "https://www.wikidata.org/wiki/Q16497238",
-              "https://pt.wikipedia.org/wiki/Baterias_Moura"
-            ]
+            "sameAs": ["https://www.wikidata.org/wiki/Q16497238","https://pt.wikipedia.org/wiki/Baterias_Moura"]
           },
           {
             "@type": "Brand",
             "name": "Tudor",
-            "sameAs": [
-              "https://www.wikidata.org/wiki/Q30588270",
-              "https://pt.wikipedia.org/wiki/Exide_Technologies"
-            ]
+            "sameAs": ["https://www.wikidata.org/wiki/Q30588270","https://pt.wikipedia.org/wiki/Exide_Technologies"]
           },
           {
             "@type": "Brand",
@@ -815,8 +848,46 @@ ul, ol { list-style: none; }
       }
     },
     {
+      "@type": "HowTo",
+      "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#howto",
+      "name": "Como funciona a troca de bateria na Auto Peças Itatiaia",
+      "description": "Processo completo de diagnóstico e substituição de bateria automotiva em Itatiaia RJ.",
+      "about": { "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#service" },
+      "isPartOf": { "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#webpage" },
+      "estimatedCost": { "@type": "MonetaryAmount", "currency": "BRL", "value": "0", "description": "Teste diagnóstico gratuito" },
+      "totalTime": "PT15M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Leve o veículo à loja",
+          "text": "Passe na Av. dos Expedicionários, 275, Centro de Itatiaia, sem necessidade de agendamento."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Teste de diagnóstico gratuito",
+          "text": "Nossa equipe realiza o teste de carga com analisador digital em 3 minutos. Medimos CCA, tensão e saúde interna da bateria."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Escolha a bateria ideal",
+          "text": "Se a troca for necessária, orientamos sobre a melhor opção entre Moura, Tudor e Zetta de acordo com o seu veículo."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Instalação na hora",
+          "text": "A bateria é instalada no momento. Saída inclui descarte correto da bateria usada e documento de garantia."
+        }
+      ]
+    },
+    {
       "@type": "FAQPage",
       "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#faq",
+      "about": { "@id": "https://autopecasitatiaia.com.br/#organization" },
+      "isPartOf": { "@id": "https://autopecasitatiaia.com.br/troca-de-bateria.html#webpage" },
       "mainEntity": [
         {
           "@type": "Question",
