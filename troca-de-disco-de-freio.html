@@ -234,8 +234,8 @@ ul, ol { list-style: none; }
 .wpp-float:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 16px 48px rgba(37,211,102,.5); }
 .sticky-cta { display: none; }
 @média (max-width: 768px) {
-  .sticky-cta { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 998; background: var(--bg-glass); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border-top: 1px solid var(--border); padding: 12px 16px; align-items: center; justify-content: space-between; gap: 12px; opacity: 0; pointer-events: none; transition: opacity .4s var(--ease-out); }
-  .sticky-cta.visible { opacity: 1; pointer-events: auto; }
+  .sticky-cta { display: none; position: fixed; bottom: 0 !important; top: auto !important; left: 0; right: 0; z-index: 998; background: var(--bg-glass); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border-top: 1px solid var(--border); padding: 12px 16px; align-items: center; justify-content: space-between; gap: 12px; }
+  .sticky-cta.visible { display: flex; }
   .sticky-cta-info { display: flex; flex-direction: column; min-width: 0; }
   .sticky-cta-title { font-size: 14px; font-weight: 700; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .sticky-cta-sub { font-family: var(--font-mono); font-size: 10px; color: var(--text-tertiary); letter-spacing: .04em; }
@@ -485,7 +485,6 @@ ul, ol { list-style: none; }
 /* P1.7: Sticky CTA — não cobrir conteúdo */
 @media (max-width: 480px) {
   .sticky-cta {
-    bottom: safe(env(safe-area-inset-bottom, 0px));
     padding: var(--s-3);
   }
 }
@@ -636,8 +635,8 @@ ul, ol { list-style: none; }
         { "@type": "City", "name": "Penedo", "sameAs": ["https://www.wikidata.org/wiki/Q1073075","https://pt.wikipedia.org/wiki/Penedo_(Rio_de_Janeiro)"] }
       ],
       "knowsAbout": [
-        { "@type": "DefinedTerm", "@id": "https://www.wikidata.org/wiki/Q754579", "name": "Peças Automotivas" },
-        { "@type": "DefinedTerm", "@id": "https://www.wikidata.org/wiki/Q11032", "name": "Manutenção Automotiva" }
+        { "@type": "DefinedTerm", "@id": "https://www.wikidata.org/wiki/Q6405028", "name": "Peças Automotivas" },
+        { "@type": "DefinedTerm", "@id": "https://www.wikidata.org/wiki/Q7455657", "name": "Manutenção Automotiva" }
       ],
       "sameAs": ["https://www.instagram.com/autopecasitatiaia","https://www.facebook.com/autopecasitatiaia","https://www.wikidata.org/wiki/Q128705407"]
     },
@@ -663,8 +662,8 @@ ul, ol { list-style: none; }
         "sameAs": ["https://www.wikidata.org/wiki/Q454100","https://pt.wikipedia.org/wiki/Disco_de_freio"],
         "brand": [
           { "@type": "Brand", "name": "Fremax" },
-          { "@type": "Brand", "name": "TRW", "sameAs": ["https://www.wikidata.org/wiki/Q900874","https://pt.wikipedia.org/wiki/TRW_Automotive"] },
-          { "@type": "Brand", "name": "Bosch", "sameAs": ["https://www.wikidata.org/wiki/Q8425","https://pt.wikipedia.org/wiki/Robert_Bosch_GmbH"] }
+          { "@type": "Brand", "name": "TRW", "sameAs": ["https://www.wikidata.org/wiki/Q1117943","https://pt.wikipedia.org/wiki/TRW_Automotive"] },
+          { "@type": "Brand", "name": "Bosch", "sameAs": ["https://www.wikidata.org/wiki/Q234021","https://pt.wikipedia.org/wiki/Robert_Bosch_GmbH"] }
         ]
       }
     },

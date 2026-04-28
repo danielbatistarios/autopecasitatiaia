@@ -1691,9 +1691,10 @@ a.service-card { text-decoration: none; color: inherit; display: flex; flex-dire
 
 @media (max-width: 768px) {
   .sticky-cta {
-    display: flex;
+    display: none;
     position: fixed;
-    bottom: 0;
+    bottom: 0 !important;
+    top: auto !important;
     left: 0;
     right: 0;
     z-index: 998;
@@ -1705,14 +1706,10 @@ a.service-card { text-decoration: none; color: inherit; display: flex; flex-dire
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .4s var(--ease-out);
   }
 
   .sticky-cta.visible {
-    opacity: 1;
-    pointer-events: auto;
+    display: flex;
   }
 
   .sticky-cta-info {
@@ -2055,7 +2052,7 @@ a.service-card { text-decoration: none; color: inherit; display: flex; flex-dire
             "longitude": -44.4897
           },
           "sameAs": [
-            "https://www.wikidata.org/wiki/Q10283028",
+            "https://www.wikidata.org/wiki/Q10272923",
             "https://pt.wikipedia.org/wiki/Engenheiro_Passos"
           ]
         },
@@ -2068,7 +2065,7 @@ a.service-card { text-decoration: none; color: inherit; display: flex; flex-dire
             "longitude": -44.4506
           },
           "sameAs": [
-            "https://www.wikidata.org/wiki/Q950836",
+            "https://www.wikidata.org/wiki/Q913390",
             "https://pt.wikipedia.org/wiki/Resende_(Rio_de_Janeiro)"
           ]
         }
@@ -2110,17 +2107,17 @@ a.service-card { text-decoration: none; color: inherit; display: flex; flex-dire
       "knowsAbout": [
         {
           "@type": "DefinedTerm",
-          "@id": "https://www.wikidata.org/wiki/Q754579",
+          "@id": "https://www.wikidata.org/wiki/Q6405028",
           "name": "Peças Automotivas"
         },
         {
           "@type": "DefinedTerm",
-          "@id": "https://www.wikidata.org/wiki/Q1330968",
+          "@id": "https://www.wikidata.org/wiki/Q297392",
           "name": "Troca de Óleo"
         },
         {
           "@type": "DefinedTerm",
-          "@id": "https://www.wikidata.org/wiki/Q193318",
+          "@id": "https://www.wikidata.org/wiki/Q902054",
           "name": "Bateria Automotiva"
         },
         {
