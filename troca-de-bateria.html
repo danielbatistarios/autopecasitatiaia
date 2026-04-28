@@ -441,16 +441,7 @@ ul, ol { list-style: none; }
   }
 }
 
-/* P0.7: Footer grid 4 colunas fixa — empilhar em mobile */
-@media (max-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: var(--s-4);
-  }
-  .footer-col-title {
-    font-size: 13px;
-  }
-}
+/* P0.7: removido — footer-grid tratado no bloco mobile principal */
 
 /* P0.8: Hover sem @media (hover: hover) — mover para touch-safe */
 @media (hover: hover) and (pointer: fine) {
