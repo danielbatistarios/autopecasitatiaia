@@ -295,7 +295,7 @@ ul, ol { list-style: none; }
   .nav.open .nav-link { padding: 12px var(--s-2); border-bottom: 1px solid var(--border); font-size: 14px; }
   .nav.open .nav-cta { margin-top: var(--s-2); padding: 14px; text-align: center; }
   .menu-toggle { display: flex; }
-  .hero { min-height: auto; padding-bottom: 32px; }
+  .hero { min-height: auto; padding-bottom: 0; align-items: flex-start; }
   .hero-inner { padding: 32px 14px; padding-top: calc(56px + 32px); }
   .hero h1 { font-size: clamp(32px, 9vw, 44px); margin-bottom: 16px; }
   .hero-eyebrow { font-size: 10px; margin-bottom: 12px; }
@@ -625,64 +625,12 @@ ul, ol { list-style: none; }
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "AutoPartsStore",
-      "@id": "https://autopecasitatiaia.com.br/#organization",
-      "name": "Auto Peças Itatiaia",
+      "@type": "WebSite",
+      "@id": "https://autopecasitatiaia.com.br/#website",
       "url": "https://autopecasitatiaia.com.br",
-      "telephone": "+55-24-99309-9190",
-      "hasMap": "https://www.google.com/maps/place/Auto+Pe%C3%A7as+Itatiaia/@-22.4939592,-44.5614109,17z/data=!4m2!3m1!1s0x0:0xce6aced7aeeef147",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Av. dos Expedicionários, 275 - loja 5 - Centro",
-        "addressLocality": "Itatiaia",
-        "addressRegion": "RJ",
-        "postalCode": "27580-216",
-        "addressCountry": "BR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -22.4939592,
-        "longitude": -44.5614109
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "08:00",
-          "closes": "18:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "08:00",
-          "closes": "13:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Sunday",
-          "opens": "00:00",
-          "closes": "00:00"
-        }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.9,
-        "reviewCount": 347,
-        "bestRating": 5,
-        "worstRating": 1
-      },
-      "sameAs": [
-        "https://www.instagram.com/autopecasitatiaia",
-        "https://www.facebook.com/autopecasitatiaia",
-        "https://www.wikidata.org/wiki/Q128705407"
-      ],
-      "taxID": "01.335.600/0001-73"
+      "name": "Auto Peças Itatiaia",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://autopecasitatiaia.com.br/#organization" }
     },
     {
       "@type": "WebPage",
@@ -691,39 +639,66 @@ ul, ol { list-style: none; }
       "name": "Troca de Óleo em Itatiaia | Auto Peças Itatiaia",
       "description": "Troca de óleo em Itatiaia com filtro incluso. Óleos Mobil, Shell, Castrol e Lubrax. Análise do óleo usado sem custo. Auto Peças Itatiaia (24) 99309-9190.",
       "inLanguage": "pt-BR",
-      "isPartOf": {
-        "@id": "https://autopecasitatiaia.com.br/#website"
-      },
-      "about": {
-        "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#service"
-      },
-      "breadcrumb": {
-        "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#breadcrumb"
-      }
+      "isPartOf": { "@id": "https://autopecasitatiaia.com.br/#website" },
+      "about": { "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#service" },
+      "mainEntity": { "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#service" },
+      "publisher": { "@id": "https://autopecasitatiaia.com.br/#organization" },
+      "breadcrumb": { "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#breadcrumb" },
+      "hasPart": [{ "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#faq" }],
+      "speakableSpecification": { "@type": "SpeakableSpecification", "cssSelector": ["h1","h2",".faq__answer"] },
+      "dateModified": "2026-04-27"
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#breadcrumb",
+      "isPartOf": { "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#webpage" },
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Início",
-          "item": "https://autopecasitatiaia.com.br/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Serviços",
-          "item": "https://autopecasitatiaia.com.br/servicos.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Troca de Óleo em Itatiaia",
-          "item": "https://autopecasitatiaia.com.br/troca-de-oleo.html"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://autopecasitatiaia.com.br/" },
+        { "@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://autopecasitatiaia.com.br/servicos.html" },
+        { "@type": "ListItem", "position": 3, "name": "Troca de Óleo em Itatiaia", "item": "https://autopecasitatiaia.com.br/troca-de-oleo.html" }
       ]
+    },
+    {
+      "@type": "AutoPartsStore",
+      "@id": "https://autopecasitatiaia.com.br/#organization",
+      "name": "Auto Peças Itatiaia",
+      "legalName": "Auto Peças Itatiaia",
+      "url": "https://autopecasitatiaia.com.br",
+      "telephone": "+55-24-99309-9190",
+      "taxID": "01.335.600/0001-73",
+      "foundingDate": "2019-01-01",
+      "hasMap": "https://www.google.com/maps/place/Auto+Pe%C3%A7as+Itatiaia/@-22.4939592,-44.5614109,17z",
+      "mainEntityOfPage": { "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#webpage" },
+      "image": { "@type": "ImageObject", "url": "https://autopecasitatiaia.com.br/images/og-image.jpg", "width": 1200, "height": 630 },
+      "logo": { "@type": "ImageObject", "url": "https://autopecasitatiaia.com.br/images/logo-auto-pecas-itatiaia.png", "width": 300, "height": 80 },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. dos Expedicionários, 275 - loja 5 - Centro",
+        "addressLocality": "Itatiaia",
+        "addressRegion": "RJ",
+        "postalCode": "27580-216",
+        "addressCountry": "BR"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": -22.4939592, "longitude": -44.5614109 },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "13:00" }
+      ],
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 347, "bestRating": 5, "worstRating": 1 },
+      "paymentAccepted": ["Dinheiro", "PIX", "Cartão de Débito", "Cartão de Crédito"],
+      "priceRange": "$$",
+      "currenciesAccepted": "BRL",
+      "areaServed": [
+        { "@type": "City", "name": "Itatiaia", "geo": { "@type": "GeoCoordinates", "latitude": -22.4939592, "longitude": -44.5614109 }, "sameAs": ["https://www.wikidata.org/wiki/Q1686604","https://pt.wikipedia.org/wiki/Itatiaia"] },
+        { "@type": "City", "name": "Resende", "geo": { "@type": "GeoCoordinates", "latitude": -22.4688, "longitude": -44.4507 }, "sameAs": ["https://www.wikidata.org/wiki/Q913390","https://pt.wikipedia.org/wiki/Resende_(Rio_de_Janeiro)"] },
+        { "@type": "City", "name": "Engenheiro Passos", "sameAs": ["https://www.wikidata.org/wiki/Q10272923","https://pt.wikipedia.org/wiki/Engenheiro_Passos"] },
+        { "@type": "City", "name": "Penedo", "sameAs": ["https://www.wikidata.org/wiki/Q1073075","https://pt.wikipedia.org/wiki/Penedo_(Rio_de_Janeiro)"] }
+      ],
+      "knowsAbout": [
+        { "@type": "DefinedTerm", "@id": "https://www.wikidata.org/wiki/Q754579", "name": "Peças Automotivas" },
+        { "@type": "DefinedTerm", "@id": "https://www.wikidata.org/wiki/Q11032", "name": "Manutenção Automotiva" }
+      ],
+      "sameAs": ["https://www.instagram.com/autopecasitatiaia","https://www.facebook.com/autopecasitatiaia","https://www.wikidata.org/wiki/Q128705407"]
     },
     {
       "@type": "Service",
@@ -731,140 +706,77 @@ ul, ol { list-style: none; }
       "name": "Troca de Óleo em Itatiaia",
       "serviceType": "Troca de Óleo Automotivo",
       "description": "Serviço de troca de óleo em Itatiaia RJ com filtro incluído. Óleos Mobil, Shell, Lubrax e Petronas para carros de passeio.",
-      "provider": {
-        "@id": "https://autopecasitatiaia.com.br/#organization"
-      },
+      "provider": { "@id": "https://autopecasitatiaia.com.br/#organization" },
+      "sameAs": ["https://www.wikidata.org/wiki/Q297392","https://pt.wikipedia.org/wiki/Troca_de_%C3%B3leo"],
       "areaServed": [
-        {
-          "@type": "City",
-          "name": "Itatiaia",
-          "addressRegion": "RJ",
-          "sameAs": [
-            "https://www.wikidata.org/wiki/Q817223",
-            "https://pt.wikipedia.org/wiki/Itatiaia_(Rio_de_Janeiro)"
-          ]
-        },
-        {
-          "@type": "City",
-          "name": "Resende",
-          "addressRegion": "RJ",
-          "sameAs": [
-            "https://www.wikidata.org/wiki/Q913390",
-            "https://pt.wikipedia.org/wiki/Resende_(Rio_de_Janeiro)"
-          ]
-        },
-        {
-          "@type": "City",
-          "name": "Engenheiro Passos",
-          "addressRegion": "RJ",
-          "sameAs": [
-            "https://www.wikidata.org/wiki/Q10272923",
-            "https://pt.wikipedia.org/wiki/Engenheiro_Passos"
-          ]
-        },
-        {
-          "@type": "City",
-          "name": "Penedo",
-          "addressRegion": "RJ",
-          "sameAs": [
-            "https://www.wikidata.org/wiki/Q1073075",
-            "https://pt.wikipedia.org/wiki/Penedo_(Rio_de_Janeiro)"
-          ]
-        }
+        { "@type": "City", "name": "Itatiaia", "addressRegion": "RJ", "sameAs": ["https://www.wikidata.org/wiki/Q1686604","https://pt.wikipedia.org/wiki/Itatiaia"] },
+        { "@type": "City", "name": "Resende", "addressRegion": "RJ", "sameAs": ["https://www.wikidata.org/wiki/Q913390","https://pt.wikipedia.org/wiki/Resende_(Rio_de_Janeiro)"] },
+        { "@type": "City", "name": "Engenheiro Passos", "addressRegion": "RJ", "sameAs": ["https://www.wikidata.org/wiki/Q10272923","https://pt.wikipedia.org/wiki/Engenheiro_Passos"] },
+        { "@type": "City", "name": "Penedo", "addressRegion": "RJ", "sameAs": ["https://www.wikidata.org/wiki/Q1073075","https://pt.wikipedia.org/wiki/Penedo_(Rio_de_Janeiro)"] }
       ],
-      "offers": {
-        "@type": "Offer",
-        "name": "Troca de Óleo em Itatiaia",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "BRL",
-        "url": "https://autopecasitatiaia.com.br/troca-de-oleo.html"
-      },
-      "sameAs": [
-        "https://www.wikidata.org/wiki/Q297392",
-        "https://pt.wikipedia.org/wiki/Troca_de_%C3%B3leo"
-      ],
+      "offers": { "@type": "Offer", "name": "Troca de Óleo em Itatiaia", "availability": "https://schema.org/InStock", "priceCurrency": "BRL", "url": "https://autopecasitatiaia.com.br/troca-de-oleo.html" },
       "serviceOutput": {
         "@type": "Product",
+        "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#product-oleo",
         "name": "Óleo Lubrificante Automotivo",
         "brand": [
-          {
-            "@type": "Brand",
-            "name": "Mobil",
-            "sameAs": [
-              "https://www.wikidata.org/wiki/Q156238",
-              "https://pt.wikipedia.org/wiki/ExxonMobil"
-            ]
-          },
-          {
-            "@type": "Brand",
-            "name": "Shell",
-            "sameAs": [
-              "https://www.wikidata.org/wiki/Q154950",
-              "https://pt.wikipedia.org/wiki/Shell"
-            ]
-          },
-          {
-            "@type": "Brand",
-            "name": "Lubrax"
-          },
-          {
-            "@type": "Brand",
-            "name": "Petronas"
-          }
+          { "@type": "Brand", "name": "Mobil", "sameAs": ["https://www.wikidata.org/wiki/Q156238","https://pt.wikipedia.org/wiki/ExxonMobil"] },
+          { "@type": "Brand", "name": "Shell", "sameAs": ["https://www.wikidata.org/wiki/Q154950","https://pt.wikipedia.org/wiki/Shell"] },
+          { "@type": "Brand", "name": "Lubrax" },
+          { "@type": "Brand", "name": "Petronas" }
         ]
       }
     },
     {
+      "@type": "HowTo",
+      "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#howto",
+      "name": "Como funciona a troca de óleo na Auto Peças Itatiaia",
+      "description": "Processo completo de troca de óleo com filtro incluso em Itatiaia RJ.",
+      "about": { "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#service" },
+      "isPartOf": { "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#webpage" },
+      "totalTime": "PT20M",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Escolha do óleo", "text": "Orientamos sobre viscosidade e tipo (mineral, semi-sintético ou sintético) de acordo com o manual do veículo e perfil de uso." },
+        { "@type": "HowToStep", "position": 2, "name": "Drenagem do óleo antigo", "text": "Removemos o óleo antigo completamente e descartamos de forma correta." },
+        { "@type": "HowToStep", "position": 3, "name": "Troca do filtro de óleo", "text": "Instalamos filtro novo (Tecfil, Mann ou Wega) compatível com o veículo — incluso sem custo adicional." },
+        { "@type": "HowToStep", "position": 4, "name": "Abastecimento e verificação", "text": "Abastecemos com o óleo escolhido, verificamos o nível e entregamos registro para controle do próximo intervalo." }
+      ]
+    },
+    {
       "@type": "FAQPage",
       "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#faq",
+      "about": { "@id": "https://autopecasitatiaia.com.br/#organization" },
+      "isPartOf": { "@id": "https://autopecasitatiaia.com.br/troca-de-oleo.html#webpage" },
       "mainEntity": [
         {
           "@type": "Question",
           "name": "Quanto custa a troca de óleo em Itatiaia?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "O valor depende do tipo de óleo (mineral, semi-sintético ou sintético) e da quantidade necessária para o seu motor. O filtro de óleo está incluso. Consulte pelo WhatsApp (24) 99309-9190 para orçamento com a marca e viscosidade do seu veículo."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "O valor depende do tipo de óleo (mineral, semi-sintético ou sintético) e da quantidade necessária para o seu motor. O filtro de óleo está incluso. Consulte pelo WhatsApp (24) 99309-9190 para orçamento com a marca e viscosidade do seu veículo." }
         },
         {
           "@type": "Question",
           "name": "Qual a diferença entre óleo sintético e semi-sintético?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "O óleo sintético oferece proteção superior em temperaturas extremas e dura mais (até 10.000 km). O semi-sintético é mais acessível e atende bem veículos de uso misto. Para quem dirige em serra (Itatiaia a Maromba), o sintético é recomendado."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "O óleo sintético oferece proteção superior em temperaturas extremas e dura mais (até 10.000 km). O semi-sintético é mais acessível e atende bem veículos de uso misto. Para quem dirige em serra (Itatiaia a Maromba), o sintético é recomendado." }
         },
         {
           "@type": "Question",
           "name": "De quantos em quantos km devo trocar o óleo em estradas de serra?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Em uso predominante de serra (subidas, descidas ingremes), recomendamos reduzir o intervalo em 20%: se o manual indica 10.000 km, troque a cada 8.000 km. Para uso misto (serra + cidade), 7.000-8.000 km e seguro."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "Em uso predominante de serra (subidas, descidas ingremes), recomendamos reduzir o intervalo em 20%: se o manual indica 10.000 km, troque a cada 8.000 km. Para uso misto (serra + cidade), 7.000-8.000 km é seguro." }
         },
         {
           "@type": "Question",
           "name": "A troca de óleo inclui o filtro?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim! Toda troca de óleo na Auto Peças Itatiaia inclui a substituição do filtro de óleo (Tecfil, Mann ou Wega) sem custo adicional pela mão de obra. Filtro saturado contamina o óleo novo e reduz sua vida útil."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim! Toda troca de óleo na Auto Peças Itatiaia inclui a substituição do filtro de óleo (Tecfil, Mann ou Wega) sem custo adicional pela mão de obra. Filtro saturado contamina o óleo novo e reduz sua vida útil." }
         },
         {
           "@type": "Question",
-          "name": "Voces fazem troca de óleo para vans e caminhoes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Não trabalhamos com troca de óleo para vans e caminhoes. Atendemos apenas carros de passeio."
-          }
+          "name": "Vocês fazem troca de óleo para vans e caminhões?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Não trabalhamos com troca de óleo para vans e caminhões. Atendemos apenas carros de passeio." }
         },
         {
           "@type": "Question",
           "name": "Posso trocar o óleo sem agendar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim, atendemos por ordem de chegada, sem necessidade de agendamento. Atendemos por ordem de chegada. Funcionamos de segunda a sexta (08h-18h) e sábado (08h-13h). Estamos na Av. dos Expedicionários, 275, Centro de Itatiaia."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim, atendemos por ordem de chegada, sem necessidade de agendamento. Funcionamos de segunda a sexta (08h-18h) e sábado (08h-13h). Estamos na Av. dos Expedicionários, 275, Centro de Itatiaia." }
         }
       ]
     }
