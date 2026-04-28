@@ -584,6 +584,14 @@ html {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://autopecasitatiaia.com.br/#website",
+      "url": "https://autopecasitatiaia.com.br",
+      "name": "Auto Peças Itatiaia",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://autopecasitatiaia.com.br/#organization" }
+    },
+    {
       "@type": "AutoPartsStore",
       "@id": "https://autopecasitatiaia.com.br/#organization",
       "name": "Auto Peças Itatiaia",
@@ -621,12 +629,6 @@ html {
           "dayOfWeek": "Saturday",
           "opens": "08:00",
           "closes": "13:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Sunday",
-          "opens": "00:00",
-          "closes": "00:00"
         }
       ],
       "aggregateRating": {
@@ -641,7 +643,13 @@ html {
         "https://www.facebook.com/autopecasitatiaia",
         "https://www.wikidata.org/wiki/Q128705407"
       ],
-      "taxID": "01.335.600/0001-73"
+      "taxID": "01.335.600/0001-73",
+      "logo": "https://autopecasitatiaia.com.br/assets/logo.svg",
+      "image": "https://autopecasitatiaia.com.br/assets/og-image.jpg",
+      "foundingDate": "2019-01-01",
+      "mainEntityOfPage": { "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#webpage" },
+      "paymentAccepted": ["Dinheiro", "Cartão de Crédito", "Cartão de Débito", "Pix"],
+      "knowsAbout": ["Pastilhas de freio automotivas", "Freios a disco", "Frenagem em serra", "Peças automotivas", "Segurança veicular"]
     },
     {
       "@type": "WebPage",
@@ -650,19 +658,18 @@ html {
       "name": "Troca de Pastilhas de Freio em Itatiaia | Auto Peças",
       "description": "Troca de pastilhas de freio em Itatiaia. Cobreq, TRW e Frasle. Serra da Mantiqueira desgasta pastilhas mais rápido. Solicite orçamento (24) 99309-9190.",
       "inLanguage": "pt-BR",
-      "isPartOf": {
-        "@id": "https://autopecasitatiaia.com.br/#website"
-      },
-      "about": {
-        "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#service"
-      },
-      "breadcrumb": {
-        "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#breadcrumb"
-      }
+      "isPartOf": { "@id": "https://autopecasitatiaia.com.br/#website" },
+      "mainEntity": { "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#service" },
+      "publisher": { "@id": "https://autopecasitatiaia.com.br/#organization" },
+      "hasPart": [{ "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#faq" }],
+      "breadcrumb": { "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#breadcrumb" },
+      "speakableSpecification": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".hero-description", ".faq-question"] },
+      "dateModified": "2026-04-27"
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#breadcrumb",
+      "isPartOf": { "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#webpage" },
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -699,7 +706,7 @@ html {
           "name": "Itatiaia",
           "addressRegion": "RJ",
           "sameAs": [
-            "https://www.wikidata.org/wiki/Q817223",
+            "https://www.wikidata.org/wiki/Q1686604",
             "https://pt.wikipedia.org/wiki/Itatiaia_(Rio_de_Janeiro)"
           ]
         },
@@ -740,6 +747,7 @@ html {
       },
       "serviceOutput": {
         "@type": "Product",
+        "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#product-pastilha",
         "name": "Pastilha de Freio",
         "brand": [
           {
@@ -766,8 +774,43 @@ html {
       }
     },
     {
+      "@type": "HowTo",
+      "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#howto",
+      "name": "Como funciona a troca de pastilhas na Auto Peças Itatiaia",
+      "about": { "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#service" },
+      "isPartOf": { "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#webpage" },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Inspeção da espessura",
+          "text": "Verificamos a espessura atual das pastilhas e o estado dos discos. O limite mínimo seguro e de 2mm; abaixo disso, indicamos troca imediata."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Indicação da pastilha certa",
+          "text": "Recomendamos o tipo ideal para o perfil de uso: orgânica para uso urbano, semi-metálica ou cerâmica para quem trafega em serra e faz descidas frequentes."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Troca com instalação",
+          "text": "Realizamos a troca com as ferramentas adequadas, aplicando massa anti-ruído nas guias e verificando o pistão da pinça."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Orientação pós-troca",
+          "text": "Orientamos sobre o rodagem das pastilhas novas (primeiros 200km sem frenagens bruscas) e o intervalo de revisão recomendado para uso em serra."
+        }
+      ]
+    },
+    {
       "@type": "FAQPage",
       "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#faq",
+      "about": { "@id": "https://autopecasitatiaia.com.br/#organization" },
+      "isPartOf": { "@id": "https://autopecasitatiaia.com.br/troca-de-pastilhas.html#webpage" },
       "mainEntity": [
         {
           "@type": "Question",

@@ -27,6 +27,14 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://autopecasitatiaia.com.br/#website",
+      "url": "https://autopecasitatiaia.com.br",
+      "name": "Auto Peças Itatiaia",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://autopecasitatiaia.com.br/#organization" }
+    },
+    {
       "@type": "AutoPartsStore",
       "@id": "https://autopecasitatiaia.com.br/#organization",
       "name": "Auto Peças Itatiaia",
@@ -64,12 +72,6 @@
           "dayOfWeek": "Saturday",
           "opens": "08:00",
           "closes": "13:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Sunday",
-          "opens": "00:00",
-          "closes": "00:00"
         }
       ],
       "aggregateRating": {
@@ -84,7 +86,13 @@
         "https://www.facebook.com/autopecasitatiaia",
         "https://www.wikidata.org/wiki/Q128705407"
       ],
-      "taxID": "01.335.600/0001-73"
+      "taxID": "01.335.600/0001-73",
+      "logo": "https://autopecasitatiaia.com.br/assets/logo.svg",
+      "image": "https://autopecasitatiaia.com.br/assets/og-image.jpg",
+      "foundingDate": "2019-01-01",
+      "mainEntityOfPage": { "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#webpage" },
+      "paymentAccepted": ["Dinheiro", "Cartão de Crédito", "Cartão de Débito", "Pix"],
+      "knowsAbout": ["Fluido de freio automotivo", "DOT 3", "DOT 4", "DOT 5.1", "Vapor lock", "Frenagem em descidas de serra"]
     },
     {
       "@type": "WebPage",
@@ -93,38 +101,22 @@
       "name": "Troca de Fluido de Freio em Itatiaia | Auto Peças Itatiaia",
       "description": "Troca de fluido de freio em Itatiaia. Bosch, TRW e Varga DOT 3, DOT 4 e DOT 5.1. Frenagem segura nas descidas da serra. Auto Peças Itatiaia (24) 99309-9190.",
       "inLanguage": "pt-BR",
-      "isPartOf": {
-        "@id": "https://autopecasitatiaia.com.br/#website"
-      },
-      "about": {
-        "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#service"
-      },
-      "breadcrumb": {
-        "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#breadcrumb"
-      }
+      "isPartOf": { "@id": "https://autopecasitatiaia.com.br/#website" },
+      "mainEntity": { "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#service" },
+      "publisher": { "@id": "https://autopecasitatiaia.com.br/#organization" },
+      "hasPart": [{ "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#faq" }],
+      "breadcrumb": { "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#breadcrumb" },
+      "speakableSpecification": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".hero-description", ".faq-question"] },
+      "dateModified": "2026-04-27"
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#breadcrumb",
+      "isPartOf": { "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#webpage" },
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Início",
-          "item": "https://autopecasitatiaia.com.br/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Serviços",
-          "item": "https://autopecasitatiaia.com.br/servicos.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Troca de Fluido de Freio em Itatiaia",
-          "item": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://autopecasitatiaia.com.br/" },
+        { "@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://autopecasitatiaia.com.br/servicos.html" },
+        { "@type": "ListItem", "position": 3, "name": "Troca de Fluido de Freio em Itatiaia", "item": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html" }
       ]
     },
     {
@@ -142,7 +134,7 @@
           "name": "Itatiaia",
           "addressRegion": "RJ",
           "sameAs": [
-            "https://www.wikidata.org/wiki/Q817223",
+            "https://www.wikidata.org/wiki/Q1686604",
             "https://pt.wikipedia.org/wiki/Itatiaia_(Rio_de_Janeiro)"
           ]
         },
@@ -187,6 +179,7 @@
       ],
       "serviceOutput": {
         "@type": "Product",
+        "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#product-fluido",
         "name": "Fluido de Freio",
         "sameAs": [
           "https://www.wikidata.org/wiki/Q631359",
@@ -217,8 +210,43 @@
       }
     },
     {
+      "@type": "HowTo",
+      "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#howto",
+      "name": "Como funciona a troca de fluido de freio na Auto Peças Itatiaia",
+      "about": { "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#service" },
+      "isPartOf": { "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#webpage" },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Teste gratuito do fluido",
+          "text": "Medimos o ponto de ebulição e o teor de umidade do fluido atual com refratômetro digital. O resultado sai em 30 segundos e indica se a troca é necessária."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Indicação do tipo correto",
+          "text": "Recomendamos o fluido adequado ao veículo e ao perfil de uso. Para quem trafega em descidas da Serra da Mantiqueira, indicamos DOT 4 ou DOT 5.1 pela maior resistência ao calor."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Sangria completa do sistema",
+          "text": "Realizamos a sangria completa removendo todo o fluido antigo e absorvido de umidade. Preenchemos com fluido novo nos quatro pontos de sangria."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Verificação final",
+          "text": "Testamos o nível no reservatório, checamos por vazamentos nas mangueiras e orientamos sobre o próximo intervalo de troca: 2 anos ou 18 meses para uso em serra."
+        }
+      ]
+    },
+    {
       "@type": "FAQPage",
       "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#faq",
+      "about": { "@id": "https://autopecasitatiaia.com.br/#organization" },
+      "isPartOf": { "@id": "https://autopecasitatiaia.com.br/troca-de-fluido-de-freio.html#webpage" },
       "mainEntity": [
         {
           "@type": "Question",
